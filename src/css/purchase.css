@@ -1,0 +1,41 @@
+.flex-box{
+	display:  flex;
+	flex-wrap: wrap; 
+	justify-content: space-around; 
+	align-content: stretch;
+  flex-direction: row;
+	height: 100%;
+}
+
+.collapsed-border {
+	border:none;
+}
+
+  .collection>.collapsed-border{
+	border:none;
+}
+
+form, .info{
+  border: 1px solid #c2cbd0;
+  padding: 20px 15px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  height: 100%; 
+}
+
+.counter li{
+  min-width:45px;
+  display: inline-block;
+  border: 2px solid #bdbdbd;
+  font-size: 18px;
+  margin-right: -4px;
+  margin-top: 3px;
+  padding: 5px 10px;
+  text-align:center;
+}
+
+.amount{
+  font-size: 22px;
+  font-weight: bold;
+}
+
