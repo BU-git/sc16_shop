@@ -7,7 +7,7 @@
   <title>Корзина</title>
   <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="all"/>
-  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="stylesheet" href="css/purchase.css"/>
 
 </head>
 
@@ -16,13 +16,13 @@
 
   <div class="row">
      <div class="col s12">
-     <h2 class="center-align">Оформление заказа</h2>
+     <h3 class="center-align">Оформление заказа</h3>
      </div>
   </div>
 
-    <div class="row">
+    <div class="row ">
      <div class="col s12 m12 l6">
-      <div class="info">
+      <div class="info ">
 
        <div class="row">
         <div class="col s12">
@@ -32,25 +32,31 @@
         </div>
        </div>
 
-      <div class="align-content-center">
+      <div class="flex-box">
        <div class="center-align">
-         <img class="responsive-img center-align" src="images/Product.png" alt="Close">
+         <img  class="materialboxed  center-align" src="images/Product.png" alt="Close">
       </div>
-      <div>
+      <div class="flex-item">
        <ul class="collection collapsed-border">
         <li class="collection-item collapsed-border "><h5>Футболка</h5></li>
          <li class="collection-item collapsed-border valign-wrapper">
-           <span class="valign">Цвет </span><span class="valign badge"><img  src="images/ColorProduct.png" alt=""></span>
+           <span class="valign">Цвет </span><span class="valign badge"><img  src="images/Fill1.png" alt=""></span>
          </li>
-          <li class="collection-item collapsed-border">Размер S</li>
-          <li class="collection-item collapsed-border">Количество</li>
-              </ul>
-            </div>
+          <li class="collection-item collapsed-border">Размер <span class="badge">S</span></li>
+          <li class="collection-item collapsed-border">Количество
+          <ul class="counter">
+            <li id="increase-counter" class="waves-effect waves-light grey lighten-1">+</li>
+            <li id="counter" class="waves-effect waves-light">1</li>
+            <li id="decrease-counter" class="waves-effect waves-light grey lighten-1">-</li>
+          </ul></li>
+        </ul>
        </div>
+       </div>
+
     </div>
    </div>
    
-   <div class="col s12  m12 l6">
+   <div class="col s12  m12  l6">
      <form >
       <div class="row">
         <div class="col s12">
@@ -60,21 +66,21 @@
          <div class="row">
            <div class="input-field col s12">
              <input  id="first_name" type="text" class="validate">
-             <label for="first_name">Имя</label>
+             <label for="first_name">Имя*</label>
            </div>
          </div>
      
          <div class="row">
            <div class="input-field col s12">
             <input id="last_name" type="text" class="validate">
-            <label for="last_name">Фамилия</label>
+            <label for="last_name">Фамилия*</label>
           </div>
         </div>
      
          <div class="row">
            <div class="input-field col s12">
-             <input id="tel" type="tel" class="validate">
-             <label for="tel">Телефон</label>
+             <input id="tel" type="tel" class="validate" >
+             <label for="tel">Телефон*</label>
            </div>
          </div>
      
@@ -91,7 +97,7 @@
                <option value="1" selected>Самовивоз</option>
                <option value="2">Доставка</option>
              </select>
-             <label>Как доставить</label>
+             <label>Как доставить?</label>
            </div>
          </div>
          <div class="row">
@@ -99,6 +105,20 @@
              <textarea id="textarea1" class="materialize-textarea"></textarea>
              <label for="textarea1">Коментарии</label>
             </div>
+         </div>
+         <div class="row">
+           <div class="col s12">
+             <p class="right">Итого: <span class="amount">350 грн</span>
+             </p>
+           </div>
+         </div>
+         <div class="row">
+           <div class="col s12">
+             <div  class="right">
+             <button class="btn waves-effect waves-light pink" type="button" name="action">Заказать</button>
+             <!-- <a class="waves-effect waves-light btn-large pink">Отправить</a> -->
+            </div>
+          </div>
          </div>
        </form>
    </div>
@@ -111,10 +131,31 @@
 <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 <script type="text/javascript" src="js/materialize.min.js"></script>
 <script>
+
   $(document).ready(function() {
     $('select').material_select();
   });
-  $('select').material_select('destroy');
+
+  // $('select').material_select('destroy');
+
+  $(document).ready(function(){
+    $('.materialboxed').materialbox();
+  });
+
+  $(document).ready(function() {
+    $('#increase-counter').click(function() {
+      if(+$('#counter').html()){
+       $('#counter').html(+$('#counter').html()+1);
+     }});
+  });
+
+  $(document).ready(function() {
+    $('#decrease-counter').click(function() {
+      if(+$('#counter').html()>1){
+       $('#counter').html(+$('#counter').html()-1);
+     }});
+  });
+
 </script>
 </body>
 </html>
