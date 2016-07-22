@@ -6,12 +6,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Корзина</title>
   <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="all"/>
+  <!-- <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="all"/> -->
   
   <!-- Compiled and minified CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
-
- <link rel="stylesheet" href="src/css/purchase.css"/>
+  <link rel="stylesheet" href="src/css/purchase.css"/>
  
 </head>
 
@@ -61,28 +60,14 @@
    </div>
    
    <div class="col s12  m12  l6">
-     <form >
+     <form id="formValidate">
       <div class="row">
         <div class="col s12">
           <h4>Ваши даные</h4>
         </div>
       </div>
         
-             <!--   <div class="row">
-           <div class="input-field col s12">
-             <input  id="first_name" type="text" class="validate">
-             <label for="first_name">Имя*</label>
-           </div>
-         </div>
-     
-         <div class="row">
-           <div class="input-field col s12">
-            <input id="last_name" type="text" class="validate">
-            <label for="last_name">Фамилия*</label>
-          </div>
-        </div> -->
-     
-       <div class="row">
+          <div class="row">
         <div class="input-field col l6 m6 s12">
           <input  id="first_name" type="text" class="validate" name="first_name">
           <label for="first_name">Имя*</label>
@@ -95,14 +80,14 @@
      
          <div class="row">
            <div class="input-field col s12">
-             <input id="tel" type="tel" class="validate" name="tel">
+             <input id="tel" type="tel"  class="validate" name="tel">
              <label for="tel">Телефон*</label>
            </div>
          </div>
      
          <div class="row">
            <div class="input-field col s12">
-             <input id="email" type="email" class="validate" name="tel">
+             <input id="email" type="email" class="validate" name="email">
              <label for="email">Email</label>
           </div>
          </div>
@@ -131,7 +116,7 @@
          <div class="row">
            <div class="col s12">
              <div  class="right">
-             <button class="btn waves-effect waves-light pink" type="button" name="action">Заказать</button>
+             <button class="btn waves-effect waves-light pink" type="submit" name="action">Заказать</button>
              <!-- <a class="waves-effect waves-light btn-large pink">Отправить</a> -->
             </div>
           </div>
@@ -145,10 +130,10 @@
 
 <!--Import jQuery before materialize.js-->
 <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-<script type="text/javascript" src="js/materialize.min.js"></script>
+<!-- <script type="text/javascript" src="js/materialize.min.js"></script> -->
  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
- <script src="js/jquery.validate.min.js"></script>
-<script src="js/validate.js"></script>
+ <script src="src/js/jquery.validate.min.js"></script>
+<script src="src/js/validate.js"></script>
 <script>
 
   $(document).ready(function() {
