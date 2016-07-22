@@ -5,7 +5,7 @@ jQuery.validator.addMethod('phoneUS', function(phone_number, element) {
     phone_number = phone_number.replace(/\s+/g, ''); 
     return this.optional(element) || 
         phone_number.match(/^\d[\d\(\)\ -]{4,14}\d$/);
-}, 'Please enter a valid phone number.');
+});
 
 
 
