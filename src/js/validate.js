@@ -3,9 +3,11 @@ $(document).ready(function(){
 
 jQuery.validator.addMethod('phoneUS', function(phone_number, element) {
     phone_number = phone_number.replace(/\s+/g, ''); 
-    return this.optional(element) || phone_number.length > 3 &&
+    return this.optional(element) || 
         phone_number.match(/^\d[\d\(\)\ -]{4,14}\d$/);
 }, 'Please enter a valid phone number.');
+
+
 
 
     $("#formValidate").validate({
@@ -27,7 +29,7 @@ jQuery.validator.addMethod('phoneUS', function(phone_number, element) {
             },
             email:{
                 email: true,
-                required: false,
+                required: true,
             },
 
               textarea:{
@@ -55,6 +57,7 @@ jQuery.validator.addMethod('phoneUS', function(phone_number, element) {
                 
             },
             email:{
+              required: "Это поле обязательно для заполнения",
                 email:"Введите корректный  email",
             },
               textarea:{
@@ -75,3 +78,4 @@ jQuery.validator.addMethod('phoneUS', function(phone_number, element) {
     });
 
 });
+

@@ -63,7 +63,7 @@
      <form id="formValidate">
       <div class="row">
         <div class="col s12">
-          <h4>Ваши даные</h4>
+          <h4>Ваши данные</h4>
         </div>
       </div>
         
@@ -95,7 +95,7 @@
          <div class="row">
            <div class="input-field col s12">
              <select>
-               <option value="1" selected>Самовивоз</option>
+               <option value="1" selected>Самовывоз</option>
                <option value="2">Доставка</option>
              </select>
              <label>Как доставить?</label>
@@ -159,7 +159,10 @@
        $('#counter').html(+$('#counter').html()-1);
      }});
   });
-
+ $(document).ready(function() {
+    Materialize.updateTextFields();
+  });
+      
 </script>
 </body>
 </html>
