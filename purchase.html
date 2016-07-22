@@ -7,8 +7,12 @@
   <title>Корзина</title>
   <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="all"/>
-  <link rel="stylesheet" href="css/purchase.css"/>
+  
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
 
+ <link rel="stylesheet" href="src/css/purchase.css"/>
+ 
 </head>
 
 <body>
@@ -34,13 +38,13 @@
 
       <div class="flex-box">
        <div class="center-align">
-         <img  class="materialboxed  center-align" src="images/Product.png" alt="Close">
+         <img  class="materialboxed  center-align" src="src/images/Product.png" alt="Close">
       </div>
       <div class="flex-item">
        <ul class="collection collapsed-border">
         <li class="collection-item collapsed-border "><h5>Футболка</h5></li>
          <li class="collection-item collapsed-border valign-wrapper">
-           <span class="valign">Цвет </span><span class="valign badge"><img  src="images/Fill1.png" alt=""></span>
+           <span class="valign">Цвет </span><span class="valign badge"><img  src="src/images/ColorProduct.png" alt=""></span>
          </li>
           <li class="collection-item collapsed-border">Размер <span class="badge">S</span></li>
           <li class="collection-item collapsed-border">Количество
@@ -79,26 +83,26 @@
         </div> -->
      
        <div class="row">
-        <div class="input-field col l6 m12 s12">
-          <input  id="first_name" type="text" class="validate">
+        <div class="input-field col l6 m6 s12">
+          <input  id="first_name" type="text" class="validate" name="first_name">
           <label for="first_name">Имя*</label>
         </div>
-        <div class="input-field col l6 m12 s12">
-          <input id="last_name" type="text" class="validate">
+        <div class="input-field col l6 m6 s12">
+          <input id="last_name" type="text" class="validate" name="last_name">
           <label for="last_name">Фамилия*</label>
         </div>
       </div>
      
          <div class="row">
            <div class="input-field col s12">
-             <input id="tel" type="tel" class="validate" >
+             <input id="tel" type="tel" class="validate" name="tel">
              <label for="tel">Телефон*</label>
            </div>
          </div>
      
          <div class="row">
            <div class="input-field col s12">
-             <input id="email" type="email" class="validate">
+             <input id="email" type="email" class="validate" name="tel">
              <label for="email">Email</label>
           </div>
          </div>
@@ -114,7 +118,7 @@
          </div>
          <div class="row">
            <div class="input-field col s12">
-             <textarea id="textarea1" class="materialize-textarea"></textarea>
+             <textarea id="textarea1" class="materialize-textarea" name="textarea"></textarea>
              <label for="textarea1">Коментарии</label>
             </div>
          </div>
@@ -142,6 +146,7 @@
 <!--Import jQuery before materialize.js-->
 <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 <script type="text/javascript" src="js/materialize.min.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
 <script>
 
   $(document).ready(function() {
