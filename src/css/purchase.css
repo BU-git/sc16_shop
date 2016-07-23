@@ -1,3 +1,6 @@
+body{
+  font-family: Arial;
+}
 .flex-box{
 	display:  flex;
 	flex-wrap: wrap; 
@@ -23,8 +26,8 @@ form, .info{
   height: 100%; 
 }
 
-.counter li{
-  min-width:45px;
+/*.counter li{
+  max-width: 70px;
   display: inline-block;
   border: 2px solid #bdbdbd;
   font-size: 18px;
@@ -34,8 +37,35 @@ form, .info{
   text-align:center;
 }
 
-.amount{
+.counter:nth-child(2){
+  padding: 5px 0;
+ }*/
+
+
+.sum{
   font-size: 22px;
   font-weight: bold;
 }
+  .input-field div.error{
+    position: relative;
+    top: -1rem;
+    left: 0rem;
+    font-size: 0.8rem;
+    color:#FF4081;
+    -webkit-transform: translateY(0%);
+    -ms-transform: translateY(0%);
+    -o-transform: translateY(0%);
+    transform: translateY(0%);
+  }
+/*
+   li>.amount{
+    height: inherit;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    border:none;
+  }*/
+
+ 
+
 
