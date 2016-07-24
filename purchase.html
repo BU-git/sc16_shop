@@ -45,7 +45,13 @@
            <span class="valign">Цвет </span><span class="valign badge"><img  src="src/images/ColorProduct.png" alt=""></span>
          </li>
           <li class="collection-item collapsed-border">Размер <span class="badge">S</span></li>
-          <li class="collection-item collapsed-border"><span>Количество</span><input id="amount" class="amount" name = "amount" type="number" min="1" max="1000"  value="1"></li>
+          <li class="collection-item collapsed-border">Количество
+          <ul class="counter">
+            <li id="increase_amount" class="waves-effect waves-light grey">+</li>
+            <li class="waves-effect waves-light container-input"><input id="amount" class="amount" name = "amount" type="text"  value="1"></li>
+            <li id="decrease_amount" class="waves-effect waves-light grey">-</li>
+          </ul>
+          
         </ul>
        </div>
        </div>
@@ -133,6 +139,7 @@
  <!-- <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.15.0/jquery.validate.min.js"></script> -->
  <script src="src/js/jquery.validate.js"></script>
  <script src="src/js/validate.js"></script>
+ <script src = "src/js/counter.js"></script>
  <script>
   $(document).ready(function() {
     $('select').material_select();
