@@ -12,11 +12,13 @@
   }
   if(eval(new_str) > 1000){ new_str = 1000; }
   if(eval(new_str) == 0){ new_str = ""; }
-  
+
   jQuery(e).val(new_str);
 }
 
-
+$("#amount").focusout(function(){
+	if (+$('#amount').val() == "") {+$('#amount').val(1);}
+})
 // проверка на ввод чисел с клавиатуры
 jQuery("#amount").keyup(function(event){// когда пользователь отпускает клавишу клавиатуры
   checkNumberFields(this, event);
