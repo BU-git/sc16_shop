@@ -9,7 +9,7 @@ $(document).ready(function(){
 
 
   jQuery.validator.addMethod( "lettersonly", function( value, element ) {
-  return this.optional( element ) || /^[а-я\a-z]?[а-я\-\a-z]+$/i.test( value );
+  return this.optional( element ) || /^[а-я\a-z]?[а-я\-\a-z]?[а-я\a-z]+$/i.test( value );
 }, "Letters or punctuation only please" );
 
   $("#formValidate").validate({
