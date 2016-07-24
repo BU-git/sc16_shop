@@ -7,14 +7,14 @@ body{
 	justify-content: space-around; 
 	align-content: stretch;
   flex-direction: row;
-	height: 100%;
+  height: 100%;
 }
 
 .collapsed-border {
 	border:none;
 }
 
-  .collection>.collapsed-border{
+.collection>.collapsed-border{
 	border:none;
 }
 
@@ -40,33 +40,35 @@ form, .info{
 
 .counter>.container-input{
   padding: 5px 0;
- }
-
+}
 
 .sum{
   font-size: 22px;
   font-weight: bold;
 }
-  .input-field div.error{
-    position: relative;
-    top: -1rem;
-    left: 0rem;
-    font-size: 0.8rem;
-    color:#FF4081;
-    -webkit-transform: translateY(0%);
-    -ms-transform: translateY(0%);
-    -o-transform: translateY(0%);
-    transform: translateY(0%);
-  }
+.input-field div.error{
+  position: relative;
+  top: -1rem;
+  left: 0rem;
+  font-size: 0.8rem;
+  color:#FF4081;
+  -webkit-transform: translateY(0%);
+  -ms-transform: translateY(0%);
+  -o-transform: translateY(0%);
+  transform: translateY(0%);
+}
 
-   li>.amount{
-    height: inherit;
-    text-align: center;
-    padding: 0;
-    margin: 0;
-    border:none;
-  }
+li>.amount{
+  height: inherit;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  border:none;
+}
+input[type=text]:focus:not([readonly]){
+  border:none;
+  box-shadow: none;
+}
 
- 
 
 
