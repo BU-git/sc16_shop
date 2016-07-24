@@ -1,45 +1,50 @@
  $(document).ready(function(){
 
-    function checkNumberFields(e, k){
-      var str = jQuery(e).val();
-      var new_str = s = "";
+ 	var MAXNUMBER = 1000;
+ 	var MINNUMBER = 1;
+  var amountId = "#amount";
 
-      for(var i=0; i < str.length; i++){
-        s = str.substr(i,1);
-    if(s!=" " && isNaN(s) == false){// если цифра
-      new_str += s;
-    }
-  }
-  if(eval(new_str) > 1000){ new_str = 1000; }
-  if(eval(new_str) == 0){ new_str = ""; }
+// функция проверки на число
+ 	function checkNumberFields(e, k){
+ 		var str = jQuery(e).val();
+ 		var new_str = "";
 
-  jQuery(e).val(new_str);
-}
+ 		for(var i=0; i < str.length; i++){
+ 			if ((/^\d+$/).test(str.substr(i,1))) { new_str += str.substr(i,1); }
+ 		}
 
-$("#amount").focusout(function(){
-	if (+$('#amount').val() == "") {+$('#amount').val(1);}
-})
+ 		if(eval(new_str) > MAXNUMBER){ new_str = MAXNUMBER; }
+ 		if(eval(new_str) == 0){ new_str = ""; }
+
+ 		jQuery(e).val(new_str);
+ 	}
+
 // проверка на ввод чисел с клавиатуры
-jQuery("#amount").keyup(function(event){// когда пользователь отпускает клавишу клавиатуры
-  checkNumberFields(this, event);
+jQuery(amountId).keyup(function(event){// когда пользователь отпускает клавишу клавиатуры
+	checkNumberFields(this, event);
 }).keypress(function(event){// когда пользователь нажимает клавишу клавиатуры и удерживает её в нажатом состоянии
-  checkNumberFields(this, event);
+	checkNumberFields(this, event);
 }).change(function(event){// когда поля теряет фокус
-  checkNumberFields(this, event);
+	checkNumberFields(this, event);
 }).click(function(){
-  this.select();
+	this.select();
 });
 
+// когда поля теряет фокус проверить на пустоту или ноль
+$(amountId).focusout(function(){
+	if (+$(amountId).val() == "" || +$(amountId).val() == 0) {+$(amountId).val(MINNUMBER);}
+})
+
+// инкрементация счетчика
 $('#increase_amount').click(function(){ 
-  if(+$('#amount').val() < 1000){ 
-  $('#amount').val(+$('#amount').val()+1);
-}
-  
+	if(+$(amountId).val() < MAXNUMBER){ 
+		$(amountId).val(+$(amountId).val()+1);
+	}
 });
-
+// декрементация счетчика
 $('#decrease_amount').click(function(){ 
-  if (+$('#amount').val()>1) { 
-   $('#amount').val(+$('#amount').val()-1);
- }
+	if (+$(amountId).val()> MINNUMBER) { 
+		$(amountId).val(+$(amountId).val()-1);
+	}
 });
 });

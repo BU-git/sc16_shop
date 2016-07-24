@@ -1,5 +1,3 @@
-
-
 $(document).ready(function(){
 
   jQuery.validator.addMethod('phoneUS', function(phone_number, element) {
