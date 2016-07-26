@@ -1,80 +1,44 @@
-body {
-	font-family: MuseoSansCyrl-700;
+.basis li {
+	display:inline-block;
 }
-.name {
-	font-size: 48px;
-	height: 57px;
-  	
+.basis {
+	background-color:#fff;
+}
+.construcor_height{
+	max-height:750px;
+	 overflow: auto;
+}
+.choice-size a{
+	display:block;
+	padding:5px 10px;
+	border:1px solid violet;
+	color:violet;
+}
+.choice-size a:hover{
+	background-color:violet;
+	color:white;
+}
+.price{
+	font-weight:bold;
+	font-size:18px;
+	margin-bottom:25px;
+}
+ul.tabs li a:focus, .active {
+    background-color:  #9b56e0 !important;
+    color: white !important;
+}
+.tabs .indicator{
+  display: none;
 }
 
-
-.canv>p {
-  height: 33px;
-  font-size: 28px;
-  font-weight: normal;
-  color: #000000;
-  
-} 
 .overview {
 	border: 1px solid #c2cbd0;
 	border-radius: 3px;
   padding: 10px;
 
 }
-.view {
-	margin-top: 100px; 
-}
-.view p{
-  height: 19px;
-  font-size: 16px;
-  font-weight: normal;
-  color: #000000;
-
-}
-.front {
-	border-radius: 3px;
-	box-shadow: 0 0 10px #9b56e0; 
-	padding: 10px 5px;
-}
-
-ul.tab li a:focus, .active {
-    background-color:  #9b56e0;
-    color: white;
-}
-
-.men-basis {
-	
-  height: 19px;
-  font-family: MuseoSansCyrl-700;
-  font-size: 16px;
-  font-weight: normal;
-  letter-spacing: 2.7px;
-  color: #000000;
-}
-
-.price>b {
-  height: 33px;
-  font-family: MuseoSansCyrl-900;
-  font-size: 28px;
-  font-weight: normal;
-  color: #000000;
-}
-
-.tabs .indicator{
-  display: none;
-}
 .tabcontent {
   border: 1px solid #c2cbd0;
   border-radius: 3px;
 
-}
-
-.main_canvas {
-  position: absolute;
-  border: 1px solid red;
-  top: 60px;
-  left: 100px;
-}
-.canvas_shirt {
-  position: relative;
 }
