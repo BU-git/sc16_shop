@@ -1,0 +1,83 @@
+body{
+  font-family: Arial;
+}
+.flex-box{
+	display:  flex;
+	flex-wrap: wrap; 
+	justify-content: space-around; 
+	align-content: stretch;
+  flex-direction: row;
+  height: 100%;
+}
+
+.collapsed-border {
+	border:none;
+}
+
+.collection>.collapsed-border{
+	border:none;
+}
+
+form, .info{
+  border: 1px solid #c2cbd0;
+  padding: 20px 15px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  height: 100%; 
+}
+
+.counter li{
+  max-width: 45px;
+  display: inline-block;
+  border-top: 2px solid #9e9e9e;
+  border-bottom: 2px solid #9e9e9e;
+  font-size: 18px;
+  margin-right: -4px;
+  margin-top: 3px;
+  padding: 5px 15px;
+  text-align:center;
+}
+
+.counter>.container-input{
+  padding: 5px 0;
+}
+
+.sum{
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.input-field div.error{
+  position: relative;
+  top: -1rem;
+  left: 0rem;
+  font-size: 1rem;
+  color:#FF4081;
+  -webkit-transform: translateY(0%);
+  -ms-transform: translateY(0%);
+  -o-transform: translateY(0%);
+  transform: translateY(0%);
+}
+
+li>.amount{
+  height: inherit;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  border:none;
+}
+
+.counter>li>input[type=number]:focus:not([readonly]){
+  border:none;
+  box-shadow: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0; 
+}
+
+input[type=number] { 
+ -moz-appearance:textfield; 
+ }

@@ -1,0 +1,25 @@
+.basis li {
+	display:inline-block;
+}
+.basis {
+	background-color:#fff;
+}
+.construcor_height{
+	max-height:750px;
+	 overflow: auto;
+}
+.choice-size a{
+	display:block;
+	padding:5px 10px;
+	border:1px solid violet;
+	color:violet;
+}
+.choice-size a:hover{
+	background-color:violet;
+	color:white;
+}
+.price{
+	font-weight:bold;
+	font-size:18px;
+	margin-bottom:25px;
+}
