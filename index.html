@@ -1,13 +1,58 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>HW5</title>
-    <link rel="stylesheet" href="build/css/main.css">
-    <script src="build/js/main.js"></script>
-  
-</head>
-<body>
-	
-</body>
-</html>
+  <html>
+    <head>
+      <!--Import Google Icon Font-->
+      <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="build/css/main.css"  media="screen,projection"/>
+      <link rel="stylesheet" href="build/css/main.css">
+      <!--Let browser know website is optimized for mobile--> 
+      <meta name="viewport" charset="UTF-8" content="width=device-width, initial-scale=1.0"/>
+    </head>
+    <body>
+      <header>
+          <div class="container">
+          <div class="row">
+              <div class="col l3">
+                 <a href="index.html"><img src="src/images/LOGO.png" alt=""></a>              
+              </div>
+              <div class="col l8">
+                <ul id="nav-mobile" class="left hide-on-med-and-down nav-wrapper__navigation">
+                  <li><a href="#">Популярное</a></li>
+                  <li><a href="#">О Нас</a></li>
+                  <li><a href="#">Контакты</a></li>
+                  <li><a href="constructor.html">Конструктор</a></li>
+                </ul>
+                <ul class="side-nav" id="mobile-demo">
+                  <li><a href="#">Популярное</a></li>
+                   <li><a href="#">О Нас</a></li>
+                   <li><a href="#">Контакты</a></li>
+                   <li><a href="constructor.html">Конструктор</a></li>
+                 </ul>
+             </div>
+             <div class="col l1 right">
+              <a href="#" data-activates="mobile-demo" class="button-collapse hide-on-large-only button_hiden-menu"><img src="src/images/menu.svg"></a>
+             <a href="purchase.html"><img src="src/images/cart.svg" alt="" class="header__cart-icon"></a>
+             </div>
+         </div></div>
+      </header>
+
+      <section class="banner">
+        <div class="row">
+           <div class="banner_main_img col l6 m6 s12"></div>    
+           <div class="banner_main_info col l6 m6 s12 valign-wrapper ">
+              <div class="banner__main_info__wrapper valign center-align">
+                <h3 class="">Создай свою футболку мечты</h3>
+                <a href="constructor.html" class="waves-effect waves-light btn pink accent-3"> Создать дизайн</a>
+              </div>
+           </div>     
+        </div>               
+      </section>
+
+
+      <!--Import jQuery before materialize.js-->
+      <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+      <script type="text/javascript" src="build/js/main.js"></script>
+      <script> $(".button-collapse").sideNav();</script>
+    </body>
+  </html>

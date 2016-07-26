@@ -1,0 +1,58 @@
+
+body{
+	min-width: 320px !important;
+}
+.row{
+	margin: 0 !important;
+}
+.col{
+	margin: 0 !important;
+}
+.nav-wrapper__navigation li{
+	display: inline-block;
+} 
+
+header{
+	box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+.nav-wrapper__navigation a{
+	display: block;
+	padding: 0 15px;
+
+}
+.header__cart-icon{
+	padding-top:20px;
+
+}
+.button_hiden-menu{
+	color: #000;
+}
+.banner_main_img {
+	padding: 0;
+	background-image: url("../../src/images/banner-img.png");
+	background-size: cover;
+	background-position: top;
+	background-repeat: no-repeat;
+}
+.banner_main_img , .banner_main_info{
+	height:600px;
+}
+.banner_main_info {
+	padding: 0;
+	background-image: url("../../src/images/banner-bg.png");
+	color:#fff;
+}
+ .banner_main-info_button{
+	display: block;
+	margin:0 auto;
+	color:#fff;
+	text-align: center;
+	padding: 10px;
+	background-color: red;
+	width: 180px;
+	text-transform: uppercase;
+
+} 
+.banner__main_info__wrapper{
+	width: 100%;
+}
