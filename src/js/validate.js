@@ -1,16 +1,13 @@
 $(document).ready(function(){
-
   jQuery.validator.addMethod('phoneUS', function(phone_number, element) {
     phone_number = phone_number.replace(/\s+/g, ''); 
     return this.optional(element) || phone_number.length > 5 &&
     phone_number.match(/^\d[\d\(\)\ -]{3,14}\d$/);
   }, "Please specify a valid  phone number");
 
-
-
   jQuery.validator.addMethod( "lettersonly", function( value, element ) {
-  return this.optional( element ) || /^[а, б, в, г, ґ, д, е, є, ж, з, и, і, ї, й, к, л, м, н, о, п, р, с, т, у,', ф, х, ц, ч, ш, щ, ь, ю, я,ъ,ё,ы\-\a-z]+$/i.test( value );
-}, "Letters or punctuation only please" );
+  return this.optional( element ) || /^[а-я,ґ,',і,ї,є\-\a-z]+$/i.test( value );
+}, "Letters or punctuation only please" )
 
   $("#formValidate").validate({
    rules:{
