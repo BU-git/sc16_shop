@@ -1,5 +1,6 @@
 .basis li {
 	display:inline-block;
+	margin-left: 10px;
 }
 .basis {
 	background-color:#fff;
@@ -45,6 +46,7 @@ ul.tabs li a:hover {
 	border-radius: 3px;
 	padding: 10px;
 	margin-top: 48px !important;
+	margin-left: 50px !important;
 }
 .view-basis-canvas {
 	border: 1px solid white;
@@ -61,4 +63,12 @@ ul.tabs li a:hover {
 }
 .basis-hover:hover {
 	border: 1px solid #c2cbd0; 
+}
+.canvas-basis-description {
+	padding-left: 20px;
+	padding-right: 10px;
+}
+.canvas-basis-view {
+	margin-top: 100px;
+
 }
