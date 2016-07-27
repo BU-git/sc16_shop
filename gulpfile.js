@@ -4,16 +4,13 @@ var cssmin = require('gulp-cssmin');
 var uglify = require('gulp-uglify');
 
 gulp.task('cssConcat', function(){
-	return gulp.src([
-		'./src/css/reset.css',
-		'./src/css/style.css'
-		])
+	return gulp.src(['./src/css/*.css'])
     .pipe(concat('main.css'))
     .pipe(cssmin())
     .pipe(gulp.dest('./build/css'));
 });
 gulp.task('jsConcat', function() {
-  return gulp.src(['./src/js/script.js','./src/js/slider.js'])
+  return gulp.src(['./src/js/*.js'])
     .pipe(concat('main.js'))
     .pipe(uglify())
     .pipe(gulp.dest('./build/js'));
