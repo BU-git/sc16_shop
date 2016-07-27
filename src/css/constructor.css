@@ -23,3 +23,22 @@
 	font-size:18px;
 	margin-bottom:25px;
 }
+ul.tabs li a:focus, .active {
+    background-color:  #9b56e0 !important;
+    color: white !important;
+}
+.tabs .indicator{
+  display: none;
+}
+
+.overview {
+	border: 1px solid #c2cbd0;
+	border-radius: 3px;
+  padding: 10px;
+
+}
+.tabcontent {
+  border: 1px solid #c2cbd0;
+  border-radius: 3px;
+
+}
