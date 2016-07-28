@@ -68,6 +68,13 @@ header{
 .banner__main_info__wrapper{
 	width: 100%;
 }
-.comments {
+/*.comments {
 padding: 20px;
+}*/
+section.partners {
+	margin: -10px;
+	padding: 20px 0;
+}
+.partners-attachment {
+   padding: 30px 0;
 }
