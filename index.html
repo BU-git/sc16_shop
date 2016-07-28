@@ -57,9 +57,87 @@
       </section>
 
 
+      <!-- Block of comments -->
+      <section class="comments purple darken-3">
+        <div class="row">
+          <h3 class="center-align white-text">Отзывы</h3>
+          <div class="slider">
+            <ul class="slides">
+              <li>
+                <div class="row valign-wrapper">
+            <div class="col s3 offset-s3">
+              <p class="valign"> <img src="src/images/comments-1.png" alt="comments-1" class="circle responsive-img"> </p>
+            </div>
+            <div class="col s6">
+              <span class="white-text">
+              <b>Настя, 23 года</b>  <br>
+               Очень здорово, что можно добавить свой принт и почувствовать себя дизайнером! <br> Желаю успехов в дальнейшем!
+              </span>
+            </div>
+          </div>
+      </li>
+      <li>
+           <div class="row valign-wrapper">
+            <div class="col s3 offset-s3">
+              <p class="valign"> <img src="src/images/comments-2.png" alt="comments-2" class="circle responsive-img"> </p>
+            </div>
+            <div class="col s6">
+              <span class="white-text">
+              <b>Антон, 23 года</b>  <br>
+                Заказывали футболки с принтом нашей футбольной школы, <br>остались довольны качеством и тем, с какой ответственностью ребята подошли к заказу. <br>Спасибо!
+              </span>
+            </div>
+          </div>
+      </li>
+      <li>
+           <div class="row valign-wrapper">
+            <div class="col s3 offset-s3">
+              <p class="valign"> <img src="src/images/comments-3.png" alt="comments-3" class="circle responsive-img"> </p>
+            </div>
+            <div class="col s6">
+              <span class="white-text">
+              <b>Катя, 20 лет </b> <br>
+                Безумно порадовало качество готового изделия,<br> а также скорость в исполнении моего заказа
+              </span>
+            </div>
+          </div>
+      </li>
+      </ul>
+  </div>
+   </div>
+  </section>
+<!-- END COMMENTS-->
+
+   <!--  Block of partners -->
+  <section class="partners">
+    <div class="row">
+      <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </div>
+  </section>
+
+
+
       <!--Import jQuery before materialize.js-->
       <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
       <script type="text/javascript" src="build/js/main.js"></script>
       <script> $(".button-collapse").sideNav();</script>
+      <!-- Comments slider -->
+      <script>  $(document).ready(function(){
+      $('.slider').slider({full_width: true});
+      });      
+      // Pause slider
+    $('.slider').slider('pause');
+      // Start slider
+    $('.slider').slider('start');
+    // Next slide
+    $('.slider').slider('next');
+    // Previous slide
+      $('.slider').slider('prev');
+       </script>
+
     </body>
   </html>
