@@ -1,6 +1,6 @@
 .flex-box{
 	display:  flex;
-	flex-wrap: wrap; 
+	/*flex-wrap: wrap; */
 	justify-content: space-around; 
 	align-content: stretch;
   flex-direction: row;
@@ -75,6 +75,7 @@ input::-webkit-inner-spin-button {
     margin: 0; 
 }
 
-input[type=number] { 
+input[type=number].amount { 
  -moz-appearance:textfield; 
  }
+
