@@ -1,5 +1,6 @@
 .basis li {
 	display:inline-block;
+	margin-left: 10px;
 }
 .basis {
 	background-color:#fff;
@@ -22,4 +23,52 @@
 	font-weight:bold;
 	font-size:18px;
 	margin-bottom:25px;
+}
+ul.tabs li a:focus, .active {
+    background-color:  #9b56e0 !important;
+    color: white !important;
+}
+ul.tabs li a:hover {
+	background-color: #e7eaec;
+}
+
+.tabs .indicator{
+  display: none;
+}
+
+.tabcontent {
+  border: 1px solid #c2cbd0;
+  border-radius: 3px;
+
+}
+.canvas-basis {
+	border: 1px solid #c2cbd0;
+	border-radius: 3px;
+	padding: 10px;
+	margin-top: 48px !important;
+	margin-left: 50px !important;
+}
+.view-basis-canvas {
+	border: 1px solid white;
+	border-radius: 3px;
+	padding: 5px;
+}
+.view-basis-canvas:hover {
+	border: 1px solid #c2cbd0;
+}
+.basis-hover {
+	border: 1px solid white;
+	margin: 5px;
+	border-radius: 3px; 
+}
+.basis-hover:hover {
+	border: 1px solid #c2cbd0; 
+}
+.canvas-basis-description {
+	padding-left: 20px;
+	padding-right: 10px;
+}
+.canvas-basis-view {
+	margin-top: 100px;
+
 }

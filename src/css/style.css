@@ -2,8 +2,9 @@
 body{
 	min-width: 320px !important;
 }
-.row{
+.container_row{
 	margin: 0 !important;
+	padding: 15px 0 !important;
 }
 .col{
 	margin: 0 !important;
@@ -15,14 +16,25 @@ body{
 header{
 	box-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
+
 .nav-wrapper__navigation a{
 	display: block;
-	padding: 0 15px;
-
+	padding: 0 10px;
+	margin:0 7px;
+	border-bottom:1px dashed gray;
+	color:#000;
 }
-.header__cart-icon{
-	padding-top:20px;
+.nav-wrapper__navigation a:hover{
+	border-bottom:1px dashed #2890e3;
+	color:#2890e3;
+}
 
+
+.header__cart-icon{
+	padding-top:17px;
+}
+.header__cart-icon a:hover {
+	color:#2890e3;
 }
 .button_hiden-menu{
 	color: #000;
@@ -51,8 +63,8 @@ header{
 	background-color: red;
 	width: 180px;
 	text-transform: uppercase;
-
 } 
+
 .banner__main_info__wrapper{
 	width: 100%;
 }
