@@ -6,9 +6,7 @@ body{
 	margin: 0 !important;
 	padding: 15px 0 !important;
 }
-.col{
-	margin: 0 !important;
-}
+
 .nav-wrapper__navigation li{
 	display: inline-block;
 } 
@@ -99,3 +97,64 @@ header{
 .sample {
 	display: inline-block;
 }
+/* Популярная продукция*/
+.pop-production{
+	padding: 10px 5px 10px 5px;
+}
+
+
+.collapse-margine{
+	margin: -20px 0;
+}
+
+.container-padding{
+	padding: 30px 0;
+}
+
+.flex-pupular_main{
+	display:  flex;
+	justify-content: space-around; 
+	align-content: stretch;
+  flex-direction: row;
+  height: 100%;
+}
+
+ .flex-item_main{
+  display:  flex;
+	justify-content: space-around; 
+	align-content: stretch;
+  flex-direction: row;
+  height: 100%;
+} 
+  
+
+ @media only screen and (max-width: 992px) {
+  .flex-pupular_main{
+    flex-wrap: wrap; 
+  }
+}
+ @media only screen and (max-width: 500px) {
+  .flex-item_main{
+    flex-wrap: wrap; 
+  }
+}
+
+.container-about {
+	border:1px dashed black;
+	padding:  30px 40px ;
+	margin-top:50px;
+}
+
+.container-about-header{
+	height: 0;
+}
+
+.about-header {
+	position:  relative; 
+	display:  inline-block; 
+	padding:  0 15px;
+	top: -80px;
+	background-color:  white;
+}
+
+/*popular product*/
