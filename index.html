@@ -50,7 +50,122 @@
         </div>               
       </section>
 
-
+<!-- Our advantages -->
+    <section class="advantages">
+    <div class="row">
+      <div class="col l4 m4 s14 light-blue-text text-darken-4 center-align advantages-attachment">
+        <h2>450</h2>
+        <h5>уникальных <br> дизайна</h5>
+      </div>
+      <div class="col l4 m4 s12 light-blue-text text-darken-4 center-align">
+         <h2>320</h2>
+         <h5>довольных <br> клиента</h5>
+      </div>
+      <div class="col l4 m4 s12 light-blue-text text-darken-4 center-align">
+        <h2>60</h2>
+        <h5>видов <br> продукции</h5>
+      </div>
+     </div>
+    </div>
+    <div class="row light-blue darken-4">
+     <div class="container advantages-attachment">
+     <h4 class="white-text center-align">Наши преимущества</h4>
+      <div class="col l4 m4 s14 ">
+        <p class="center-align"><img class="responsive-img" src="src/images/advantages-1.png" alt="advantages-1"></p>
+        <h5 class="center-align white-text">100% качество</h5>
+      </div>
+      <div class="col l4 m4 s12 advantages-attachment">
+         <p class="center-align"><img class="responsive-img" src="src/images/advantages-2.png" alt="advantages-2"></p>
+         <h5 class="center-align white-text">Оперативность в изготовлении</h5>
+      </div>
+      <div class="col l4 m4 s12 advantages-attachment">
+        <p class="center-align"><img class="responsive-img  " src="src/images/advantages-3.png" alt="advantages-3"></p>
+        <h5 class="center-align white-text">100% уникальность</h5>
+      </div>
+     </div>
+    </div>
+  </section>
+ <!-- end block of advantages -->
+ 
+ 
+ <!-- Block of comments -->
+      <section class="comments ">
+         <div class="row">
+           <!-- <h3 class="center-align white-text">Отзывы</h3> -->
+          <div class="slider">
+          
+            <ul class="slides ">
+                <li>
+                <h3 class="center-align white-text">Отзывы</h3>
+              <div class="row valign-wrapper">
+                <div class="col s2 offset-s4">
+                <p class="valign"> <img src="src/images/comments-1.png" alt="comments-1" class="circle responsive-img"> </p>
+              </div>
+              <div class="col  s6">
+                <span class="white-text">
+                <b>Настя, 23 года</b>  <br>
+                 Очень здорово, что можно добавить свой принт и почувствовать себя дизайнером! <br> Желаю успехов в дальнейшем!
+                </span>
+              </div>
+            </div>
+                  </li>
+                  <li >
+                  <h3 class="center-align white-text">Отзывы</h3>
+             <div class="row valign-wrapper">
+              <div class="col s2 offset-s4">
+             
+                <p class="valign"> <img src="src/images/comments-2.png" alt="comments-2" class="circle responsive-img"> </p>
+              </div>
+              <div class="col s6">
+                <span class="white-text">
+                <b>Антон, 23 года</b>  <br>
+                  Заказывали футболки с принтом нашей футбольной школы, <br>остались довольны качеством и тем,<br> с какой ответственностью ребята подошли к заказу. <br>Спасибо!
+                </span>
+              </div>
+            </div>
+                  </li>
+                  <li>
+              <h3 class="center-align white-text">Отзывы</h3>
+              <div class="row valign-wrapper">
+              <div class="col s2 offset-s4">
+                <p class="valign"> <img src="src/images/comments-3.png" alt="comments-3" class="circle responsive-img"> </p>
+              </div>
+              <div class="col s6">
+                <span class="white-text">
+                <b>Катя, 20 лет </b> <br>
+                  Безумно порадовало качество готового изделия,<br> а также скорость в исполнении моего заказа
+                </span>
+              </div>
+            </div>
+              </li>
+          </ul>
+        
+  </div>
+   </div>
+  </section>
+  <!-- END COMMENTS-->
+ 
+ 
+  <!--  Block of partners -->
+  <section class="partners">
+    <div class="row light-blue darken-4">
+     <div class="container partners-attachment">
+     <h4 class="white-text center-align">Партнеры</h4>
+      <div class="col l4 m4 s14 ">
+        <img class="responsive-img  partners-attachment" src="src/images/lotus.png" alt="lotus">
+      </div>
+      <div class="col l4 m4 s12">
+         <img class="responsive-img  partners-attachment" src="src/images/fruit.png" alt="fruit">
+      </div>
+      <div class="col l4 m4 s12">
+        <img class="responsive-img  partners-attachment" src="src/images/mate.png" alt="mate">
+      </div>
+     </div>
+    </div>
+  </section>
+<!-- end block -->
+ 
+ 
 <!--popular product ready-->
       <section class="light-blue darken-4 collapse-margine">
         <div class="container container-padding">
@@ -172,5 +287,21 @@
        <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
       <script type="text/javascript" src="build/js/main.js"></script>
       <script> $(".button-collapse").sideNav();</script>
+
+<script>  $(document).ready(function(){
+      $('.slider').slider({full_width: true});
+       $('.slider').slider({height: 500});
+       $('.slider').slider('pause');
+      // Start slider
+      $('.slider').slider('start');
+    // Next slide
+       $('.slider').slider('next');
+    // Previous slide
+      $('.slider').slider('prev');
+      });      
+      // Pause slider
+    
+
+       </script>
     </body>
   </html>
