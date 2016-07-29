@@ -68,15 +68,11 @@ header{
 }
 
 
-/*Pecheniuk*/
+/*Pecheniuk Популярная продукция*/
 .pop-production{
-	padding: 10px 5px 20px 5px;
+	padding: 10px 5px 10px 5px;
 }
 
-
-div.pop-production>p{
-	font-size: 20px;
-}
 
 .collapse-margine{
 	margin: -20px 0;
@@ -112,6 +108,9 @@ div.pop-production>p{
   .flex-item_main{
     flex-wrap: wrap; 
   }
+  .container-padding{
+	padding: 20px 0;
+}
 }
 
 /*Pecheniuk*/
