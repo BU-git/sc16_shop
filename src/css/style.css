@@ -54,8 +54,23 @@ header{
 .wrapper>h3{
 /* 	width: 400px; */
 	color: #3b4449;
+}
+.cash_delivering{
+	border: 1px dashed;
+}
+.test-img{
+
 
 }
+/*  .delivering__header{
+	position: relative;
+	top: 75px;
+	z-index: 2;
+}
+.delivering__header h1{
+	background-color:#fff;
+	width: px;
+}  */
 /* .banner_main {
 	background-color: #dce2e5;
 }
@@ -147,6 +162,10 @@ header{
 
 .container-about-header{
 	height: 0;
+}
+
+.about-to-constructor{
+	text-decoration: underline;
 }
 
 .about-header {
