@@ -6,7 +6,9 @@ body{
 	margin: 0 !important;
 	padding: 15px 0 !important;
 }
-
+/*.col{
+	margin: 0 !important;
+}*/
 .nav-wrapper__navigation li{
 	display: inline-block;
 } 
@@ -44,81 +46,17 @@ header{
 	background-position: top;
 	background-repeat: no-repeat;
 	background-color: #dce2e5;
-	/* background-size: cover;
-	 */
-}
-.wrapper{
-/* 	 width: 335px;  */
-
 }
 .wrapper>h3{
-/* 	width: 400px; */
 	color: #3b4449;
 }
 .cash_delivering{
 	border: 1px dashed;
 }
-.test-img{
-
-
-}
-/*  .delivering__header{
-	position: relative;
-	top: 75px;
-	z-index: 2;
-}
-.delivering__header h1{
-	background-color:#fff;
-	width: px;
-}  */
-/* .banner_main {
-	background-color: #dce2e5;
-}
-.banner_main_img {
-	float: right;
-	padding: 0;
-	background-image: url("../../src/images/banner-img.png");
-	background-size: cover;
-	background-position: top;
-	background-repeat: no-repeat;
-} */
-/* .banner_main_img , .banner_main_info{
-	height:600px;
-} */
-/* .banner_main_info {
-	padding: 0;
-	background-image: url("../../src/images/banner-bg.png");
-	color:#fff;
-} */
-/*  .banner_main-info_button{
-	display: block;
-	margin:0 auto;
-	color:#fff;
-	text-align: center;
-	padding: 10px;
-	background-color: red;
-	width: 180px;
-	text-transform: uppercase;
-}  */
-
-.banner__main_info__wrapper{
-/*	width: 35%;
-	float: right;*/
-/*	position: absolute;
-	top: 300px;*/
-}
-
 
 .sample {
 	display: inline-block;
 }
-
-
-/* Популярная продукция*/
-/*.pop-production{
-	padding: 10px 5px 10px 5px;
-}
-*/
 
 .collapse-margine{
 	margin: -15px 0;
@@ -178,8 +116,6 @@ header{
 	top: -80px;
 	background-color:  white;
 }
-
-/*popular product*/
 
 .indent-info__main {
 margin-right: 15px;
