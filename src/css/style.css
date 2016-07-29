@@ -2,7 +2,7 @@
 body{
 	min-width: 320px !important;
 }
-.container_row{
+.container_row, .banner>.row{
 	margin: 0 !important;
 	padding: 15px 0 !important;
 }
@@ -37,22 +37,45 @@ header{
 .button_hiden-menu{
 	color: #000;
 }
+
+.main__banner__img{
+	height: 634px;
+	background-image: url(../../src/images/banner.jpg);
+	background-position: top;
+	background-repeat: no-repeat;
+	background-color: #dce2e5;
+	/* background-size: cover;
+	 */
+}
+.wrapper{
+/* 	 width: 335px;  */
+
+}
+.wrapper>h3{
+/* 	width: 400px; */
+	color: #3b4449;
+
+}
+/* .banner_main {
+	background-color: #dce2e5;
+}
 .banner_main_img {
+	float: right;
 	padding: 0;
 	background-image: url("../../src/images/banner-img.png");
 	background-size: cover;
 	background-position: top;
 	background-repeat: no-repeat;
-}
-.banner_main_img , .banner_main_info{
+} */
+/* .banner_main_img , .banner_main_info{
 	height:600px;
-}
-.banner_main_info {
+} */
+/* .banner_main_info {
 	padding: 0;
 	background-image: url("../../src/images/banner-bg.png");
 	color:#fff;
-}
- .banner_main-info_button{
+} */
+/*  .banner_main-info_button{
 	display: block;
 	margin:0 auto;
 	color:#fff;
@@ -61,21 +84,27 @@ header{
 	background-color: red;
 	width: 180px;
 	text-transform: uppercase;
-} 
+}  */
 
 .banner__main_info__wrapper{
-	width: 100%;
+/*	width: 35%;
+	float: right;*/
+/*	position: absolute;
+	top: 300px;*/
 }
 
 
-/* ÐŸÐ¾Ð¿ÑƒÐ»ÑÑ€Ð½Ð°Ñ Ð¿Ñ€Ð¾Ð´ÑƒÐºÑ†Ð¸Ñ*/
-.pop-production{
+.sample {
+	display: inline-block;
+}
+/* Ïîïóëÿðíàÿ ïðîäóêöèÿ*/
+/*.pop-production{
 	padding: 10px 5px 10px 5px;
 }
-
+*/
 
 .collapse-margine{
-	margin: -20px 0;
+	margin: -15px 0;
 }
 
 .container-padding{
@@ -111,7 +140,7 @@ header{
 }
 
 .container-about {
-	border:1px dashed black;
+	border:1px dashed #9b56e0;
 	padding:  30px 40px ;
 	margin-top:50px;
 }
@@ -122,6 +151,7 @@ header{
 
 .about-header {
 	position:  relative; 
+	color: #9b56e0;
 	display:  inline-block; 
 	padding:  0 15px;
 	top: -80px;
@@ -129,3 +159,32 @@ header{
 }
 
 /*popular product*/
+
+.indent-info__main {
+margin-right: 15px;
+}
+
+.indent-advantege {
+margin-right: 10px;
+}
+
+section.partners {
+	margin: -10px;
+	padding: 20px 0;
+}
+.partners-attachment {
+   padding: 30px 0;
+}
+
+.advantages-attachment {
+	padding: 40px;
+	margin-bottom: 20px;
+}
+
+.collection-info__main>li{
+	padding:  10px;
+}
+
+.collection-info__main{
+	padding:  10px;
+}
