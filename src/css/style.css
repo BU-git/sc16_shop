@@ -7,9 +7,7 @@ body{
 	margin: 0 !important;
 	padding: 15px 0 !important;
 }
-.col{
-	margin: 0 !important;
-}
+
 .nav-wrapper__navigation li{
 	display: inline-block;
 } 
