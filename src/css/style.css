@@ -2,9 +2,26 @@ body{
 	min-width: 320px !important;
 }
 
+.container_row{
+	margin: 0 !important;
+	padding: 15px 0 !important;
+}
+
 .nav-wrapper__navigation li{
 	display: inline-block;
 } 
+
+
+.nav {
+	z-index: 998;
+  position: fixed;
+  width: 100%;
+  right: 0;
+  left: 0;
+  top:0;
+  z-index: 1030;
+  display: block;
+}
 
 header{
 	box-shadow: 0 0 10px rgba(0,0,0,0.5);
@@ -39,6 +56,7 @@ header{
 	height: 634px;
 	background-image: url(../../src/images/banner.jpg);
 	background-position: top;
+	margin-top:20px;
 	background-repeat: no-repeat;
 	background-color: #dce2e5;
 }
@@ -55,10 +73,6 @@ header{
 
 .sample {
 	display: inline-block;
-}
-
-.collapse-margine{
-	margin: -20px 0;
 }
 
 .container-padding{
@@ -103,7 +117,7 @@ header{
 }
 
 .container-about-header{
-	height: 0;
+	height: 10px;
 }
 
 .about-to-constructor{
@@ -114,9 +128,9 @@ header{
 	position:  relative; 
 	color: #9b56e0;
 	display:  inline-block; 
-	padding:  0 15px;
 	top: -80px;
-	background-color:  white;
+	padding-left:  5px;
+	padding-right:  5px;
 }
 
 .indent-info__main .indent-advantege {
@@ -128,9 +142,12 @@ margin-right: 15px;
 }
 
 .collection-info__main>li{
-	padding:  10px;
+	padding:  5px;
 }
 
 .collection-info__main{
-	padding:  10px;
+	padding:  5px;
+	margin: 5px;
 }
+
+*/

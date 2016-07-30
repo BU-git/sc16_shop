@@ -75,11 +75,10 @@ ul.tabs li a:hover  {
 	border: 1px solid #c2cbd0; 
 }
 
-.canvas-basis-description {
-	padding-left: 20px;
-	padding-right: 15px;
-}
-
+ .canvas-basis-description {
+	margin-left: 20px;
+	margin-right: 15px;
+} 
 .header-indent__body{
 	margin-top: 30px;
 }
