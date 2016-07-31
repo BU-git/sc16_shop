@@ -8,25 +8,25 @@
   <link rel="stylesheet" href="build/css/main.css">
 </head>
 <body>
- <header>
+ <header id = "top">
   <div class="navbar-fixed">
     <div class="nav white">
       <div class="nav-wrapper container">
         <div class="row container_row">
-         <div class="col l3 ">
-          <a href="index.html"><img src="src/images/LOGO.png" alt=""></a> 
+         <div class="col l3 menu">
+          <a  href="#top"><img src="src/images/LOGO.png" alt=""></a> 
         </div>
         <div class="col l8 ">
          <ul id="nav-mobile" class="left hide-on-med-and-down nav-wrapper__navigation">
-           <li><a href="#popular">Популярное</a></li>
-           <li><a href="#about">O Нас</a></li>
-           <li><a href="#contacts">Контакты</a></li>
+           <li class= "menu"><a href="#popular">Популярное</a></li>
+           <li class= "menu"><a href="#about">O Нас</a></li>
+           <li class= "menu"><a href="#contacts">Контакты</a></li>
            <li><a href="constructor.html">Конструктор</a></li>
          </ul>
          <ul class="side-nav" id="mobile-demo">
-           <li><a href="#popular">Популярное</a></li>
-           <li><a href="#about">О Нас</a></li>
-           <li><a href="#contacts">Контакты</a></li>
+           <li class= "menu"><a href="#popular">Популярное</a></li>
+           <li class= "menu"><a href="#about">О Нас</a></li>
+           <li class= "menu"><a href="#contacts">Контакты</a></li>
            <li><a href="constructor.html">Конструктор</a></li>
          </ul>
        </div>
@@ -324,7 +324,13 @@
  }); 
   $('#prev-slider').click(function(){ 
    $('.slider').slider('prev');
- }); 
+ });
+ $(".menu").on("click","a", function (event) {
+        event.preventDefault();
+        var id  = $(this).attr('href'),
+            top = $(id).offset().top;
+        $('body,html').animate({scrollTop: top}, 1500);
+    }); 
 });      
 </script>
 </body>
