@@ -78,7 +78,7 @@ body{
   height: 100%;
 }
 
- .flex-item_main{
+/* .flex-item_main{
   display:  flex;
 	justify-content: space-around; 
 	align-content: stretch;
@@ -86,7 +86,7 @@ body{
   flex-direction: row;
   height: 100%;
 } 
-
+*/
  @media only screen and (max-width: 992px) {
   .flex-pupular_main{
     flex-wrap: wrap; 
@@ -94,7 +94,7 @@ body{
 }
 
  @media only screen and (max-width: 500px) {
-  .flex-item_main{
+  .flex-pupular_main{
     flex-wrap: wrap; 
   }
   .container-padding{
@@ -146,5 +146,9 @@ margin-right: 15px;
 .collection-info__main{
 	padding:  5px;
 	margin: 5px;
+}
+
+.pop-production{
+	flex: 5 5 auto;
 }
 

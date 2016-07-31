@@ -6,7 +6,7 @@
 
 // функция проверки на число
  	function checkNumberFields(e, k){
- 		var str = jQuery(e).val();
+ 		var str = $(e).val();
  		var new_str = "";
 
  		for(var i=0; i < str.length; i++){
@@ -16,11 +16,11 @@
  		if(eval(new_str) > MAXNUMBER){ new_str = MAXNUMBER; }
  		if(eval(new_str) == 0){ new_str = ""; }
 
- 		jQuery(e).val(new_str);
+ 		$(e).val(new_str);
  	}
 
 // проверка на ввод чисел с клавиатуры
-jQuery(amountId).keyup(function(event){// когда пользователь отпускает клавишу клавиатуры
+$(amountId).keyup(function(event){// когда пользователь отпускает клавишу клавиатуры
 	checkNumberFields(this, event);
 }).keypress(function(event){// когда пользователь нажимает клавишу клавиатуры и удерживает её в нажатом состоянии
 	checkNumberFields(this, event);
