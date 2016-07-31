@@ -1,20 +1,21 @@
-
 body{
 	min-width: 320px !important;
 }
-.container_row, .banner>.row{
+
+.container_row{
 	margin: 0 !important;
 	padding: 15px 0 !important;
 }
-/*.col{
-	margin: 0 !important;
-}*/
+
 .nav-wrapper__navigation li{
 	display: inline-block;
 } 
 
-header{
-	box-shadow: 0 0 10px rgba(0,0,0,0.5);
+.nav {
+	z-index: 998;
+  position: fixed;
+  width: 100%;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
 
 .nav-wrapper__navigation a{
@@ -24,18 +25,20 @@ header{
 	border-bottom:1px dashed gray;
 	color:#000;
 }
+
 .nav-wrapper__navigation a:hover{
 	border-bottom:1px dashed #2890e3;
 	color:#2890e3;
 }
 
-
 .header__cart-icon{
 	padding-top:17px;
 }
+
 .header__cart-icon a:hover {
 	color:#2890e3;
 }
+
 .button_hiden-menu{
 	color: #000;
 }
@@ -44,12 +47,16 @@ header{
 	height: 634px;
 	background-image: url(../../src/images/banner.jpg);
 	background-position: top;
+	margin-top:20px;
 	background-repeat: no-repeat;
 	background-color: #dce2e5;
 }
+
 .wrapper>h3{
 	color: #3b4449;
+	word-wrap:  nowrap;
 }
+
 .cash_delivering{
 	border: 1px dashed;
 }
@@ -58,39 +65,34 @@ header{
 	display: inline-block;
 }
 
-.collapse-margine{
-	margin: -15px 0;
-}
-
 .container-padding{
-	padding: 30px 0;
+	padding: 60px 0;
 }
 
 .flex-pupular_main{
 	display:  flex;
 	justify-content: space-around; 
-	align-content: stretch;
+	 align-items:stretch;
   flex-direction: row;
   height: 100%;
 }
 
- .flex-item_main{
-  display:  flex;
-	justify-content: space-around; 
-	align-content: stretch;
-  flex-direction: row;
-  height: 100%;
-} 
-
- @media only screen and (max-width: 992px) {
+ @media only screen and (max-width: 895px) {
   .flex-pupular_main{
     flex-wrap: wrap; 
   }
+  .pop-production{
+	width:  40%;
 }
- @media only screen and (max-width: 500px) {
-  .flex-item_main{
-    flex-wrap: wrap; 
-  }
+}
+
+ @media only screen and (max-width: 600px) {
+  .container-padding{
+	padding: 20px 0;
+}
+  .pop-production{
+	width:  auto;
+}
 }
 
 .container-about {
@@ -100,7 +102,7 @@ header{
 }
 
 .container-about-header{
-	height: 0;
+	height: 10px;
 }
 
 .about-to-constructor{
@@ -111,36 +113,47 @@ header{
 	position:  relative; 
 	color: #9b56e0;
 	display:  inline-block; 
-	padding:  0 15px;
 	top: -80px;
-	background-color:  white;
+	padding-left:  5px;
+	padding-right:  5px;
+	margin-bottom:  50px;
 }
 
-.indent-info__main {
+.about-inform{
+padding-top:10px;
+margin-top:10px;
+}
+
+.indent-info__main .indent-advantege {
 margin-right: 15px;
 }
 
-.indent-advantege {
-margin-right: 10px;
-}
-
-section.partners {
-	margin: -10px;
-	padding: 20px 0;
-}
-.partners-attachment {
-   padding: 30px 0;
-}
-
 .advantages-attachment {
-	padding: 40px;
-	margin-bottom: 20px;
+	padding: 20px 0;
 }
 
 .collection-info__main>li{
-	padding:  10px;
+	padding:  5px;
 }
 
 .collection-info__main{
-	padding:  10px;
+	padding:  5px;
+	margin: 5px;
 }
+
+.pop-production{
+display: flex;
+	flex-wrap: wrap;
+	align-items: stretch;
+	flex-direction: column;
+padding:  15px;
+}
+
+.pop-production>p{
+	flex: 5 4 auto;
+}
+
+.pop-production>a{
+   align-self:flex-start;
+}
+
