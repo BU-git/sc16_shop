@@ -10,7 +10,7 @@
 <body>
  <header>
   <div class="navbar-fixed">
-    <div class="white nav">
+    <div class="nav white">
       <div class="nav-wrapper container">
         <div class="row container_row">
          <div class="col l3 ">
@@ -18,20 +18,20 @@
         </div>
         <div class="col l8 ">
          <ul id="nav-mobile" class="left hide-on-med-and-down nav-wrapper__navigation">
-           <li><a href="#">Популярное</a></li>
-           <li><a href="#">О Нас</a></li>
-           <li><a href="#">Контакты</a></li>
+           <li><a href="#popular">Популярное</a></li>
+           <li><a href="#about">O Нас</a></li>
+           <li><a href="#contacts">Контакты</a></li>
            <li><a href="constructor.html">Конструктор</a></li>
          </ul>
          <ul class="side-nav" id="mobile-demo">
-           <li><a href="#">Популярное</a></li>
-           <li><a href="#">О Нас</a></li>
-           <li><a href="#">Контакты</a></li>
+           <li><a href="#popular">Популярное</a></li>
+           <li><a href="#about">О Нас</a></li>
+           <li><a href="#contacts">Контакты</a></li>
            <li><a href="constructor.html">Конструктор</a></li>
          </ul>
        </div>
        <div class="col l1 right">
-       <a href="#" data-activates="mobile-demo" class="button-collapse hide-on-large-only button_hiden-menu"><img src="src/images/menu.svg" alt=""></a>
+         <a href="#" data-activates="mobile-demo" class="button-collapse hide-on-large-only button_hiden-menu"><img src="src/images/menu.svg" alt=""></a>
          <a href="purchase.html"><img src="src/images/cart.svg" alt="" class="header__cart-icon"></a>
        </div>
      </div>
@@ -39,8 +39,6 @@
  </div>
 </div> 
 </header>
-      
-
 <section>
   <div class="main__banner__img valign-wrapper" >
     <div class="container">
@@ -55,11 +53,10 @@
  </div>
 </div>               
 </section>
-
-<section >
+<section>
  <div class="row advantages-attachment ">
   <div class="col s12">
-   <div class="container">
+   <div class="container ">
     <div class="flex-box light-blue-text text-darken-4">      
       <div class="collection-info__main text-darken-4 center-align">
         <h2 class="sample"><b>450</b></h2>
@@ -103,8 +100,7 @@
 </div>
 </div>
 </section>
-
-<section class="collapse-margine">
+<section>
   <div class="container container-padding">
     <div class="row"> 
       <div class="col s12"> 
@@ -112,36 +108,39 @@
          <div class= "center-align container-about-header">
           <h3 class= "about-header white">Оплата и доставка</h3>
         </div>
-            <div class="valign-wrapper">
-              <img class="indent-info__main hide-on-small-only responsive-img " src="src/images/icon_plane.png" alt="">
-              <ul class="collection-info__main">
-                <li><b>Информация о доставке</b></li>
-                <li>Заказ можно забрать на указанном Вами отделении Новой Почты при оформлении заказа.</li>
-                <li>Также доступна доставка курьером в нужное Вам место.</li>
-              </ul>
-            </div>
-         <div class="valign-wrapper">
-            <img class="indent-info__main hide-on-small-only responsive-img " src="src/images/icon_pig.png" alt="">
+        <div class="about-inform">
+          <div class="valign-wrapper">
+            <img class="indent-info__main hide-on-small-only responsive-img " src="src/images/icon_plane.png" alt="">
             <ul class="collection-info__main">
-              <li><b>Информация об оплате</b></li>
-              <li>Оплатить заказ можно через карту ПриватБанк, реквизиты будут указаны при оформлении заказа,  или наличными курьеру/на Новой Почте при получении товара.</li>
-              <li>В случае если готовый товар не соответствует сделанному Вами заказу, мы гарантируем 100% возврата денежных средств.</li>
+              <li><b>Информация о доставке</b></li>
+              <li>Заказ можно забрать на указанном Вами отделении Новой Почты при оформлении заказа.</li>
+              <li>Также доступна доставка курьером в нужное Вам место.</li>
             </ul>
           </div>
           <div class="valign-wrapper">
-            <img class="indent-info__main hide-on-small-only responsive-img" src="src/images/icon_plane.png" alt="">
+            <img class="indent-info__main hide-on-small-only responsive-img " src="src/images/icon_pig.png" alt="">
             <ul class="collection-info__main">
-              <li><b>Оформление заказа</b></li>
-              <li>Заказ можно оформить, добавив его в корзину со страниц конструктора/магазина, выбрав при этом количество, размер и цвет товара.</li>
-              <li>Если у Вас возникнут дополнительные вопросы, можете обратиться к нам по телефону +380672695536.</li>
-            </ul>
+              <li><b>Информация об оплате</b></li>
+              <li>Оплатить заказ можно через карту ПриватБанк, реквизиты будут указаны при оформлении заказа, 
+                или наличными курьеру/на Новой Почте при получении товара.</li>
+                <li>В случае если готовый товар не соответствует сделанному Вами заказу, мы гарантируем 100% возврата денежных средств.</li>
+              </ul>
+            </div>
+            <div class="valign-wrapper">
+              <img class="indent-info__main hide-on-small-only responsive-img" src="src/images/icon_plane.png" alt="">
+              <ul class="collection-info__main">
+                <li><b>Оформление заказа</b></li>
+                <li>Заказ можно оформить, добавив его в корзину со страниц конструктора/магазина, выбрав при этом количество, размер и цвет товара.</li>
+                <li>Если у Вас возникнут дополнительные вопросы, можете обратиться к нам по телефону +380672695536.</li>
+              </ul>
+            </div>
           </div>
+        </div>
       </div>
     </div>
   </div>
-  </div>
 </section>
-<section class="light-blue darken-4 collapse-margine">
+<section id="popular" class="light-blue darken-4">
   <div class="container container-padding">
     <div class="row">
       <div class="col s12">
@@ -290,10 +289,10 @@
    </div>
  </div>
 </section>
-<section class="collapse-margine">
+<section id = "about" class="collapse-margine">
   <div class="container container-padding">
     <div class="row"> 
-      <div class="col s12"> 
+      <div  class="col s12"> 
         <div class="container-about">
          <div class= "center-align container-about-header">
           <h3 class= "about-header white">О нас</h3>
@@ -304,7 +303,7 @@
         </div>
       </div>
     </div>
-    <div class="col s12"> 
+    <div id = "contacts" class="col s12"> 
       <div class="container-about">
        <div class= "center-align container-about-header">
         <h3 class= "about-header white">Контакты</h3>

@@ -11,20 +11,11 @@ body{
 	display: inline-block;
 } 
 
-
 .nav {
 	z-index: 998;
   position: fixed;
   width: 100%;
-  right: 0;
-  left: 0;
-  top:0;
-  z-index: 1030;
-  display: block;
-}
-
-header{
-	box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
 
 .nav-wrapper__navigation a{
@@ -66,7 +57,6 @@ header{
 	word-wrap:  nowrap;
 }
 
-
 .cash_delivering{
 	border: 1px dashed;
 }
@@ -76,7 +66,7 @@ header{
 }
 
 .container-padding{
-	padding: 30px 0;
+	padding: 60px 0;
 }
 
 .flex-pupular_main{
@@ -97,7 +87,6 @@ header{
   height: 100%;
 } 
 
-
  @media only screen and (max-width: 992px) {
   .flex-pupular_main{
     flex-wrap: wrap; 
@@ -108,6 +97,9 @@ header{
   .flex-item_main{
     flex-wrap: wrap; 
   }
+  .container-padding{
+	padding: 20px 0;
+}
 }
 
 .container-about {
@@ -131,6 +123,12 @@ header{
 	top: -80px;
 	padding-left:  5px;
 	padding-right:  5px;
+	margin-bottom:  50px;
+}
+
+.about-inform{
+padding-top:10px;
+margin-top:10px;
 }
 
 .indent-info__main .indent-advantege {
@@ -150,4 +148,3 @@ margin-right: 15px;
 	margin: 5px;
 }
 
-*/
