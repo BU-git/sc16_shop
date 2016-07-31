@@ -47,4 +47,6 @@ $('#decrease_amount').click(function(){
 		$(amountId).val(+$(amountId).val()-1);
 	}
 });
+
+
 });
