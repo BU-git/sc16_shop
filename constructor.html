@@ -129,7 +129,19 @@
 							</div> 								
 						</div>	
 					</div>
-					<div id="photo" class="col l12 m12"> Photo</div>
+					<div id="photo" class="col l12 m12"> 
+						<form enctype="multipart/form-data" method="post">
+   							<p><b>Загрузите изображение в формате jpg, png, gif</b></p>
+   							<p><input type="file" name="img" accept="image/*"></p>
+   							<button class="btn waves-effect waves-light pink accent-3" type="submit" name="action">Загрузить картинку</button>
+   							<p>Маленькое фото нельзя напечатать  в большом размере.</p>
+   							<p>Чтобы нанести фото на всю ширину области печати нужен размер не менее 1000x1000 пикселей, желательно в формате PNG с прозрачным фоном.</p>
+   							<p>Использование изображения не должно нарушать авторских прав.</p>
+   						</form> 
+   						 
+   						
+  						<!-- <button id="upload-photo"></button> -->
+					</div>
 					<div id="clipart" class="col l12 m12">Clipart</div>
 				</div>
 			</div>
