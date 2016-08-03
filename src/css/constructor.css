@@ -87,7 +87,7 @@ ul.tabs li a:hover  {
 }
 
 canvas {
-	border: 1px solid red;
+	/*border: 1px solid red;*/
 	position: absolute;
 	top: 70px;
 	left: 135px;

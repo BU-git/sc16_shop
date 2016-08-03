@@ -132,11 +132,13 @@
 					<div id="photo" class="col l12 m12 s12"> 
 						<form enctype="multipart/form-data" method="post">
    							<p><b>Загрузите изображение в формате jpg, png, gif</b></p>
-   							<p><input type="file" name="img" accept="image/*" id="inp-photo"></p>
-   							<button class="btn waves-effect waves-light pink accent-3" type="submit" name="action" id="upload-photo">Загрузить картинку</button>
+   							<p><input type="file" name="img" accept="image/*" id="design-upload"></p>
+   							<a href="#" class="waves-effect waves-light btn pink accent-3" id="upload-button">Загрузить картинку</a>
+   							<a href="#" class="waves-effect waves-light btn pink accent-3" id="clear-button">Очистить</a>
    							<p>Маленькое фото нельзя напечатать  в большом размере.</p>
    							<p>Чтобы нанести фото на всю ширину области печати нужен размер не менее 1000x1000 пикселей, желательно в формате PNG с прозрачным фоном.</p>
    							<p>Использование изображения не должно нарушать авторских прав.</p>
+
    						</form> 
    						 
    						
@@ -157,7 +159,7 @@
 								<div class="row">
 									<div class="col l8 m12 s12">
 										<div class="center-align canvas_shirt">
-											<canvas width="150" height="150" class="main_canvas"></canvas>
+											<canvas width="150" height="150" class="main_canvas" id="canvas_image"></canvas>
 											<img class="responsive-img" src="src/images/big_t-shirt.png" alt="t-shirt">
 										</div>
 									</div>
@@ -228,5 +230,7 @@
 				$(".button-collapse").sideNav();
 			});
 		</script>
+		<script type="text/javascript" src="src/js/canvas.js"></script>
+
 	</body>
 	</html>
