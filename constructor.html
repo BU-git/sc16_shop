@@ -10,7 +10,7 @@
 <body>
 	<header>
 		<div class="navbar-fixed">
-			<div class="nav white">
+			<div id = "menu" class="nav white">
 				<div class="nav-wrapper container">
 					<div class="row container_row">
 						<div class="col l3 ">
@@ -18,10 +18,10 @@
 						</div>
 						<div class="col l8 ">
 							<ul id="nav-mobile" class="left hide-on-med-and-down nav-wrapper__navigation">
-								<li><a href="index.html">Главная</a></li>
+								<li><a  href="index.html#popular">Главная</a></li>
 							</ul>
 							<ul class="side-nav" id="mobile-demo">
-								<li><a href="index.html">Главная</a></li>
+								<li ><a href="index.html#popular">Главная</a></li>
 							</ul>
 						</div>
 						<div class="col l1 right">
@@ -33,7 +33,7 @@
 			</div>
 		</div> 
 	</header>
-	<section class="header container">
+	<section  class="header container">
 		<h3 class="center-align header-indent__body">КОНСТРУКТОР</h3>
 		<div class="row">
 			<div class="col l5 m12 s12">
@@ -51,11 +51,11 @@
 								<div class="collapsible-header">МУЖСКАЯ ОДЕЖДА</div>
 								<div class="collapsible-body">
 									<ul class=" basis mens-basis">
-										<li><img   class="basis-hover product" src="src/images/basis_t-shirt.png" alt="basis-t-shirt"></li>
-										<li><img class="basis-hover product" src="src/images/men-shirt.png" alt="men-shirt"></li>
-										<li><img class="basis-hover product" src="src/images/sweatshirt.png" alt="sweatshirt"></li>
-										<li><img class="basis-hover product" src="src/images/hoodie.png" alt="hoodie"></li>
-										<li><img class="basis-hover product" src="src/images/cap.png" alt="cap"></li>
+										<li class = "product"><img   class="basis-hover " src="src/images/basis_t-shirt.png" alt="basis-t-shirt"></li>
+										<li class = "product"><img class="basis-hover " src="src/images/men-shirt.png" alt="men-shirt"></li>
+										<li class = "product"><img class="basis-hover " src="src/images/sweatshirt.png" alt="sweatshirt"></li>
+										<li class = "product"><img class="basis-hover " src="src/images/hoodie.png" alt="hoodie"></li>
+										<li class = "product"><img class="basis-hover " src="src/images/cap.png" alt="cap"></li>
 									</ul>
 								</div>
 							</li>
@@ -135,7 +135,7 @@
 			</div>
 			<div class="col l7  m12 s12">
 				<div class="row">
-					<div class="col s12 m12 l11 offset-l">
+					<div class="col s12 m12 l12">
 							<div class="canvas-basis">
 								<div class="row">
 									<div class="col s12">
@@ -143,13 +143,13 @@
 									</div>
 								</div>
 								<div class="row">
-									<div class="col l8 m12 s12">
+									<div class="col l9 m12 s12">
 										<div class="center-align canvas_shirt">
-											<canvas id = "mainCanvas" width="250" height="250" ></canvas>
+											<canvas id = "mainCanvas"  ></canvas>
 										</div>
 
 									</div>
-									<div class="col l4 m12 s12">
+									<div class="col l3 m12 s12">
 										<div class="row">
 											<div class="col s6 m6 l12">
 												<p class="center-align"> Вид спереди</p>
@@ -173,7 +173,7 @@
 										<li><a href=""><img src="src/images/navy.png" alt="basis-t-shirt"></a></li>
 									</ul>
 								</div>
-								<div class="row">
+								<div  class="row">
 									<p class="canvas-basis-description">Размер:</p>
 									<ul class="choice-size basis canvas-basis-description ">
 										<li><a href="">S</a></li>
@@ -211,7 +211,9 @@
 		<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 		<script type="text/javascript" src="build/js/main.js"></script>
 		<script src="src\canvas.js">	</script>
+
 		<script>
+
 			$(document).ready(function(){
 				$('ul.tabs').tabs();
 				$(".button-collapse").sideNav();

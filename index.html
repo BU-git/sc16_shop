@@ -10,7 +10,7 @@
 <body>
  <header id = "top">
   <div class="navbar-fixed">
-    <div class="nav white">
+    <div id = "menu"  class="nav white">
       <div class="nav-wrapper container">
         <div class="row container_row">
          <div class="col l3 menu">
@@ -18,15 +18,15 @@
         </div>
         <div  class="col l8">
          <ul id="nav-mobile" class="left hide-on-med-and-down nav-wrapper__navigation">
-           <li class = "menu"><a  href="#popular">Популярное</a></li>
-           <li class = "menu"><a  href="#about">O Нас</a></li>
-           <li class = "menu"><a href="#contacts">Контакты</a></li>
+           <li ><a  href="#popular">Популярное</a></li>
+           <li ><a  href="#about">O Нас</a></li>
+           <li ><a href="#contacts">Контакты</a></li>
            <li><a href="constructor.html">Конструктор</a></li>
          </ul>
          <ul class="side-nav " id="mobile-demo">
-           <li><a class = "menu" href="#popular">Популярное</a></li>
-           <li><a class = "menu" href="#about">О Нас</a></li>
-           <li><a class = "menu" href="#contacts">Контакты</a></li>
+           <li><a  href="#popular">Популярное</a></li>
+           <li><a  href="#about">О Нас</a></li>
+           <li><a href="#contacts">Контакты</a></li>
            <li><a href="constructor.html">Конструктор</a></li>
          </ul>
        </div>
@@ -314,7 +314,7 @@
 <script type="text/javascript" src="build/js/main.js"></script>
 <script>
  $(document).ready(function(){
-    $(".menu").on("click","a", function (event) {
+    $("#menu").on("click","a[href*=#]:not([href=#])", function (event) {
         event.preventDefault();
         var id  = $(this).attr('href'),
             top = $(id).offset().top;

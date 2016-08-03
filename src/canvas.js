@@ -1,41 +1,76 @@
+var baseCanvas;
+var context;
+var baseImage;
+var clipart
+
+
 $(document).ready(function(){
-  var mainCanvas = document.getElementById("mainCanvas");
-  var context = mainCanvas.getContext('2d');
-  var img = new Image(); 
-  img.src = "src/images/Product.png";
-  img.onload = function() {    // Событие onLoad, ждём момента пока загрузится изображение
-        context.drawImage(img, 0, 0);  // Рисуем изображение от точки с координатами 0, 0
-      }
+  baseCanvas = document.getElementById("mainCanvas");
+  
+  context = mainCanvas.getContext('2d');
+  baseImage = new Image();
+
+  baseImage.src = "src/images/comments-1.png";
+  baseImage.onload = function() {
+  doSomethingUseful();
+   baseImage.src = "src/images/green.png";
+ context.drawImage(baseImage, 50, 50, 150, 150); 
+ }
 
 
+ $(window).resize(doSomethingUseful);
 
-      $('.product').click(function (event) {
-      	var element= event;
-      	var foto = element.toElement.src;
-      	fillBackgroundColor();
-        drawImageInCanvas(foto);
-      })
+ $('#basis img').click(function () {
+   fillBackgroundColor();
+   baseImage.src = (this).src;
+   drawImageInCanvas();
+ })
 
 
-function drawImageInCanvas(argument) {
-	 var mainCanvas = document.getElementById("mainCanvas");
-  var context = mainCanvas.getContext('2d');
-  var img = new Image(); 
-  img.src = argument;
-  img.width = mainCanvas.width;
-  img.height = mainCanvas.height;
-  img.onload = function() {    // Событие onLoad, ждём момента пока загрузится изображение
-        context.drawImage(img, 0, 0);  // Рисуем изображение от точки с координатами 0, 0
-      }
+// перерисовує картинку в canvas
+function drawImageInCanvas() {
+  sizeBaseImg();
+  context.drawImage(baseImage, positionBaseImage(baseImage).x, positionBaseImage(baseImage).y, baseImage.width, baseImage.height); 
 }
 
+// визначаємо позицію в canvas
+function positionBaseImage(img) {
+  var point = new Object();
+  point.x = (baseCanvas.width - img.width)/2;
+  point.y = (baseCanvas.height - img.height)/2;
+  return point;
+}
+
+// Очистка canvas
 function fillBackgroundColor() {
-	 var mainCanvas = document.getElementById("mainCanvas");
-  var context = mainCanvas.getContext('2d');
-  context.fillStyle = "white";
-  context.fillRect(0, 0 , 250, 250);
+  context.fillStyle = "red";
+  context.fillRect(0, 0 , baseCanvas.width, baseCanvas.height);
+}
+
+// визначення ширини і висоти картинки
+function sizeBaseImg(){
+  var ratioSide  = baseImage.width/baseImage.height;
+  if (ratioSide < 1) {
+    baseImage.width  = ratioSide*mainCanvas.width;
+    baseImage.height = mainCanvas.height;
+  } else if(ratioSide >=1){
+    baseImage.width = mainCanvas.width;
+    baseImage.height = ratioSide*mainCanvas.height;
+  }
+}
+
+// зміна широти і висоти canvas при зміні вікна браузера
+function doSomethingUseful() {
+ if($(this)[0].innerWidth > 992){
+  baseCanvas.width = 0.3*$(this)[0].innerWidth;
+  baseCanvas.height = baseCanvas.width;
+  drawImageInCanvas();
+} else if ($(this)[0].innerWidth <= 992){
+  baseCanvas.width = 0.8*$(this)[0].innerWidth;
+  baseCanvas.height = baseCanvas.width;
+  drawImageInCanvas();
+}    
 }
 
 
-
-    });
+});

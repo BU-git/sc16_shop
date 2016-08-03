@@ -58,7 +58,7 @@ ul.tabs li a:hover  {
 .view-basis-canvas {
 	border: 1px solid white;
 	border-radius: 3px;
-	padding: 5px;
+	/*padding: 5px;*/
 }
 
 .view-basis-canvas:hover {
