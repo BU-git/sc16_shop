@@ -89,7 +89,6 @@ function updateWindow() {
   baseCanvas.height = baseCanvas.width;
   drawImageInCanvas();
   setTime();
- 
 }    
 }
 
@@ -107,8 +106,8 @@ function updateCanvas() {
 
 function  setTime() {
  // drawImageInCanvas();
- setTimeout(updateCanvas , 1050);
- // alert('hello')
+ setTimeout(updateCanvas , 1000);
+ // alert('hello');
 }
 
 // фунція вибору кольору
