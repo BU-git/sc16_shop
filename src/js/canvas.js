@@ -3,16 +3,24 @@
 var baseCanvas;
 var context;
 var baseImgItem = 'tshirts';
-var baseImage;
-var color = 'white';
+// var baseImage;
+// var color = 'white';
 var viewSide;
+
+var productImg = {};
+
+}
 
 
 
 $(document).ready(function(){
   baseCanvas = document.getElementById('mainCanvas');
   context = baseCanvas.getContext('2d');
-  baseImage = new Image();
+
+  productImg.baseImage = new Image();
+  productImg.color = 'white';
+
+
   loadProduct('tshirts');
   baseImage.onload = function() {
   updateWindow();
@@ -23,12 +31,12 @@ $(document).ready(function(){
 
 function loadProduct(baseImgItem) {
    viewSide = clothe[baseImgItem].frontImg;
-   color= "white";
+   productImg.color = "white";
    changeAmount();
-   // $('#frontView img').attr('src',clothe[baseImgItem].frontImg[color]);
-   //  $('#backView img').attr('src',clothe[baseImgItem].backImg[color]);
+   // $('#frontView img').attr('src',clothe[baseImgItem].frontImg[productImg.color ]);
+   //  $('#backView img').attr('src',clothe[baseImgItem].backImg[productImg.color ]);
 
-   baseImage.src = viewSide[color];
+   productImg.baseImage.src = viewSide[productImg.color];
 }
 // подія вибору основи
  $('#basis .basis>li').click(function () {
@@ -47,7 +55,7 @@ $('#backView').on('click', toBackView);
 // перерисовує картинку в canvas
 function drawImageInCanvas() {
   sizeBaseImg();
-  context.drawImage(baseImage, positionBaseImage(baseImage).x, positionBaseImage(baseImage).y, baseImage.width, baseImage.height); 
+  context.drawImage(productImg.baseImage, positionBaseImage(productImg.baseImage).x, positionBaseImage(productImg.baseImage).y, productImg.baseImage.width, productImg.baseImage.height); 
 }
 
 // визначаємо позицію в canvas
@@ -66,13 +74,13 @@ function fillBackgroundColor() {
 
 // визначення ширини і висоти картинки
 function sizeBaseImg(){
-  var ratioSide  = baseImage.width/baseImage.height;
+  var ratioSide  = productImg.baseImage.width/productImg.baseImage.height;
   if (ratioSide < 1) {
-    baseImage.width  = ratioSide*baseCanvas.width;
-    baseImage.height = baseCanvas.height;
+    productImg.baseImage.width  = ratioSide*baseCanvas.width;
+    productImg.baseImage.height = baseCanvas.height;
   } else if(ratioSide >=1){
-    baseImage.width = baseCanvas.width;
-    baseImage.height = ratioSide*baseCanvas.height;
+    productImg.baseImage.width = baseCanvas.width;
+    productImg.baseImage.height = ratioSide*baseCanvas.height;
   }
 }
 
@@ -113,19 +121,19 @@ function  setTime() {
 // фунція вибору кольору
 function changeColor(){
   color = (this).id;
-  baseImage.src = viewSide[color];
+  productImg.baseImage.src = viewSide[color];
   drawImageInCanvas();
 }
 
 function toFrontView() {
   viewSide = clothe[baseImgItem].frontImg;
-  baseImage.src = viewSide[color];
+  productImg.baseImage.src = viewSide[color];
   drawImageInCanvas();
 }
 
 function toBackView() {
   viewSide = clothe[baseImgItem].backImg;
-  baseImage.src = viewSide[color];
+  productImg.baseImage.src = viewSide[color];
   drawImageInCanvas();
 }
 
