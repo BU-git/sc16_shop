@@ -85,7 +85,11 @@ ul.tabs li a:hover  {
 	padding-top:10px;
 	padding-bottom: 10px
 }
+/*canvas{
+	border:1px dashed black;
+}*/
 
-canvas{
-	border: 1px solid black;
-}
+.canvas_shirt {
+	position: relative;
+	}
+

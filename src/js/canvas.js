@@ -1,61 +1,82 @@
 
-// ініціалізація змінних
+// обявлення змінних
 var baseCanvas;
 var context;
-var baseImgItem = 'tshirts';
-// var baseImage;
-// var color = 'white';
+var baseImgItem;
 var viewSide;
-
-var productImg = {};
-
-}
+var baseProduct;
 
 
 
 $(document).ready(function(){
+  if(document.getElementById('mainCanvas') && document.getElementById('mainCanvas').getContext){
+
   baseCanvas = document.getElementById('mainCanvas');
   context = baseCanvas.getContext('2d');
+  baseImgItem = 'tshirts';
+  baseProduct = new Object();
+  baseProduct.baseImage = new Image();
+  baseProduct.baseImage.crossOrigin = 'anonymous';
 
-  productImg.baseImage = new Image();
-  productImg.color = 'white';
-
-
-  loadProduct('tshirts');
-  baseImage.onload = function() {
+  loadProduct();
+  baseProduct.baseImage.onload = function() {
   updateWindow();
  }
 
 // подія зміни вікна браузера
  $(window).on('resize' , updateWindow);
 
-function loadProduct(baseImgItem) {
-   viewSide = clothe[baseImgItem].frontImg;
-   productImg.color = "white";
-   changeAmount();
-   // $('#frontView img').attr('src',clothe[baseImgItem].frontImg[productImg.color ]);
-   //  $('#backView img').attr('src',clothe[baseImgItem].backImg[productImg.color ]);
-
-   productImg.baseImage.src = viewSide[productImg.color];
-}
 // подія вибору основи
  $('#basis .basis>li').click(function () {
    fillBackgroundColor();
    baseImgItem = (this).id;
-    loadProduct(baseImgItem);
+   loadProduct();
    drawImageInCanvas();
  })
 
+// завантаження фото
+$('#upload-button').click(function(){
+        $('#design-upload').click();
+        return false;
+});
 // подія вибору кольору
 $('#color li').on('click', changeColor);
 
 $('#frontView').on('click', toFrontView);
 $('#backView').on('click', toBackView);
 
+
+// вибір продукту
+function loadProduct() {
+   viewSide = clothe[baseImgItem].frontImg;
+   baseProduct.color= "white";
+   baseProduct.price  = clothe[baseImgItem].price;
+   baseProduct.name = clothe[baseImgItem].productName;
+   baseProduct.size  = "S";
+   baseProduct.manufacturer  = clothe[baseImgItem].manufacturer;
+   baseProduct.about  = clothe[baseImgItem].about;
+   baseProduct.service  = clothe[baseImgItem].service;
+   changePrice();
+   changeProductName();
+
+// if(baseImgItem == "peakedcap")
+// {
+//    $('#viewCollapseProduct').css("display" , "none");
+// }
+// else{
+//    $('#viewCollapseProduct').css("display" , "block");
+//    $('#frontView img').attr('src',clothe[baseImgItem].frontImg[baseProduct.color]);
+//   $('#backView img').attr('src',clothe[baseImgItem].backImg[baseProduct.color]);
+// }
+
+  
+   baseProduct.baseImage.src = viewSide[baseProduct.color];
+}
+
 // перерисовує картинку в canvas
 function drawImageInCanvas() {
   sizeBaseImg();
-  context.drawImage(productImg.baseImage, positionBaseImage(productImg.baseImage).x, positionBaseImage(productImg.baseImage).y, productImg.baseImage.width, productImg.baseImage.height); 
+  context.drawImage(baseProduct.baseImage, positionBaseImage(baseProduct.baseImage).x, positionBaseImage(baseProduct.baseImage).y, baseProduct.baseImage.width, baseProduct.baseImage.height); 
 }
 
 // визначаємо позицію в canvas
@@ -74,28 +95,37 @@ function fillBackgroundColor() {
 
 // визначення ширини і висоти картинки
 function sizeBaseImg(){
-  var ratioSide  = productImg.baseImage.width/productImg.baseImage.height;
+  var ratioSide  = baseProduct.baseImage.width/baseProduct.baseImage.height;
   if (ratioSide < 1) {
-    productImg.baseImage.width  = ratioSide*baseCanvas.width;
-    productImg.baseImage.height = baseCanvas.height;
+    baseProduct.baseImage.width  = ratioSide*baseCanvas.width;
+    baseProduct.baseImage.height = baseCanvas.height;
   } else if(ratioSide >=1){
-    productImg.baseImage.width = baseCanvas.width;
-    productImg.baseImage.height = ratioSide*baseCanvas.height;
+    baseProduct.baseImage.width = baseCanvas.width;
+    baseProduct.baseImage.height = ratioSide*baseCanvas.height;
   }
 }
-
 
 // зміна широти і висоти canvas при зміні вікна браузера
 function updateWindow() {
  if($(this)[0].innerWidth > 992){
   baseCanvas.width = 0.29*$(this)[0].innerWidth;
   baseCanvas.height = baseCanvas.width;
+  canvas_image.width = 0.32*baseCanvas.width;
+  canvas_image.height = 0.32*baseCanvas.width;
+ canvas_image.style.top  = 0.22*baseCanvas.width +"px";
+  canvas_image.style.left  = 0.34*baseCanvas.width+"px";
   drawImageInCanvas();
+  resizeImage(labelImg);
   setTime()
 } else if ($(this)[0].innerWidth <= 992){
   baseCanvas.width = 0.75*$(this)[0].innerWidth;
   baseCanvas.height = baseCanvas.width;
+  canvas_image.width = 0.32*baseCanvas.width;
+  canvas_image.height = 0.32*baseCanvas.width;
+ canvas_image.style.top  = 0.22*baseCanvas.width +"px";
+  canvas_image.style.left  = 0.33*baseCanvas.width+"px";
   drawImageInCanvas();
+  resizeImage(labelImg);
   setTime();
 }    
 }
@@ -104,110 +134,131 @@ function updateCanvas() {
  if($(window)[0].innerWidth > 992){
   baseCanvas.width = 0.29*$(window)[0].innerWidth;
   baseCanvas.height = baseCanvas.width;
+ canvas_image.style.top  = 0.22*baseCanvas.width +"px";
+  canvas_image.style.left  = 0.34*baseCanvas.width+"px";
   drawImageInCanvas();
+  resizeImage(labelImg);
 } else if ($(window)[0].innerWidth <= 992){
   baseCanvas.width = 0.75*$(window)[0].innerWidth;
   baseCanvas.height = baseCanvas.width;
+  canvas_image.style.top  = 0.22*baseCanvas.width +"px";
+  canvas_image.style.left  = 0.33*baseCanvas.width+"px";
   drawImageInCanvas();
+  resizeImage(labelImg);
 }    
 }
 
 function  setTime() {
- // drawImageInCanvas();
  setTimeout(updateCanvas , 1000);
- // alert('hello');
 }
 
 // фунція вибору кольору
 function changeColor(){
-  color = (this).id;
-  productImg.baseImage.src = viewSide[color];
+  baseProduct.color = (this).id;
+  baseProduct.baseImage.src = viewSide[baseProduct.color];
   drawImageInCanvas();
 }
 
 function toFrontView() {
   viewSide = clothe[baseImgItem].frontImg;
-  productImg.baseImage.src = viewSide[color];
+  baseProduct.baseImage.src = viewSide[baseProduct.color];
   drawImageInCanvas();
 }
 
 function toBackView() {
   viewSide = clothe[baseImgItem].backImg;
-  productImg.baseImage.src = viewSide[color];
+  baseProduct.baseImage.src = viewSide[baseProduct.color];
   drawImageInCanvas();
 }
 
-function changeAmount() {
-  $('#amount').html(clothe[baseImgItem].amount);
+function changePrice() {
+  $('#price').html(baseProduct.price + ' ' + "грн");
+}
+function changeProductName() {
+  // var d = baseProduct.name;
+  $('.productName').html(baseProduct.name);
 }
 
-});
+//upload image
 
-var clothe = {
-  'tshirts': {
-      'productName': "Мужская футболка",
-      'frontImg':{
-      'white': 'src/images/m_tshirt_f_w.jpg',
-      'red': 'src/images/m_tshirt_f_r.jpg',
-      'green': 'src/images/m_tshirt_f_green.jpg',
-      'blue': 'src/images/m_tshirt_f_blue.jpg',
-      'black': 'src/images/m_tshirt_f_b.jpg',
-       },
-      'backImg':{
-      'white': 'src/images/m_tshirt_b_w.jpg',
-      'red': 'src/images/m_tshirt_b_r.jpg',
-      'green': 'src/images/m_tshirt_b_greenjpg.jpg',
-      'blue': 'src/images/m_tshirt_b_blue.jpg',
-      'black': 'src/images/m_tshirt_b_b.jpg',
-       },
-      'color': ['white', 'red', 'green', 'blue', 'black'],
-      'manufacturer': 'Stedman (Бельгия)',
-      'about': 'Футболка изготовлена из 100% хлопка, не имеет боковых швов, хорошо сидит по фигуре. Изображение наносится специальной флекс-пленкой Premium качества. Благодаря использованию высококачественных материалов, нанесенное изобрежение не отрывается, не трескается, не выгорает и не меняет цвет даже спустя 100 стирок!',
-      'service': 'Не требует особенного ухода! Стирать при температуре не выше 40С. Этого достаточно для того, что бы футболка радовала Вас долгие годы!',
-      'amount': 420, 
-      'size': ['S', 'M', 'L', 'XL', 'XXL']
-  },
-    'jumper': {
-      'productName': "Реглан мужской",
-      'frontImg':{
-      'white': 'src/images/m_jumper_f_white.jpg',
-      'red': 'src/images/m_jumper_f_red.jpg',
-      'blue': 'src/images/m_jumper_f_blue.jpg',
-      'black': 'src/images/m_jumper_f_gray.jpg',
-       },
-      'backImg':{
-      'white': 'src/images/m_jumper_b_white.jpg',
-      'red': 'src/images/m_jumper_b_red.jpg',
-      'blue': 'src/images/m_jumper_b_blue.jpg',
-      'black': 'src/images/m_jumper_b_gray.jpg',
-       },
-      'color': ['white', 'red', 'blue', 'black'],
-      'manufacturer': 'Stedman (Бельгия)',
-      'about': 'Футболка изготовлена из 100% хлопка, не имеет боковых швов, хорошо сидит по фигуре. Изображение наносится специальной флекс-пленкой Premium качества. Благодаря использованию высококачественных материалов, нанесенное изобрежение не отрывается, не трескается, не выгорает и не меняет цвет даже спустя 100 стирок!',
-      'service': 'Не требует особенного ухода! Стирать при температуре не выше 40С. Этого достаточно для того, что бы футболка радовала Вас долгие годы!',
-      'amount': 600, 
-      'size': ['S', 'M', 'L', 'XL', 'XXL']
-  },
-     'peakedcap': {
-      'productName': "Реглан мужской",
-      'frontImg':{
-      'white': 'src/images/cap_white.jpg',
-      'red': 'src/images/cap_red.jpg',
-      'blue': 'src/images/cap_blue.jpg',
-      'black': 'src/images/cap_black.jpg',
-       },
-      'backImg':{
-      'white': 'src/images/cap_white.jpg',
-      'red': 'src/images/cap_red.jpg',
-      'blue': 'src/images/cap_blue.jpg',
-      'black': 'src/images/cap_black.jpg',
-       },
-      'color': ['white', 'red', 'blue', 'black'],
-      'manufacturer': 'Stedman (Бельгия)',
-      'about': 'Футболка изготовлена из 100% хлопка, не имеет боковых швов, хорошо сидит по фигуре. Изображение наносится специальной флекс-пленкой Premium качества. Благодаря использованию высококачественных материалов, нанесенное изобрежение не отрывается, не трескается, не выгорает и не меняет цвет даже спустя 100 стирок!',
-      'service': 'Не требует особенного ухода! Стирать при температуре не выше 40С. Этого достаточно для того, что бы футболка радовала Вас долгие годы!',
-      'amount': 240, 
-      'size': ['S', 'M', 'L', 'XL', 'XXL']
-  },
+//upload image
+var canvas_image = document.getElementById("canvas_image");
+var ctx = canvas_image.getContext('2d')
+var labelImg;
+document.getElementById('design-upload').onchange = function (e) {
+  if(window.FileReader) {
+    var reader = new FileReader();
+    reader.readAsDataURL(e.target.files[0]); 
+    reader.onload = function (e) {
+       labelImg = new Image;
+      labelImg.src = e.target.result;
+      labelImg.onload = function() {
+        resizeImage(labelImg);           
+            
+          };                         
+      };
+    }
+  else {
+    alert('FileReader API is not supported in your browser, please use Firefox, Safari, Chrome or IE10!')
+  }
+  
+};
+
+$('#clear-button').on('click', canvasClear);
+function canvasClear () {
+  ctx.clearRect(0, 0, canvas_image.width, canvas_image.height);
+} 
+
+function resizeImage(img) {
+  if(img){
+  var maxWidth = canvas_image.width ; // Max width for the image
+               var maxHeight = canvas_image.height;    // Max height for the image
+               var ratio = 0;  // Used for aspect ratio
+               var image_width = img.width;    // Current image width
+               var image_height = img.height;
+                 if(image_width > maxWidth){
+                   ratio = maxWidth / image_width;   // get ratio for scaling image
+                   $(img).css("width", maxWidth); // Set new width
+                   $(img).css("height", image_height * ratio);  // Scale height based on ratio
+                   image_height = image_height * ratio;    // Reset height to match scaled image
+                   image_width = image_width * ratio;    // Reset width to match scaled image
+                   ctx.drawImage(img, 0, 0, image_width/2, image_width/2);
+                    
+                   }
+               if(image_height > maxHeight){
+                   ratio = maxHeight / image_height; // get ratio for scaling image
+                   $(img).css("height", maxHeight);   // Set new height
+                   $(img).css("width", image_width * ratio);    // Scale width based on ratio
+                   image_width = image_width * ratio;    // Reset width to match scaled image
+                   image_height = image_height * ratio;    // Reset height to match scaled image
+                   ctx.drawImage(img, 0, 0, image_width/2, image_width/2);
+                   }    
+                 }
 }
+
+$('#order').on("click", orderProduct);
+
+function  orderProduct() {
+
+ // var data = ctx.getImageData(0,0,canvas_image.width,canvas_image.height);
+ // context.putImageData(data, )
+
+ var data1 = baseCanvas.toDataURL('image/jpeg');
+console.log(data1);
+ 
+var order= new Object();
+
+      // order.printImg = labelImg.src;
+       order.name = baseProduct.name;
+      order.price = baseProduct.price;
+      order.color = baseProduct.color;
+      order.size = baseProduct.size;
+       localStorage.setItem('Ordered', JSON.stringify(order));
+
+   
+}
+
+}});
+
+
 
