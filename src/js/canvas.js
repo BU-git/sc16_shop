@@ -16,7 +16,7 @@ $(document).ready(function(){
   baseImgItem = 'tshirts';
   baseProduct = new Object();
   baseProduct.baseImage = new Image();
-  baseProduct.baseImage.crossOrigin = 'anonymous';
+  // baseProduct.baseImage.crossOrigin = 'anonymous';
 
   loadProduct();
   baseProduct.baseImage.onload = function() {
@@ -59,15 +59,15 @@ function loadProduct() {
    changePrice();
    changeProductName();
 
-// if(baseImgItem == "peakedcap")
-// {
-//    $('#viewCollapseProduct').css("display" , "none");
-// }
-// else{
-//    $('#viewCollapseProduct').css("display" , "block");
-//    $('#frontView img').attr('src',clothe[baseImgItem].frontImg[baseProduct.color]);
-//   $('#backView img').attr('src',clothe[baseImgItem].backImg[baseProduct.color]);
-// }
+if(baseImgItem == "peakedcap")
+{
+   $('#viewCollapseProduct').css("display" , "none");
+}
+else{
+   $('#viewCollapseProduct').css("display" , "block");
+   $('#frontView img').attr('src',clothe[baseImgItem].frontImg[baseProduct.color]);
+  $('#backView img').attr('src',clothe[baseImgItem].backImg[baseProduct.color]);
+}
 
   
    baseProduct.baseImage.src = viewSide[baseProduct.color];
@@ -134,8 +134,10 @@ function updateCanvas() {
  if($(window)[0].innerWidth > 992){
   baseCanvas.width = 0.29*$(window)[0].innerWidth;
   baseCanvas.height = baseCanvas.width;
- canvas_image.style.top  = 0.22*baseCanvas.width +"px";
-  canvas_image.style.left  = 0.34*baseCanvas.width+"px";
+  canvas_image.style.top  = 0.22*baseCanvas.width +"px";
+  canvas_image.style.left  = 0.33*baseCanvas.width+"px";
+   canvas_image.width = 0.32*baseCanvas.width;
+  canvas_image.height = 0.32*baseCanvas.width;
   drawImageInCanvas();
   resizeImage(labelImg);
 } else if ($(window)[0].innerWidth <= 992){
@@ -143,6 +145,8 @@ function updateCanvas() {
   baseCanvas.height = baseCanvas.width;
   canvas_image.style.top  = 0.22*baseCanvas.width +"px";
   canvas_image.style.left  = 0.33*baseCanvas.width+"px";
+  canvas_image.width = 0.32*baseCanvas.width;
+  canvas_image.height = 0.32*baseCanvas.width;
   drawImageInCanvas();
   resizeImage(labelImg);
 }    
@@ -222,7 +226,7 @@ function resizeImage(img) {
                    $(img).css("height", image_height * ratio);  // Scale height based on ratio
                    image_height = image_height * ratio;    // Reset height to match scaled image
                    image_width = image_width * ratio;    // Reset width to match scaled image
-                   ctx.drawImage(img, 0, 0, image_width/2, image_width/2);
+                   ctx.drawImage(img, 0, 0, image_width, image_width);
                     
                    }
                if(image_height > maxHeight){
@@ -231,7 +235,7 @@ function resizeImage(img) {
                    $(img).css("width", image_width * ratio);    // Scale width based on ratio
                    image_width = image_width * ratio;    // Reset width to match scaled image
                    image_height = image_height * ratio;    // Reset height to match scaled image
-                   ctx.drawImage(img, 0, 0, image_width/2, image_width/2);
+                   ctx.drawImage(img, 0, 0, image_width, image_width);
                    }    
                  }
 }
