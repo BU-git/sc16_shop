@@ -222,14 +222,16 @@ function drawPrintImage(img) {
  }
 }
 
-$ ('#clipart img').on('click', loadingClipart);
+// $ ('#re').bind('click', loadingClipart);
 
-function loadingClipart (){
-  var src = (this).src;
-  var img = new Image();
-  img.src = src;
-  drawPrintImage(img);
-} ;
+   $('.clipartholder').on('click', function( e ) {
+    var src = (e).target.children[0].src;
+     labelImg = new Image;
+  labelImg.src = src;
+  labelImg.onload = function() {
+  drawPrintImage(labelImg);
+}
+   });
 
 
 

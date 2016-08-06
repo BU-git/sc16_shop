@@ -30,12 +30,12 @@
 	margin-bottom:25px;
 }
 
-ul.tabs li a:focus {
+ul.tabs li a:focus .active{
     background-color:  #9b56e0 !important;
     color: white !important;
 }
 
-ul.tabs li a:hover  {
+ul.tabs li a:hover{
 	background-color: #e7eaec;
 }
 
@@ -85,11 +85,15 @@ ul.tabs li a:hover  {
 	padding-top:10px;
 	padding-bottom: 10px
 }
-/*canvas{
-	border:1px dashed black;
-}*/
 
 .canvas_shirt {
 	position: relative;
 	}
+
+ .iframeImg{  
+   pointer-events:none; 
+   border-style: none;
+   max-width: 150px; 
+   max-height: 150px;
+}
 
