@@ -58,7 +58,12 @@ function loadProduct() {
    baseProduct.service  = clothe[baseImgItem].service;
    changePrice();
    changeProductName();
+changeViewButtons() ;
+   baseProduct.baseImage.src = viewSide[baseProduct.color];
+}
 
+function  changeViewButtons() {
+ 
 if(baseImgItem == "peakedcap")
 {
    $('#viewCollapseProduct').css("display" , "none");
@@ -69,10 +74,7 @@ else{
    $('#backView img').attr('src',clothe[baseImgItem].backImg[baseProduct.color]);
 }
 
-   baseProduct.baseImage.src = viewSide[baseProduct.color];
 }
-
-
 
 
 // перерисовує картинку в canvas
@@ -162,6 +164,7 @@ function  setTime() {
 function changeColor(){
   baseProduct.color = (this).id;
   baseProduct.baseImage.src = viewSide[baseProduct.color];
+  changeViewButtons();
   drawImageInCanvas();
 }
 

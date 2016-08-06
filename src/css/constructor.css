@@ -60,13 +60,12 @@ ul.tabs li a:hover{
 	margin-top: 48px !important;
 }
 
-.view-basis-canvas {
+.canvas_image {
 	border: 1px solid white;
 	border-radius: 3px;
-	/*padding: 5px;*/
 }
 
-.view-basis-canvas:hover {
+.canvas_image:hover {
 	border: 1px solid #c2cbd0;
 }
 
@@ -101,6 +100,11 @@ ul.tabs li a:hover{
    border-style: none;
    max-width: 150px; 
    max-height: 150px;
+}
+
+.canvas_image{
+	position:  absolute; 
+	z-index:  
 }
 
 
