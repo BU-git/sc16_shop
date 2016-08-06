@@ -1,49 +1,44 @@
 <!DOCTYPE html>
-<html>
- <head>
- 
-   <meta charset="utf-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-   <title>Корзина</title>
-   <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-   
-    <link type="text/css" rel="stylesheet" href="build/css/main.css"  media="screen,projection"/>
-    <link rel="stylesheet" href="build/css/main.css">
-      <!--Let browser know website is optimized for mobile--> 
- </head>
+<html lang="ru">
+<head>
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+ <title>Корзина</title>
+ <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+ <link rel="stylesheet" href="build/css/main.css">
+</head>
  <body>
-  <header>
-          <div class="container">
-          <div class="row container_row">
-              <div class="col l3 ">
-                 <a href="index.html"><img src="src/images/LOGO.png" alt=""></a> 
-              </div>
-              <div class="col l8 ">
-                <ul id="nav-mobile" class="left hide-on-med-and-down nav-wrapper__navigation">
-                  <li><a href="#">Популярное</a></li>
-                  <li><a href="#">О Нас</a></li>
-                  <li><a href="#">Контакты</a></li>
-                  <li><a href="constructor.html">Конструктор</a></li>
-                </ul>
-                <ul class="side-nav" id="mobile-demo">
-                  <li><a href="#">Популярное</a></li>
-                   <li><a href="#">О Нас</a></li>
-                   <li><a href="#">Контакты</a></li>
-                   <li><a href="constructor.html">Конструктор</a></li>
-                 </ul>
-             </div>
-             <div class="col l1 right">
-              <a href="#" data-activates="mobile-demo" class="button-collapse hide-on-large-only button_hiden-menu"><img src="src/images/menu.svg"></a>
-             <a href="purchase.html"><img src="src/images/cart.svg" alt="" class="header__cart-icon"></a>
-             </div>
-         </div></div>
+ <header>
+  <div class="navbar-fixed">
+    <div class="nav white">
+      <div class="nav-wrapper container">
+        <div class="row container_row">
+         <div class="col l3 ">
+          <a href="index.html"><img src="src/images/LOGO.png" alt=""></a> 
+        </div>
+        <div class="col l8 ">
+         <ul id="nav-mobile" class="left hide-on-med-and-down nav-wrapper__navigation">
+           <li><a href="index.html">Главная</a></li>
+           <li><a href="constructor.html">Конструктор</a></li>
+         </ul>
+         <ul class="side-nav" id="mobile-demo">
+         <li><a href="index.html">Главная</a></li>
+           <li><a href="constructor.html">Конструктор</a></li>
+         </ul>
        </div>
-      </header>
-
+       <div class="col l1 right">
+         <a href="#" data-activates="mobile-demo" class="button-collapse hide-on-large-only button_hiden-menu"><img src="src/images/menu.svg" alt=""></a>
+         <a href="purchase.html"><img src="src/images/cart.svg" alt="" class="header__cart-icon"></a>
+       </div>
+     </div>
+   </div>
+ </div>
+</div> 
+</header>
   <div class="container">
    <div class="row">
     <div class="col s12">
-     <h3 class="center-align">Оформление заказа</h3>
+     <h3 class="center-align header-indent__body">Оформление заказа</h3>
     </div>
    </div>
    <div class="row ">
@@ -77,7 +72,6 @@
       </div>
      </div>
     </div>
-
     <div class="col s12  m12  l6">
      <form id="formValidate" class="formValidate" method="POST">
       <div class="row">
@@ -144,15 +138,11 @@
    </div>
   </div>
   <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script> -->
-  <!-- <script type="text/javascript" src="src/js/materialize.min.js"></script> -->
-  <!-- <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.15.0/jquery.validate.min.js"></script> -->
   <script type="text/javascript" src="build/js/main.js"></script>
- 
   <script>
    $(document).ready(function() {
-   $('select').material_select();
-   });
+    $(".button-collapse").sideNav();
+    $('select').material_select();});
   </script>
  </body>
 </html>

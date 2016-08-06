@@ -1,351 +1,338 @@
 <!DOCTYPE html>
-  <html>
-    <head>
-      <!--Import Google Icon Font-->
-      <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-      <!--Import materialize.css-->
-      <link type="text/css" rel="stylesheet" href="build/css/main.css"  media="screen,projection"/>
-      <link rel="stylesheet" href="build/css/main.css">
-      <!--Let browser know website is optimized for mobile--> 
-      <meta name="viewport" charset="UTF-8" content="width=device-width, initial-scale=1.0"/>
-    </head>
-    <body>
-      <header>
-          <div class="container">
-          <div class="row container_row">
-              <div class="col l3 ">
-                 <a href="index.html"><img src="src/images/LOGO.png" alt=""></a> 
-              </div>
-              <div class="col l8 ">
-                <ul id="nav-mobile" class="left hide-on-med-and-down nav-wrapper__navigation">
-                  <li><a href="#">Популярное</a></li>
-                  <li><a href="#">О Нас</a></li>
-                  <li><a href="#">Контакты</a></li>
-                  <li><a href="constructor.html">Конструктор</a></li>
-                </ul>
-                <ul class="side-nav" id="mobile-demo">
-                  <li><a href="#">Популярное</a></li>
-                   <li><a href="#">О Нас</a></li>
-                   <li><a href="#">Контакты</a></li>
-                   <li><a href="constructor.html">Конструктор</a></li>
-                 </ul>
-             </div>
-             <div class="col l1 right">
-              <a href="#" data-activates="mobile-demo" class="button-collapse hide-on-large-only button_hiden-menu"><img src="src/images/menu.svg"></a>
-             <a href="purchase.html"><img src="src/images/cart.svg" alt="" class="header__cart-icon"></a>
-             </div>
-         </div>
-       </div> 
-      </header>
-      
-      <section class="banner">
-        <div class="row main__banner__img valign-wrapper" >
-          <div class="col l4 m1"><p></p></div>
-          <div class="col l3 m6 s12 ">
-             <div class="wrapper valign"> 
-                <h3><p class='#3b4449-text text-darken-1'>Создай свою футболку мечты</p></h3>
-                <a href="constructor.html" class="waves-effect waves-light btn pink accent-3 left-align"> Создать дизайн</a>
-             </div>
-          </div>
-        </div>               
-      </section>
- <!-- Our advantages -->
-    <section class="advantages">
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Главная страница</title>
+  <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="build/css/main.css">
+</head>
+<body>
+ <header id = "top">
+  <div class="navbar-fixed">
+    <div class="nav white">
+      <div class="nav-wrapper container">
+        <div class="row container_row">
+         <div class="col l3 menu">
+          <a  href="#top"><img src="src/images/LOGO.png" alt=""></a> 
+        </div>
+        <div class="col l8 ">
+         <ul id="nav-mobile" class="left hide-on-med-and-down nav-wrapper__navigation">
+           <li class= "menu"><a href="#popular">Популярное</a></li>
+           <li class= "menu"><a href="#about">O Нас</a></li>
+           <li class= "menu"><a href="#contacts">Контакты</a></li>
+           <li><a href="constructor.html">Конструктор</a></li>
+         </ul>
+         <ul class="side-nav" id="mobile-demo">
+           <li class= "menu"><a href="#popular">Популярное</a></li>
+           <li class= "menu"><a href="#about">О Нас</a></li>
+           <li class= "menu"><a href="#contacts">Контакты</a></li>
+           <li><a href="constructor.html">Конструктор</a></li>
+         </ul>
+       </div>
+       <div class="col l1 right">
+         <a href="#" data-activates="mobile-demo" class="button-collapse hide-on-large-only button_hiden-menu"><img src="src/images/menu.svg" alt=""></a>
+         <a href="purchase.html"><img src="src/images/cart.svg" alt="" class="header__cart-icon"></a>
+       </div>
+     </div>
+   </div>
+ </div>
+</div> 
+</header>
+<section>
+  <div class="main__banner__img valign-wrapper" >
+    <div class="container">
+     <div class="row">
+      <div class="col s12 offset-l2 m11 offset-m1">
+        <div class="wrapper left-align"> 
+         <h3 class='#3b4449-text text-darken-1'>Создай свою <br> футболку мечты</h3>
+         <a href="constructor.html" class="waves-effect waves-light btn pink accent-3 "> Создать дизайн</a>
+       </div>
+     </div>
+   </div>
+ </div>
+</div>               
+</section>
+<section>
+ <div class="row advantages-attachment ">
+  <div class="col s12">
+   <div class="container ">
+    <div class="flex-box light-blue-text text-darken-4">      
+      <div class="collection-info__main text-darken-4 center-align">
+        <h2 class="sample"><b>450</b></h2>
+        <h5 class="sample left-align">уникальных <br> дизайна</h5>
+      </div>
+      <div class="collection-info__main text-darken-4 center-align">
+       <h2 class="sample"><b>320</b></h2>
+       <h5 class="sample left-align">довольных <br> клиента</h5>
+     </div>
+     <div class="collection-info__main text-darken-4 center-align">
+       <h2 class="sample"><b>60</b></h2>
+       <h5 class="sample left-align">видов <br> продукции</h5>
+     </div>
+   </div>
+ </div>
+</div>
+</div>
+<div class="row light-blue darken-4 ">
+  <div class="col s12">
+   <div class="container container-padding">
     <div class="row">
-      <div class="col l4 m4 s14 light-blue-text text-darken-4 center-align advantages-attachment">
-        <h2>450</h2>
-        <h5>уникальных <br> дизайна</h5>
+      <div class="col s12">
+        <h3 class="white-text center-align">Наши преимущества</h3>
       </div>
-      <div class="col l4 m4 s12 light-blue-text text-darken-4 center-align">
-         <h2>320</h2>
-         <h5>довольных <br> клиента</h5>
-      </div>
-      <div class="col l4 m4 s12 light-blue-text text-darken-4 center-align">
-        <h2>60</h2>
-        <h5>видов <br> продукции</h5>
-      </div>
-     </div>
     </div>
-    <div class="row light-blue darken-4">
-     <div class="container advantages-attachment">
-     <h4 class="white-text center-align">Наши преимущества</h4>
-      <div class="col l4 m4 s14 ">
-        <p class="center-align"><img class="responsive-img" src="src/images/advantages-1.png" alt="advantages-1"></p>
-        <h5 class="center-align white-text">100% качество</h5>
-      </div>
-      <div class="col l4 m4 s12 advantages-attachment">
-         <p class="center-align"><img class="responsive-img" src="src/images/advantages-2.png" alt="advantages-2"></p>
-         <h5 class="center-align white-text">Оперативность в изготовлении</h5>
-      </div>
-      <div class="col l4 m4 s12 advantages-attachment">
-        <p class="center-align"><img class="responsive-img  " src="src/images/advantages-3.png" alt="advantages-3"></p>
-        <h5 class="center-align white-text">100% уникальность</h5>
-      </div>
+    <div class="flex-box white-text">
+     <div class="center-align collection-info__main">
+       <div><img class="responsive-img" src="src/images/advantages-1.png" alt="advantages-1"></div>
+       <h5>100% качество</h5>
      </div>
+     <div class="center-align collection-info__main">
+      <div><img class="responsive-img" src="src/images/advantages-2.png" alt="advantages-2"></div>
+      <h5>Оперативность в <br> изготовлении</h5>
     </div>
-  </section>
- <!-- end block of advantages -->
-
-  <section class="collapse-margine">
-      <div class="container container-padding">
-        <div class="row"> 
-          <div class="col s12"> 
-            <div class="container-about">
-             <div class= "center-align container-about-header">
-              <h3 class= "about-header white">Оплата и доставка</h3>
-            </div>
+    <div class="center-align collection-info__main">
+     <div><img class="responsive-img  " src="src/images/advantages-3.png" alt="advantages-3"></div>
+     <h5>100% уникальность</h5>
+   </div>
+ </div>
+</div>
+</div>
+</div>
+</section>
+<section>
+  <div class="container container-padding">
+    <div class="row"> 
+      <div class="col s12"> 
+        <div class="container-about">
+         <div class= "center-align container-about-header">
+          <h3 class= "about-header white">Оплата и доставка</h3>
+        </div>
+        <div class="about-inform">
+          <div class="valign-wrapper">
+            <img class="indent-info__main hide-on-small-only responsive-img " src="src/images/icon_plane.png" alt="">
             <ul class="collection-info__main">
-              <li>
-                <div class="valign-wrapper">
-                <img class="indent-info__main hide-on-small-only" src="src/images/icon_plane.png" alt="">
-                  <ul>
-                    <li><b>Информация о доставке</b></li>
-                    <li>Заказ можно забрать на указанном Вами отделении Новой Почты при оформлении заказа.</li>
-                    <li>Также доступна доставка курьером в нужное Вам место.</li>
-                  </ul>
-                </div>
-              </li>
-              <li><div class="valign-wrapper">
-                <img class="indent-info__main hide-on-small-only" src="src/images/icon_pig.png" alt="">
-                <ul>
-                  <li><b>Информация об оплате</b></li>
-                  <li>Оплатить заказ можно через карту ПриватБанк, реквизиты будут указаны при оформлении заказа,  или наличными курьеру/на Новой Почте при получении товара.</li>
-                  <li>В случае если готовый товар не соответствует сделанному Вами заказу, мы гарантируем 100% возврата денежных средств.</li>
-                </ul>
-              </div></li>
-              <li><div class="valign-wrapper">
-                <img class="indent-info__main hide-on-small-only" src="src/images/icon_plane.png" alt="">
-                <ul>
-                  <li><b>Оформление заказа</b></li>
-                  <li>Заказ можно оформить, добавив его в корзину со страниц конструктора/магазина, выбрав при этом количество, размер и цвет товара.</li>
-                  <li>Если у Вас возникнут дополнительные вопросы, можете обратиться к нам по телефону +380672695536.</li>
-                </ul>
-              </div></li>
+              <li><b>Информация о доставке</b></li>
+              <li>Заказ можно забрать на указанном Вами отделении Новой Почты при оформлении заказа.</li>
+              <li>Также доступна доставка курьером в нужное Вам место.</li>
             </ul>
+          </div>
+          <div class="valign-wrapper">
+            <img class="indent-info__main hide-on-small-only responsive-img " src="src/images/icon_pig.png" alt="">
+            <ul class="collection-info__main">
+              <li><b>Информация об оплате</b></li>
+              <li>Оплатить заказ можно через карту ПриватБанк, реквизиты будут указаны при оформлении заказа, 
+                или наличными курьеру/на Новой Почте при получении товара.</li>
+                <li>В случае если готовый товар не соответствует сделанному Вами заказу, мы гарантируем 100% возврата денежных средств.</li>
+              </ul>
+            </div>
+            <div class="valign-wrapper">
+              <img class="indent-info__main hide-on-small-only responsive-img" src="src/images/icon_plane.png" alt="">
+              <ul class="collection-info__main">
+                <li><b>Оформление заказа</b></li>
+                <li>Заказ можно оформить, добавив его в корзину со страниц конструктора/магазина, выбрав при этом количество, размер и цвет товара.</li>
+                <li>Если у Вас возникнут дополнительные вопросы, можете обратиться к нам по телефону +380672695536.</li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
-    </section>
-
-
- <!--popular product ready-->
-      <section class="light-blue darken-4 collapse-margine">
-        <div class="container container-padding">
-          <div class="row">
-            <div class="col s12">
-             <h3 class="white-text center-align">Популярная продукция</h3>
-           </div>
-         </div>
-         <div class="flex-pupular_main">
-          <div class="flex-item_main">
-            <div class="pop-production">
-             <ul class="collection collapsed-border">
-               <li class="collection-item collapsed-border light-blue darken-4"> 
-                 <div class="center-align "><a  href="constructor.html">
-                   <img class="responsive-img "  onmouseover="this.src='src/images/1_hover.png ';" onmouseout="this.src='src/images/1.png';" src="src/images/1.png" alt="Close"></a></div> 
-                 </li>
-                 <li class="collection-item collapsed-border light-blue darken-4 li-colapsed-padding">
-                   <span class="white-text">Футболка женская 200грн</span>
-                 </li>
-                 <li class="collection-item collapsed-border valign-wrapper light-blue darken-4">
-                   <a href="constructor.html" class="waves-effect waves-light btn pink accent-3 btn-red">Хочу</a>
-                 </li>
-               </ul>
-             </div>
-             <div class="pop-production">
-               <ul class="collection collapsed-border">
-                 <li class="collection-item collapsed-border light-blue darken-4"> 
-                   <div class="center-align"><a  href="constructor.html">
-                     <img class="responsive-img " onmouseover="this.src='src/images/2_hover.png ';" onmouseout="this.src='src/images/2.png';" src="src/images/2.png" alt="Close"></a>
-                   </div> 
-                   </li>
-                   <li class="collection-item collapsed-border light-blue darken-4">
-                     <span class="white-text">Толстовка  мужская 300грн</span>
-                   </li>
-                   <li class="collection-item collapsed-border valign-wrapper light-blue darken-4">
-                     <a href="constructor.html" class="waves-effect waves-light btn pink accent-3">Хочу</a>
-                   </li>
-                 </ul>
-               </div>
-             </div>
-             <div class="flex-item_main">
-              <div class="pop-production">
-                <ul class="collection collapsed-border">
-                 <li class="collection-item collapsed-border light-blue darken-4"> 
-                   <div class="center-align"><a href="constructor.html">
-                     <img  class="responsive-img"  onmouseover="this.src='src/images/3_hover.png ';" onmouseout="this.src='src/images/3.png';" src="src/images/3.png" alt="Close"></a>
-                   </div> 
-                   </li>
-                   <li class="collection-item collapsed-border light-blue darken-4">
-                     <span class="white-text">Реглан женский 320грн</span>
-                   </li>
-                   <li class="collection-item collapsed-border valign-wrapper light-blue darken-4">
-                     <a href="constructor.html" class="waves-effect waves-light btn pink accent-3">Хочу</a>
-                   </li>
-                 </ul>
-               </div>
-               <div class="pop-production">
-                <ul class="collection collapsed-border">
-                 <li class="collection-item collapsed-border light-blue darken-4"> 
-                   <div class="center-align"><a href="constructor.html">
-                     <img  class="responsive-img"  onmouseover="this.src='src/images/4_hover.png ';" onmouseout="this.src='src/images/4.png';" src="src/images/4.png" alt="Close"></a>
-                   </div> 
-                   </li>
-                   <li class="collection-item collapsed-border light-blue darken-4">
-                     <span class="white-text">Реглан мужской 320грн</span>
-                   </li>
-                   <li class="collection-item collapsed-border valign-wrapper light-blue darken-4">
-                     <a href="constructor.html" class="waves-effect waves-light btn pink accent-3">Хочу</a>
-                   </li>
-                 </ul>
-               </div>
-             </div>
-           </div>
-         </div>
-       </section>
- 
- <!-- Block of comments -->
-      <section class="comments ">
-         <div class="row">
-           <!-- <h3 class="center-align white-text">Отзывы</h3> -->
-          <div class="slider">
-            <ul class="slides ">
-                <li>
-                <h3 class="center-align white-text">Отзывы</h3>
-              <div class="row valign-wrapper">
-                <div class="col s2 offset-s4">
-                <p class="valign"> <img src="src/images/comments-1.png" alt="comments-1" class="circle responsive-img"> </p>
-              </div>
-              <div class="col  s6">
-                <span class="white-text">
-                <b>Настя, 23 года</b>  <br>
-                 Очень здорово, что можно добавить свой принт и почувствовать себя дизайнером! <br> Желаю успехов в дальнейшем!
-                </span>
-              </div>
-            </div>
-                  </li>
-                  <li >
-                  <h3 class="center-align white-text">Отзывы</h3>
-             <div class="row valign-wrapper">
-              <div class="col s2 offset-s4">
-             
-                <p class="valign"> <img src="src/images/comments-2.png" alt="comments-2" class="circle responsive-img"> </p>
-              </div>
-              <div class="col s6">
-                <span class="white-text">
-                <b>Антон, 23 года</b>  <br>
-                  Заказывали футболки с принтом нашей футбольной школы, <br>остались довольны качеством и тем,<br> с какой ответственностью ребята подошли к заказу. <br>Спасибо!
-                </span>
-              </div>
-            </div>
-                  </li>
-                  <li>
-              <h3 class="center-align white-text">Отзывы</h3>
-              <div class="row valign-wrapper">
-              <div class="col s2 offset-s4">
-                <p class="valign"> <img src="src/images/comments-3.png" alt="comments-3" class="circle responsive-img"> </p>
-              </div>
-              <div class="col s6">
-                <span class="white-text">
-                <b>Катя, 20 лет </b> <br>
-                  Безумно порадовало качество готового изделия,<br> а также скорость в исполнении моего заказа
-                </span>
-              </div>
-            </div>
-              </li>
-          </ul>
-  </div>
-   </div>
-  </section>
-  <!-- END COMMENTS-->
- 
- 
-  <!--  Block of partners -->
-  <section class="partners">
-    <div class="row light-blue darken-4">
-     <div class="container partners-attachment">
-     <h4 class="white-text center-align">Партнеры</h4>
-      <div class="col l4 m4 s14 ">
-        <img class="responsive-img  partners-attachment" src="src/images/lotus.png" alt="lotus">
-      </div>
-      <div class="col l4 m4 s12">
-         <img class="responsive-img  partners-attachment" src="src/images/fruit.png" alt="fruit">
-      </div>
-      <div class="col l4 m4 s12">
-        <img class="responsive-img  partners-attachment" src="src/images/mate.png" alt="mate">
-      </div>
-     </div>
     </div>
-  </section>
-<!-- end block -->
- 
- 
+  </div>
+</section>
 
-       <section class="collapse-margine">
-        <div class="container container-padding">
-          <div class="row"> 
-            <div class="col s12"> 
-              <div class="container-about">
-               <div class= "center-align container-about-header">
-                <h3 class= "about-header white">О нас</h3>
-              </div>
-        
-              <p>Мы всегда мечтали о сервисе, с помощью которого можно самому «примерить» необходимый принт на понравившуюся вещь и представить как будет выглядеть готовое изделие. Ведь так приятно почувствовать себя дизайнером. Недолго думая, мы воплотили это в реальность – <a class="pink-text text-accent-3 about-to-constructor" href="constructor.html">наш конструктор</a>. И теперь у Вас есть возможность создавать уникальные вещи как для себя, так и для друзей.</p>
-              <p>
-                Для изготовления наших товаров мы выбираем только самые качественные материалы, которые будут радовать и служить Вам очень долго.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col s12"> 
-            <div class="container-about">
-             <div class= "center-align container-about-header">
-              <h3 class= "about-header white">Контакты</h3>
-            </div>
+<section id="popular" class="light-blue darken-4">
+  <div class="container container-padding">
+    <div class="row">
+      <div class="col s12">
+       <h3 class="white-text center-align">Популярная продукция</h3>
+     </div>
+   </div>
+   <div class="flex-pupular_main">
+    <div class="pop-production">
+     <div class="center-align img-pop"><a  href="constructor.html">
+       <img class="responsive-img "  onmouseover="this.src='src/images/1_hover.png ';" onmouseout="this.src='src/images/1.png';" src="src/images/1.png" alt="Close"></a>
+     </div> 
+     <p class="white-text">Футболка женская 200грн</p>
+     <a href="constructor.html" class="waves-effect waves-light btn pink accent-3 btn-red">Хочу</a>
+   </div>
+   <div class="pop-production">
+     <div class="center-align img-pop"><a  href="constructor.html">
+       <img class="responsive-img " onmouseover="this.src='src/images/2_hover.png ';" onmouseout="this.src='src/images/2.png';" src="src/images/2.png" alt="Close"></a>
+     </div> 
+     <p class="white-text">Толстовка  мужская 300грн</p>
+     <a href="constructor.html" class="waves-effect waves-light btn pink accent-3">Хочу</a>
+   </div>
+   <div class="pop-production">
+     <div class="center-align img-pop"><a href="constructor.html">
+       <img  class="responsive-img"  onmouseover="this.src='src/images/3_hover.png ';" onmouseout="this.src='src/images/3.png';" src="src/images/3.png" alt="Close"></a>
+     </div> 
+     <p class="white-text">Реглан женский 320грн</p>
+     <a href="constructor.html" class="waves-effect waves-light btn pink accent-3">Хочу</a>
+   </div>
+   <div class="pop-production">
+     <div class="center-align img-pop"><a href="constructor.html">
+       <img  class="responsive-img"  onmouseover="this.src='src/images/4_hover.png ';" onmouseout="this.src='src/images/4.png';" src="src/images/4.png" alt="Close"></a>
+     </div> 
+     <p class="white-text">Реглан мужской 320грн</p>
+     <a href="constructor.html" class="waves-effect waves-light btn pink accent-3">Хочу</a>
+   </div>
+ </div>
+</div>
+</section>
+
+
+
+<section class="purple">
+  <div class="container container-padding">
+    <div class="row">
+      <div class="col s12">
+        <h3 class="center-align white-text">Отзывы</h3>
+      </div>
+    </div>
+    <div class="row ">
+     <div class="col l8 m8 push-l2 push-m2 s12">
+       <div class="slider">
+        <ul class="slides purple" >
+          <li>
             <div class="row">
-             <div class="col l4 m4 s12">
-               <ul>
-                 <li>телефоны:</li>
-                 <li>+380672695536,</li>
-                 <li>+380958775033</li>
-               </ul>
-             </div>
-             <div class="col l3 m3 s12 offset-l1">
-               <ul >
-                 <li>email:</li>
-                 <li>anngogulia@gmail.com</li>
-               </ul>
-             </div>
-             <div class="col l3 m2 s12 offset-l1 offset-m2">
-               <ul>
-                 <li>адрес:</li>
-                 <li>г. Киев</li>
-               </ul>
-             </div>
+            <div class="col l4  offset-l2  m4 offset-m2 s4 offset-s4"> <img src="src/images/comments-1.png" alt="comments-1" class="circle responsive-img"> </div>
+             <div class="col l6 m6 s8 offset-s3">
+              <p class="white-text">
+               <b>Настя, 23 года</b> <br>
+               Очень здорово, что можно добавить свой принт и почувствовать себя дизайнером!
+               <br> Желаю успехов в дальнейшем!
+             </p>
            </div>
+         </div>
+       </li>
+       <li>
+        <div class="row">
+          <div class="col l4 offset-l2 m4 offset-m2 s4 offset-s4"><img src="src/images/comments-2.png" alt="comments-2" class="circle responsive-img"> </div>
+          <div class="col l6 m6 s8 offset-s3">
+            <p class="white-text">
+             <b>Антон, 23 года </b><br>
+             Заказывали футболки с принтом нашей футбольной школы, остались довольны качеством и тем, с какой ответственностью ребята подошли к заказу. <br>Спасибо!
+           </p>
          </div>
        </div>
-     </section>
-
-      
-
-       <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-      <script type="text/javascript" src="build/js/main.js"></script>
-      <script> $(".button-collapse").sideNav();</script>
-
-<script>  $(document).ready(function(){
-      $('.slider').slider({full_width: true});
-       $('.slider').slider({height: 500});
-       $('.slider').slider('pause');
-      // Start slider
-      $('.slider').slider('start');
-    // Next slide
-       $('.slider').slider('next');
-    // Previous slide
-      $('.slider').slider('prev');
-      });      
-      // Pause slider
-    
-
-       </script>
-    </body>
-  </html>
+     </li>
+     <li>
+      <div class="row">
+       <div class="col l4 offset-l2 m4 offset-m2 s4 offset-s4"> <img src="src/images/comments-3.png" alt="comments-3" class="circle responsive-img"> </div>
+       <div class="col l6 m6 s8 offset-s3">
+        <p class="white-text ">         
+          <b>Катя, 20 лет </b><br>
+          Безумно порадовало качество готового изделия, а также скорость в исполнении моего заказа
+        </p>
+      </div>
+    </div>
+  </li>
+</ul>
+</div>
+</div>
+<div class="col l2 m2 pull-l8 pull-m8 s3 offset-s1"> 
+  <div class="valign-wrapper">
+    <a id = "prev-slider" class="btn-floating btn-large waves-effect waves-light purple valign">
+     <i class="material-icons">arrow_back</i>
+     </a>
+  </div>
+</div>
+<div class="col l2 m2 s3 offset-s4">
+  <a  id = "next-slider" class="btn-floating btn-large waves-effect waves-light purple right">
+   <i class="material-icons">arrow_forward</i>
+ </a>
+</div>
+</div>
+</div>
+</section>
+<section class="collapse-margine light-blue darken-4">
+  <div class="container container-padding">
+    <div class="row ">
+     <div class="col s12">
+       <div class="row">
+         <div class="col s12">
+           <h3 class="white-text center-align">Партнеры</h3>
+         </div>
+       </div>
+       <div class="row">
+         <div class="col l4 m4 s12 center-align">
+           <a href="#"><img class="responsive-img " src="src/images/lotus.png" alt="lotus"></a>
+         </div>
+         <div class="col l4 m4 s12 center-align">
+           <a href="#" class="center-align"><img class="responsive-img" src="src/images/fruit.png" alt="fruit"></a>
+         </div>
+         <div class="col l4 m4 s12 center-align">
+           <a href="#" class="center-align"><img class="responsive-img" src="src/images/mate.png" alt="mate"></a>
+         </div>
+       </div>
+     </div>
+   </div>
+ </div>
+</section>
+<section id = "about" class="collapse-margine">
+  <div class="container container-padding">
+    <div class="row"> 
+      <div  class="col s12"> 
+        <div class="container-about">
+         <div class= "center-align container-about-header">
+          <h3 class= "about-header white">О нас</h3>
+        </div>
+        <p>Мы всегда мечтали о сервисе, с помощью которого можно самому «примерить» необходимый принт на понравившуюся вещь и представить как будет выглядеть готовое изделие. Ведь так приятно почувствовать себя дизайнером. Недолго думая, мы воплотили это в реальность – <a class="pink-text text-accent-3 about-to-constructor" href="constructor.html">наш конструктор</a>. И теперь у Вас есть возможность создавать уникальные вещи как для себя, так и для друзей.</p>
+        <p>
+          Для изготовления наших товаров мы выбираем только самые качественные материалы, которые будут радовать и служить Вам очень долго.</p>
+        </div>
+      </div>
+    </div>
+    <div id = "contacts" class="col s12"> 
+      <div class="container-about">
+       <div class= "center-align container-about-header">
+        <h3 class= "about-header white">Контакты</h3>
+      </div>
+      <div class="row">
+       <div class="col l4 m4 s12">
+         <ul>
+           <li>телефоны:</li>
+           <li>+380672695536,</li>
+           <li>+380958775033</li>
+         </ul>
+       </div>
+       <div class="col l3 m3 s12 offset-l1">
+         <ul >
+           <li>email:</li>
+           <li>anngogulia@gmail.com</li>
+         </ul>
+       </div>
+       <div class="col l3 m2 s12 offset-l1 offset-m2">
+         <ul>
+           <li>адрес:</li>
+           <li>г. Киев</li>
+         </ul>
+       </div>
+     </div>
+   </div>
+ </div>
+ </div>
+</section>
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="build/js/main.js"></script>
+<script>  
+  $(document).ready(function(){
+  $(".button-collapse").sideNav();
+  $('.slider').slider({indicators: false, height: 300, full_width: true});
+  $('#next-slider').click(function(){ 
+   $('.slider').slider('next');
+ }); 
+  $('#prev-slider').click(function(){ 
+   $('.slider').slider('prev');
+ });
+ $(".menu").on("click","a", function (event) {
+        event.preventDefault();
+        var id  = $(this).attr('href'),
+            top = $(id).offset().top;
+        $('body,html').animate({scrollTop: top}, 1500);
+    }); 
+});      
+</script>
+</body>
+</html>
