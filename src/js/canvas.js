@@ -66,20 +66,22 @@ if(baseImgItem == "peakedcap")
 else{
    $('#viewCollapseProduct').css("display" , "block");
    $('#frontView img').attr('src',clothe[baseImgItem].frontImg[baseProduct.color]);
-  $('#backView img').attr('src',clothe[baseImgItem].backImg[baseProduct.color]);
+   $('#backView img').attr('src',clothe[baseImgItem].backImg[baseProduct.color]);
 }
 
-  
    baseProduct.baseImage.src = viewSide[baseProduct.color];
 }
 
+
+
+
 // перерисовує картинку в canvas
 function drawImageInCanvas() {
-  sizeBaseImg();
+  sizeBaseImg(baseProduct.baseImage, baseCanvas);
   context.drawImage(baseProduct.baseImage, positionBaseImage(baseProduct.baseImage).x, positionBaseImage(baseProduct.baseImage).y, baseProduct.baseImage.width, baseProduct.baseImage.height); 
 }
 
-визначаємо позицію в canvas
+// визначаємо позицію в canvas
 function positionBaseImage(img) {
   var point = new Object();
   point.x = (baseCanvas.width - img.width)/2;
@@ -94,18 +96,18 @@ function fillBackgroundColor() {
 }
 
 // визначення ширини і висоти картинки
-function sizeBaseImg(){
-  var ratioSide  = baseProduct.baseImage.width/baseProduct.baseImage.height;
+function sizeBaseImg(img, canvas){
+  var ratioSide  = img.width/img.height;
   if (ratioSide < 1) {
-    baseProduct.baseImage.width  = ratioSide*baseCanvas.width;
-    baseProduct.baseImage.height = baseCanvas.height;
+    img.width  = ratioSide*canvas.width;
+    img.height = canvas.height;
   } else if(ratioSide >=1){
-    baseProduct.baseImage.width = baseCanvas.width;
-    baseProduct.baseImage.height = ratioSide*baseCanvas.height;
+    img.width = canvas.width;
+    img.height = canvas.height/ratioSide;
   }
 }
 
-зміна широти і висоти canvas при зміні вікна браузера
+// зміна широти і висоти canvas при зміні вікна браузера
 function updateWindow() {
  if($(this)[0].innerWidth > 992){
   baseCanvas.width = 0.29*$(this)[0].innerWidth;
@@ -115,7 +117,7 @@ function updateWindow() {
  canvas_image.style.top  = 0.22*baseCanvas.width +"px";
   canvas_image.style.left  = 0.34*baseCanvas.width+"px";
   drawImageInCanvas();
-  resizeImage(labelImg);
+  drawPrintImage(labelImg);
   setTime()
 } else if ($(this)[0].innerWidth <= 992){
   baseCanvas.width = 0.75*$(this)[0].innerWidth;
@@ -125,7 +127,7 @@ function updateWindow() {
  canvas_image.style.top  = 0.22*baseCanvas.width +"px";
   canvas_image.style.left  = 0.33*baseCanvas.width+"px";
   drawImageInCanvas();
-  resizeImage(labelImg);
+  drawPrintImage(labelImg);
   setTime();
 }    
 }
@@ -139,7 +141,7 @@ function updateCanvas() {
    canvas_image.width = 0.32*baseCanvas.width;
   canvas_image.height = 0.32*baseCanvas.width;
   drawImageInCanvas();
-  resizeImage(labelImg);
+  drawPrintImage(labelImg);
 } else if ($(window)[0].innerWidth <= 992){
   baseCanvas.width = 0.75*$(window)[0].innerWidth;
   baseCanvas.height = baseCanvas.width;
@@ -148,7 +150,7 @@ function updateCanvas() {
   canvas_image.width = 0.32*baseCanvas.width;
   canvas_image.height = 0.32*baseCanvas.width;
   drawImageInCanvas();
-  resizeImage(labelImg);
+  drawPrintImage(labelImg);
 }    
 }
 
@@ -156,7 +158,7 @@ function  setTime() {
  setTimeout(updateCanvas , 1000);
 }
 
-фунція вибору кольору
+// фунція вибору кольору
 function changeColor(){
   baseProduct.color = (this).id;
   baseProduct.baseImage.src = viewSide[baseProduct.color];
@@ -183,9 +185,7 @@ function changeProductName() {
   $('.productName').html(baseProduct.name);
 }
 
-upload image
 
-upload image
 var canvas_image = document.getElementById("canvas_image");
 var ctx = canvas_image.getContext('2d')
 var labelImg;
@@ -197,8 +197,8 @@ document.getElementById('design-upload').onchange = function (e) {
        labelImg = new Image;
       labelImg.src = e.target.result;
       labelImg.onload = function() {
-        canvasClear ();
-        resizeImage(labelImg);           
+       
+        drawPrintImage(labelImg);           
             
           };                         
       };
@@ -214,69 +214,46 @@ function canvasClear () {
   ctx.clearRect(0, 0, canvas_image.width, canvas_image.height);
 } 
 
-function resizeImage(img) {
+function drawPrintImage(img) {
   if(img){
-  var maxWidth = canvas_image.width ; // Max width for the image
-               var maxHeight = canvas_image.height;    // Max height for the image
-               var ratio = 0;  // Used for aspect ratio
-               var image_width = img.width;    // Current image width
-               var image_height = img.height;
-                 if(image_width > maxWidth){
-                   ratio = maxWidth / image_width;   // get ratio for scaling image
-                   $(img).css("width", maxWidth); // Set new width
-                   $(img).css("height", image_height * ratio);  // Scale height based on ratio
-                   image_height = image_height * ratio;    // Reset height to match scaled image
-                   image_width = image_width * ratio;    // Reset width to match scaled image
-                   ctx.drawImage(img, 0, 0, image_width, image_width);
-                    
-                   }
-               if(image_height > maxHeight){
-                   ratio = maxHeight / image_height; // get ratio for scaling image
-                   $(img).css("height", maxHeight);   // Set new height
-                   $(img).css("width", image_width * ratio);    // Scale width based on ratio
-                   image_width = image_width * ratio;    // Reset width to match scaled image
-                   image_height = image_height * ratio;    // Reset height to match scaled image
-                   ctx.drawImage(img, 0, 0, image_width, image_width);
-                   }    
-                 }
+     canvasClear ();
+   sizeBaseImg(img, canvas_image);
+   ctx.drawImage(img, 0, 0, img.width, img.height);
+ }
 }
-
-
-
 
 $ ('#clipart img').on('click', loadingClipart);
 
-function loading (){
+function loadingClipart (){
   var src = (this).src;
   var img = new Image();
   img.src = src;
-  canvasClear ();
-  resizeImage(img);
+  drawPrintImage(img);
 } ;
 
 
 
-$('#order').on("click", orderProduct);
+// $('#order').on("click", orderProduct);
 
-function  orderProduct() {
+// function  orderProduct() {
 
- // var data = ctx.getImageData(0,0,canvas_image.width,canvas_image.height);
- // context.putImageData(data, )
+//  // var data = ctx.getImageData(0,0,canvas_image.width,canvas_image.height);
+//  // context.putImageData(data, )
 
- var data1 = baseCanvas.toDataURL('image/jpeg');
-console.log(data1);
+//  var data1 = baseCanvas.toDataURL('image/jpeg');
+// console.log(data1);
  
-var order= new Object();
+// var order= new Object();
 
-      // order.printImg = labelImg.src;
-       order.name = baseProduct.name;
-      order.price = baseProduct.price;
-      order.color = baseProduct.color;
-      order.size = baseProduct.size;
-       localStorage.setItem('Ordered', JSON.stringify(order));
+//       // order.printImg = labelImg.src;
+//        order.name = baseProduct.name;
+//       order.price = baseProduct.price;
+//       order.color = baseProduct.color;
+//       order.size = baseProduct.size;
+//        localStorage.setItem('Ordered', JSON.stringify(order));
 
    
-}
+// }
 
 }});
 
