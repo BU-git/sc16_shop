@@ -10,7 +10,7 @@
 <body>
 	<header>
 		<div class="navbar-fixed">
-			<div class="nav white">
+			<div id = "menu" class="nav white">
 				<div class="nav-wrapper container">
 					<div class="row container_row">
 						<div class="col l3 ">
@@ -18,10 +18,10 @@
 						</div>
 						<div class="col l8 ">
 							<ul id="nav-mobile" class="left hide-on-med-and-down nav-wrapper__navigation">
-								<li><a href="index.html">Главная</a></li>
+								<li><a  href="index.html#popular">Главная</a></li>
 							</ul>
 							<ul class="side-nav" id="mobile-demo">
-								<li><a href="index.html">Главная</a></li>
+								<li ><a href="index.html#popular">Главная</a></li>
 							</ul>
 						</div>
 						<div class="col l1 right">
@@ -33,16 +33,17 @@
 			</div>
 		</div> 
 	</header>
-	<section class="header container">
+	<section  class="header container">
 		<h3 class="center-align header-indent__body">КОНСТРУКТОР</h3>
 		<div class="row">
 			<div class="col l5 m12 s12">
 				<div class="row">
+			
 					<div class="col s12">
-						<ul class="tabs">
-							<li class="tab col l3 m3"><a class="active purple-text text-darken-3" href="#basis">Основа</a></li>
-							<li class="tab col l3 m3"><a  class="purple-text text-darken-3 hoverable" href="#photo">Фото</a></li>
-							<li class="tab col l3 m3"><a class="purple-text text-darken-3" href="#clipart">Клипарт</a></li>
+						<ul class="tabs purple-text text-darken-3 tabs-constructor">
+							<li class="tab col l3"><a class="active purple-text text-darken-4" href="#basis">Основа</a></li>
+							<li class="tab col l3"><a  class="purple-text text-darken-4" href="#photo ">Фото</a></li>
+							<li class="tab col l3"><a class="purple-text text-darken-4" href="#clipart">Клипарт</a></li>
 						</ul>
 					</div>
 					<div id="basis" class="col s12 tabcontent">
@@ -51,11 +52,10 @@
 								<div class="collapsible-header">МУЖСКАЯ ОДЕЖДА</div>
 								<div class="collapsible-body">
 									<ul class=" basis mens-basis">
-										<li><img class="basis-hover" src="src/images/basis_t-shirt.png" alt="basis-t-shirt"></li>
-										<li><img class="basis-hover" src="src/images/men-shirt.png" alt="men-shirt"></li>
-										<li><img class="basis-hover" src="src/images/sweatshirt.png" alt="sweatshirt"></li>
-										<li><img class="basis-hover" src="src/images/hoodie.png" alt="hoodie"></li>
-										<li><img class="basis-hover" src="src/images/cap.png" alt="cap"></li>
+										<li id ="tshirts"><img   class="basis-hover " src="src/images/basis_t-shirt.png" alt="basis-t-shirt"></li>
+										<li ><img class="basis-hover " src="src/images/sweatshirt.png" alt="sweatshirt"></li>
+										<li id= "jumper"><img class="basis-hover " src="src/images/hoodie.png" alt="hoodie"></li>
+										<li  id = "peakedcap"><img class="basis-hover " src="src/images/cap.png" alt="cap"></li>
 									</ul>
 								</div>
 							</li>
@@ -63,11 +63,11 @@
 								<div class="collapsible-header">ЖЕНСКАЯ ОДЕЖДА</div>
 								<div class="collapsible-body">
 									<ul class="basis woman-basis ">
-										<li><img  class="basis-hover" src="src/images/basis_t-shirt.png" alt="basis-t-shirt"></li>
-										<li><img  class="basis-hover" src="src/images/women-shirt.png" alt="women-shirt"></li>
-										<li><img  class="basis-hover" src="src/images/sweatshirt.png" alt="sweatshirt"></li>
-										<li><img  class="basis-hover" src="src/images/hoodie.png" alt="hoodie"></li>
-										<li><img  class="basis-hover" src="src/images/cap.png" alt="cap"></li>
+										<li><img  class="basis-hover product" src="src/images/basis_t-shirt.png" alt="basis-t-shirt"></li>
+										<li><img  class="basis-hover product" src="src/images/women-shirt.png" alt="women-shirt"></li>
+										<li><img  class="basis-hover product" src="src/images/sweatshirt.png" alt="sweatshirt"></li>
+										<li><img  class="basis-hover product" src="src/images/hoodie.png" alt="hoodie"></li>
+										<li><img  class="basis-hover product" src="src/images/cap.png" alt="cap"></li>
 									</ul>
 								</div>
 							</li>
@@ -75,9 +75,9 @@
 								<div class="collapsible-header">ДЕТСКАЯ ОДЕЖДА</div>
 								<div class="collapsible-body">
 									<ul class="basis children-basis ">
-										<li><img class="basis-hover" src="src/images/basis_t-shirt.png" alt="basis-t-shirt"></li>
-										<li><img  class="basis-hover" src="src/images/sweatshirt.png" alt="sweatshirt"></li>		
-										<li><img  class="basis-hover" src="src/images/cap.png" alt="cap"></li>
+										<li><img class="basis-hover product" src="src/images/basis_t-shirt.png" alt="basis-t-shirt"></li>
+										<li><img  class="basis-hover product" src="src/images/sweatshirt.png" alt="sweatshirt"></li>		
+										<li><img  class="basis-hover product" src="src/images/cap.png" alt="cap"></li>
 									</ul>
 								</div>
 							</li>
@@ -85,8 +85,8 @@
 								<div class="collapsible-header">СУВЕНИРЫ</div>
 								<div class="collapsible-body">
 									<ul class="basis accessories-basis">
-										<li><img  class="basis-hover" src="src/images/cup-basis.png" alt="cup-basis"></li>
-										<li><img  class="basis-hover" src="src/images/bowl.png" alt="bowl"></li>
+										<li><img  class="basis-hover product" src="src/images/cup-basis.png" alt="cup-basis"></li>
+										<li><img  class="basis-hover product" src="src/images/bowl.png" alt="bowl"></li>
 									</ul>
 								</div>
 							</li>
@@ -95,84 +95,171 @@
 							<div class="mens-basis">
 								<p>МУЖСКАЯ ОДЕЖДА</p>
 								<ul class=" basis mens-basis">
-									<li><img class="basis-hover" src="src/images/basis_t-shirt.png" alt="basis-t-shirt"></li>
-									<li><img class="basis-hover" src="src/images/men-shirt.png" alt="men-shirt"></li>
-									<li><img class="basis-hover" src="src/images/sweatshirt.png" alt="sweatshirt"></li>
-									<li><img  class="basis-hover" src="src/images/hoodie.png" alt="hoodie"></li>
-									<li><img class="basis-hover" src="src/images/cap.png" alt="cap"></li>
+									<li id ="tshirts"><img class="basis-hover" src="src/images/basis_t-shirt.png" alt="basis-t-shirt"></li>
+									<li id="sweatshirt"><img class="basis-hover" src="src/images/sweatshirt.png" alt="sweatshirt"></li>
+									<li id= "jumper"><img  class="basis-hover" src="src/images/hoodie.png" alt="hoodie"></li>
+									<li id = "peakedcap"><img class="basis-hover" src="src/images/cap.png" alt="cap"></li>
 								</ul>
 							</div> 
 							<div class="woman-basis">
 								<p>ЖЕНСКАЯ ОДЕЖДА</p>
 								<ul class="basis woman-basis ">
-									<li><img class="basis-hover" src="src/images/basis_t-shirt.png" alt="basis-t-shirt"></li>
-									<li><img class="basis-hover" src="src/images/women-shirt.png" alt="women-shirt"></li>
-									<li><img class="basis-hover" src="src/images/sweatshirt.png" alt="sweatshirt"></li>
-									<li><img class="basis-hover" src="src/images/hoodie.png" alt="hoodie"></li>
-									<li><img class="basis-hover" src="src/images/cap.png" alt="cap"></li>
+									<li><img class="basis-hover product" src="src/images/basis_t-shirt.png" alt="basis-t-shirt"></li>
+									<li><img class="basis-hover product" src="src/images/women-shirt.png" alt="women-shirt"></li>
+									<li><img class="basis-hover product" src="src/images/sweatshirt.png" alt="sweatshirt"></li>
+									<li><img class="basis-hover product" src="src/images/hoodie.png" alt="hoodie"></li>
+									<li><img class="basis-hover product" src="src/images/cap.png" alt="cap"></li>
 								</ul>
 							</div>
 							<div class="children-basis">
 								<p>ДЕТСКАЯ ОДЕЖДА</p>
 								<ul class="basis children-basis  ">
-									<li><img class="basis-hover" src="src/images/basis_t-shirt.png" alt="basis-t-shirt"></li>							
-									<li><img class="basis-hover" src="src/images/sweatshirt.png" alt="sweatshirt"></li>
-									<li><img class="basis-hover" src="src/images/cap.png" alt="cap"></li>
+									<li><img class="basis-hover product" src="src/images/basis_t-shirt.png" alt="basis-t-shirt"></li>							
+									<li><img class="basis-hover product" src="src/images/sweatshirt.png" alt="sweatshirt"></li>
+									<li><img class="basis-hover product" src="src/images/cap.png" alt="cap"></li>
 								</ul>
 							</div>
 							<div class="accessories-basis">
 								<p>	СУВЕНИРЫ</p>
 								<ul class="basis accessories-basis">
-									<li><img class="basis-hover" src="src/images/cup-basis.png" alt="cup-basis"></li>
-									<li><img class="basis-hover" src="src/images/bowl.png" alt="bowl"></li>
+									<li><img class="basis-hover product" src="src/images/cup-basis.png" alt="cup-basis"></li>
+									<li><img class="basis-hover product" src="src/images/bowl.png" alt="bowl"></li>
 								</ul>
 							</div> 								
 						</div>	
 					</div>
-					<div id="photo" class="col l12 m12"> Photo</div>
-					<div id="clipart" class="col l12 m12">Clipart</div>
+					<div id="photo" class="col l12 m12"> 
+					<form enctype="multipart/form-data" method="post">
+   							<p><b>Загрузите изображение в формате jpg, png, gif</b></p>
+   							<p><input type="file" name="img" accept="image/*" id="design-upload"></p>
+   							<a href="#" class="waves-effect waves-light btn pink accent-3" id="clear-button">Очистить</a>
+   							<p>Маленькое фото нельзя напечатать в большом размере.</p>
+   							<p>Использование изображения не должно нарушать авторских прав.</p>
+   						</form> 
+					</div>
+							<div id="clipart" class="col s12 tabcontent">
+							<ul class="collapsible">
+							<li>
+						<div >
+							<ul class=" basis mens-basis ">
+								<li class="clipart_pic basis-hover ">
+									<div class="clipartholder ">
+										<iframe class = "iframeImg" frameborder="0"  border="0" cellspacing="0" 
+										src="src/images/1_clipart.svg"  ></iframe>
+									</div>
+								</li>
+								<li class="clipart_pic basis-hover">
+									<div class="clipartholder">
+										<iframe class = "iframeImg"  frameborder="0" border="0" cellspacing="0" 
+										src="src/images/2_clipart.svg"  ></iframe>
+									</div>
+								</li>
+				                <li class="clipart_pic basis-hover">
+									<div class="clipartholder">
+										<iframe class = "iframeImg"  frameborder="0" border="0" cellspacing="0" 
+										src="src/images/3_clipart.svg"  ></iframe>
+									</div>
+								</li>
+								<li class="clipart_pic basis-hover">
+									<div class="clipartholder">
+										<iframe class = "iframeImg"  frameborder="0" border="0" cellspacing="0" 
+										src="src/images/4_clipart.svg"  ></iframe>
+									</div>
+								</li>
+								<li class="clipart_pic basis-hover">
+									<div class="clipartholder">
+										<iframe class = "iframeImg"  frameborder="0" border="0" cellspacing="0" 
+										src="src/images/5_clipart.svg"  ></iframe>
+									</div>
+								</li>
+								<li class="clipart_pic basis-hover">
+									<div class="clipartholder">
+										<iframe class = "iframeImg"  frameborder="0" border="0" cellspacing="0" 
+										src="src/images/6_clipart.svg"  ></iframe>
+									</div>
+								</li>
+								<li class="clipart_pic basis-hover">
+									<div class="clipartholder">
+										<iframe class = "iframeImg"  frameborder="0" border="0" cellspacing="0" 
+										src="src/images/7_clipart.svg"  ></iframe>
+									</div>
+								</li>
+								<li class="clipart_pic basis-hover">
+									<div class="clipartholder">
+										<iframe class = "iframeImg"  frameborder="0" border="0" cellspacing="0"  
+										src="src/images/8_clipart.svg"  ></iframe>
+									</div>
+								</li>
+									<li class="clipart_pic basis-hover">
+									<div class="clipartholder">
+										<iframe class = "iframeImg"  frameborder="0" border="0" cellspacing="0"  
+										src="src/images/9_clipart.svg"  ></iframe>
+									</div>
+								</li>
+								<li class="clipart_pic basis-hover">
+									<div class="clipartholder">
+										<iframe class = "iframeImg"  frameborder="0" border="0" cellspacing="0"  
+										src="src/images/10_clipart.svg"  ></iframe>
+									</div>
+								</li>
+								<li class="clipart_pic basis-hover">
+									<div class="clipartholder">
+										<iframe class = "iframeImg"  frameborder="0" border="0" cellspacing="0"  
+										src="src/images/11_clipart.svg"  ></iframe>
+									</div>
+								</li>
+								<li class="clipart_pic basis-hover">
+									<div class="clipartholder">
+										<iframe class = "iframeImg "  frameborder="0" border="0" cellspacing="0"  
+										src="src/images/12_clipart.svg"  ></iframe>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</li>
+				</ul>
+					</div>
 				</div>
 			</div>
 			<div class="col l7  m12 s12">
 				<div class="row">
-					<div class="col s12 m12 l11 offset-l">
+					<div class="col s12 m12 l12">
 							<div class="canvas-basis">
 								<div class="row">
 									<div class="col s12">
-										<h4 class="center-align">Мужская футболка</h4>
+										<h4  class="center-align productName"></h4>
 									</div>
 								</div>
 								<div class="row">
-									<div class="col l8 m12 s12">
-										<div class="center-align canvas_shirt">
-											<img class="responsive-img" src="src/images/big_t-shirt.png" alt="t-shirt">
+									<div class="col l9 m12 s12">
+										<div id = "canvas_container"  class="canvas_shirt ">
+													<canvas  id="canvas_image" style="position: absolute; z-index: 100; border:1px dashed;" width="120"  height="120" class="canvas_image"  ></canvas>
+													<canvas id = "mainCanvas"  ></canvas>
 										</div>
 									</div>
-									<div class="col l4 m12 s12">
-										<div class="row">
+									<div class="col l3 m12 s12">
+										<div id = "viewCollapseProduct"  class="row ">
 											<div class="col s6 m6 l12">
 												<p class="center-align"> Вид спереди</p>
-												<div class="center-align "><img class="responsive-img view-basis-canvas" src="src/images/front.png" alt="front" ></div>
+												<div id ="frontView" class="center-align "><img class="responsive-img view-basis-canvas" src="src/images/front.png" alt="front" ></div>
 											</div>
 											<div class="col s6 m6 l12">
 												<p class="center-align"> Вид сзади</p>
-												<div class="center-align"><img class="responsive-img view-basis-canvas" src="src/images/behind.png" alt="behind"></div>
+												<div id ="backView" class="center-align"><img class="responsive-img view-basis-canvas" src="src/images/behind.png" alt="behind"></div>
 											</div>
 										</div>
 									</div>		
 								</div>
 								<div class="row">
 									<p class=" canvas-basis-description">Цвет:</p>
-									<ul class="choice-color basis canvas-basis-description " >
-										<li><a href=""><img src="src/images/red.png" alt="basis-t-shirt"></a></li>
-										<li><a href=""><img src="src/images/black.png" alt="basis-t-shirt"></a></li>
-										<li><a href=""><img src="src/images/yellow.png" alt="basis-t-shirt"></a></li>
-										<li><a href=""><img src="src/images/green.png" alt="basis-t-shirt"></a></li>
-										<li><a href=""><img src="src/images/lime.png" alt="basis-t-shirt"></a></li>
-										<li><a href=""><img src="src/images/navy.png" alt="basis-t-shirt"></a></li>
+									<ul id = "color" class="choice-color basis canvas-basis-description " >
+									  <li id ="white"><img src="src/images/ColorProduct.png" alt="basis-t-shirt"></li>
+										<li id = "red"><img src="src/images/red.png" alt="basis-t-shirt"></li>
+										<li id = "black"><img src="src/images/black.png" alt="basis-t-shirt"></li>
+										<li id ="blue"><img src="src/images/blue.png" alt="basis-t-shirt"></li>
 									</ul>
 								</div>
-								<div class="row">
+								<div  class="row">
 									<p class="canvas-basis-description">Размер:</p>
 									<ul class="choice-size basis canvas-basis-description ">
 										<li><a href="">S</a></li>
@@ -189,14 +276,14 @@
 												<img src="src/images/size.png"  alt="size t-shirts ">
 											</div>
 											<div class="center-align">
-												<p >Итого: <span class="sum">350 грн</span></p>
-												<a href="purchase.html" class="waves-effect waves-light btn pink accent-3">Заказать</a>
+												<p >Итого: <span id= "price" class="sum"></span></p>
+												<a id="order" class="waves-effect waves-light btn pink accent-3">Заказать</a>
 											</div>
 										</div>
 									</div>
 								</div>
 								<div class="row">
-									<p class="canvas-basis-description"> <b>Мужская футболка</b></p>					
+									<p class="canvas-basis-description "> <b class="productName"></b></p>					
 										<p class="canvas-basis-description">Производитель: Stedman (Бельгия) </p>
 										<p class="canvas-basis-description">Футболка изготовлена из 100% хлопка, не имеет боковых швов, хорошо сидит по фигуре. Изображение наносится специальной флекс-пленкой Premium качества. Благодаря использованию высококачественных материалов, нанесенное изобрежение не отрывается, не трескается, не выгорает и не меняет цвет даже спустя 100 стирок! </p>
 									 <p class="canvas-basis-description">	Не требует особенного ухода! Стирать при температуре не выше 40С. Этого достаточно для того, что бы футболка радовала Вас долгие годы!</p>
@@ -208,11 +295,16 @@
 			</div>
 		</section>
 		<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-		<script type="text/javascript" src="build/js/main.js"></script>
+		<script type="text/javascript" src="build/js/main.js" ></script>
+		<script src="src/js/canvas.js">	</script>
+			<!-- <script src="src/js/data.js">	</script> -->
+
 		<script>
+
 			$(document).ready(function(){
 				$('ul.tabs').tabs();
 				$(".button-collapse").sideNav();
+
 			});
 		</script>
 	</body>

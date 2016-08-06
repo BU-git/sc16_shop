@@ -30,17 +30,19 @@
 	margin-bottom:25px;
 }
 
-ul.tabs li a:focus {
+
+ul.tabs li a:focus .active{
     background-color:  #9b56e0 !important;
     color: white !important;
 }
 
-ul.tabs li a:hover  {
+ul.tabs li a:hover{
 	background-color: #e7eaec;
 }
 
+
 .tabs .indicator{
-  display: none;
+ background-color: #6a1b9a !important;
 }
 
 .tabcontent {
@@ -58,7 +60,7 @@ ul.tabs li a:hover  {
 .view-basis-canvas {
 	border: 1px solid white;
 	border-radius: 3px;
-	padding: 5px;
+	/*padding: 5px;*/
 }
 
 .view-basis-canvas:hover {
@@ -84,5 +86,22 @@ ul.tabs li a:hover  {
 	margin-bottom: 10px;
 	padding-top:10px;
 	padding-bottom: 10px
+}
+
+.canvas_shirt {
+	position: relative;
+	}
+
+
+ .iframeImg{  
+   pointer-events:none; 
+   border-style: none;
+   max-width: 150px; 
+   max-height: 150px;
+}
+
+
+.tabs-constructor {
+	font-weight: 600;
 }
 

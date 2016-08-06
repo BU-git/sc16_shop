@@ -3,103 +3,132 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Главная страница</title>
+  <title>FLASH</title>
+  <link rel="shortcut icon" href="src/images/favicon.ico" type="image/x-icon">
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,500,700' rel='stylesheet' type='text/css'>
   <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="build/css/main.css">
 </head>
 <body>
- <header id = "top">
-  <div class="navbar-fixed">
-    <div class="nav white">
-      <div class="nav-wrapper container">
-        <div class="row container_row">
-         <div class="col l3 menu">
-          <a  href="#top"><img src="src/images/LOGO.png" alt=""></a> 
-        </div>
-        <div class="col l8 ">
-         <ul id="nav-mobile" class="left hide-on-med-and-down nav-wrapper__navigation">
-           <li class= "menu"><a href="#popular">Популярное</a></li>
-           <li class= "menu"><a href="#about">O Нас</a></li>
-           <li class= "menu"><a href="#contacts">Контакты</a></li>
-           <li><a href="constructor.html">Конструктор</a></li>
-         </ul>
-         <ul class="side-nav" id="mobile-demo">
-           <li class= "menu"><a href="#popular">Популярное</a></li>
-           <li class= "menu"><a href="#about">О Нас</a></li>
-           <li class= "menu"><a href="#contacts">Контакты</a></li>
-           <li><a href="constructor.html">Конструктор</a></li>
-         </ul>
-       </div>
-       <div class="col l1 right">
-         <a href="#" data-activates="mobile-demo" class="button-collapse hide-on-large-only button_hiden-menu"><img src="src/images/menu.svg" alt=""></a>
-         <a href="purchase.html"><img src="src/images/cart.svg" alt="" class="header__cart-icon"></a>
+   <header id="top">
+     <div class="navbar-fixed">
+       <div id="menu"  class="nav white">
+         <div class="nav-wrapper container">
+            <div class="row container__row">
+            <div class="col l3 menu">
+              <a href="#top"><img src="src/images/LOGO.png" alt="Flash"></a> 
+            </div>
+            <div class="col l8">
+              <ul id="nav-mobile" class="left hide-on-med-and-down nav-wrapper__navigation">
+                <li><a href="constructor.html">Конструктор</a></li>
+                <li><a href="#popular">Популярное</a></li>
+                <li><a href="#about">Отзывы</a></li>
+                <li><a href="#contacts">Контакты</a></li>
+              </ul>
+              <ul class="side-nav" id="mobile-demo">
+                <li><a href="constructor.html">Конструктор</a></li>
+                <li><a href="#popular">Популярное</a></li>
+                <li><a href="#about">Отзывы</a></li>
+                <li><a href="#contacts">Контакты</a></li>
+              </ul>
+           </div>
+           <div class="col l1 right side-nav__icon">
+             <a href="#" data-activates="mobile-demo" class="button-collapse hide-on-large-only button_hiden-menu"><img src="src/images/menu1.svg" alt=""></a>
+             <a href="purchase.html" class="side-nav__icon__cart"></a>
+           </div>
+         </div>
        </div>
      </div>
-   </div>
- </div>
-</div> 
-</header>
-<section>
-  <div class="main__banner__img valign-wrapper" >
+    </div> 
+    </header>
+
+
+<section class="main__banner">
+  <div class="main__banner__img valign-wrapper">
     <div class="container">
      <div class="row">
-      <div class="col s12 offset-l2 m11 offset-m1">
-        <div class="wrapper left-align"> 
-         <h3 class='#3b4449-text text-darken-1'>Создай свою <br> футболку мечты</h3>
+      <div class="col  l8 offset-l2 m10 offset-m1">
+         <h3 class="#3b4449-text text-darken-1 main-banner__name hide-on-small-only">Создай футболку мечты</h3>
+         <h3 class="#3b4449-text text-darken-1 main-banner__name__small hide-on-med-and-up">Создай футболку мечты</h3>
          <a href="constructor.html" class="waves-effect waves-light btn pink accent-3 "> Создать дизайн</a>
-       </div>
-     </div>
+      </div>
    </div>
  </div>
 </div>               
 </section>
+
+
+
+
 <section>
- <div class="row advantages-attachment ">
+<div class="row advantages-attachment ">
   <div class="col s12">
    <div class="container ">
-    <div class="flex-box light-blue-text text-darken-4">      
-      <div class="collection-info__main text-darken-4 center-align">
-        <h2 class="sample"><b>450</b></h2>
-        <h5 class="sample left-align">уникальных <br> дизайна</h5>
-      </div>
-      <div class="collection-info__main text-darken-4 center-align">
-       <h2 class="sample"><b>320</b></h2>
-       <h5 class="sample left-align">довольных <br> клиента</h5>
-     </div>
-     <div class="collection-info__main text-darken-4 center-align">
-       <h2 class="sample"><b>60</b></h2>
-       <h5 class="sample left-align">видов <br> продукции</h5>
-     </div>
-   </div>
- </div>
-</div>
-</div>
-<div class="row light-blue darken-4 ">
-  <div class="col s12">
-   <div class="container container-padding">
-    <div class="row">
-      <div class="col s12">
-        <h3 class="white-text center-align">Наши преимущества</h3>
+     <div class="flex-box light-blue-text text-darken-4">      
+       <div class="collection-info__main text-darken-4 center-align">
+        <h2 class="sample"><b id="num_client">450</b></h2>
+        <h5 class="sample left-align collection-info__main__discription">уникальных дизайна</h5>
+       </div>
+       <div class="collection-info__main text-darken-4 center-align">
+        <h2 class="sample"><b id="num_client">320</b></h2>
+        <h5 class="sample left-align collection-info__main__discription">довольных клиента</h5>
+       </div>
+       <div class="collection-info__main text-darken-4 center-align">
+        <h2 class="sample"><b id="num_product">60</b></h2>
+        <h5 class="sample left-align collection-info__main__discription">видов  продукции</h5>
+       </div>
       </div>
     </div>
-    <div class="flex-box white-text">
-     <div class="center-align collection-info__main">
-       <div><img class="responsive-img" src="src/images/advantages-1.png" alt="advantages-1"></div>
-       <h5>100% качество</h5>
+  </div>
+</div>
+
+
+
+
+<div class="light-blue darken-4 advantages-attachment__above">
+  <div class="row container "> 
+  <div class="col l4 m3 offset-m1 s12 center-align">
+      <img class="responsive-img" src="src/images/advantages-1.png" alt="advantages-1">
+      <h5>100% качество</h5>
+  </div>
+  <div class="col l4  m3 offset-m1 s12 center-align">
+      <img class="responsive-img" src="src/images/advantages-2.png" alt="advantages-1">
+      <h5>Оперативность</h5>
+  </div>
+   <div class="col l4  m3 offset-m1 s12 center-align">
+      <img class="responsive-img " src="src/images/advantages-3.png" alt="advantages-1">
+      <h5>100% уникальность</h5>
+  </div>
+
+ <!--  <div class="col s12">
+  <div class="container container-padding">
+   <div class="row">
+     <div class="col s12">
+       <h3 class="white-text center-align">Наши преимущества</h3>
      </div>
-     <div class="center-align collection-info__main">
-      <div><img class="responsive-img" src="src/images/advantages-2.png" alt="advantages-2"></div>
-      <h5>Оперативность в <br> изготовлении</h5>
+   </div>
+   <div class="hite-text">
+    <div class="center-align collection-info__main">
+      <div><img class="responsive-img" src="src/images/advantages-1.png" alt="advantages-1"></div>
+      <h5>100% качество</h5>
     </div>
     <div class="center-align collection-info__main">
-     <div><img class="responsive-img  " src="src/images/advantages-3.png" alt="advantages-3"></div>
-     <h5>100% уникальность</h5>
+     <div><img class="responsive-img" src="src/images/advantages-2.png" alt="advantages-2"></div>
+     <h5>Оперативность в <br> изготовлении</h5>
    </div>
+   <div class="center-align collection-info__main">
+    <div><img class="responsive-img  " src="src/images/advantages-3.png" alt="advantages-3"></div>
+    <h5>100% уникальность</h5>
+  </div>
+  </div>
  </div>
-</div>
+ </div> -->
 </div>
 </div>
 </section>
+
+
+
 <section>
   <div class="container container-padding">
     <div class="row"> 
@@ -140,7 +169,6 @@
     </div>
   </div>
 </section>
-
 <section id="popular" class="light-blue darken-4">
   <div class="container container-padding">
     <div class="row">
@@ -180,9 +208,6 @@
  </div>
 </div>
 </section>
-
-
-
 <section class="purple">
   <div class="container container-padding">
     <div class="row">
@@ -316,22 +341,23 @@
 </section>
 <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 <script type="text/javascript" src="build/js/main.js"></script>
-<script>  
-  $(document).ready(function(){
+<script>
+ $(document).ready(function(){
+    $("#menu").on("click","a[href*=#]:not([href=#])", function (event) {
+        event.preventDefault();
+        var id  = $(this).attr('href'),
+            top = $(id).offset().top;
+        $('body,html').animate({scrollTop: top}, 1500);
+    });
   $(".button-collapse").sideNav();
   $('.slider').slider({indicators: false, height: 300, full_width: true});
   $('#next-slider').click(function(){ 
    $('.slider').slider('next');
  }); 
   $('#prev-slider').click(function(){ 
-   $('.slider').slider('prev');
- });
- $(".menu").on("click","a", function (event) {
-        event.preventDefault();
-        var id  = $(this).attr('href'),
-            top = $(id).offset().top;
-        $('body,html').animate({scrollTop: top}, 1500);
-    }); 
+  $('.slider').slider('prev');
+ }); 
+
 });      
 </script>
 </body>
