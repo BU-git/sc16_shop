@@ -20,7 +20,7 @@
 }
 
 .choice-size a:hover{
-	background-color:violet;
+	/*background-color:violet;*/
 	color:white;
 }
 
@@ -29,6 +29,7 @@
 	font-size:18px;
 	margin-bottom:25px;
 }
+
 
 ul.tabs li a:focus .active{
     background-color:  #9b56e0 !important;
@@ -39,8 +40,9 @@ ul.tabs li a:hover{
 	background-color: #e7eaec;
 }
 
+
 .tabs .indicator{
-  display: none;
+ background-color: #6a1b9a !important;
 }
 
 .tabcontent {
@@ -90,10 +92,16 @@ ul.tabs li a:hover{
 	position: relative;
 	}
 
+
  .iframeImg{  
    pointer-events:none; 
    border-style: none;
    max-width: 150px; 
    max-height: 150px;
+}
+
+
+.tabs-constructor {
+	font-weight: 600;
 }
 

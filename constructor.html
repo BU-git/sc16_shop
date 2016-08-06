@@ -38,11 +38,12 @@
 		<div class="row">
 			<div class="col l5 m12 s12">
 				<div class="row">
+			
 					<div class="col s12">
-						<ul class="tabs">
-							<li class="tab col l3 m3"><a class="active purple-text text-darken-3" href="#basis">Основа</a></li>
-							<li class="tab col l3 m3"><a  class="purple-text text-darken-3 hoverable" href="#photo">Фото</a></li>
-							<li class="tab col l3 m3"><a class="purple-text text-darken-3" href="#clipart">Клипарт</a></li>
+						<ul class="tabs purple-text text-darken-3 tabs-constructor">
+							<li class="tab col l3"><a class="active purple-text text-darken-4" href="#basis">Основа</a></li>
+							<li class="tab col l3"><a  class="purple-text text-darken-4" href="#photo ">Фото</a></li>
+							<li class="tab col l3"><a class="purple-text text-darken-4" href="#clipart">Клипарт</a></li>
 						</ul>
 					</div>
 					<div id="basis" class="col s12 tabcontent">
@@ -131,10 +132,8 @@
 					<form enctype="multipart/form-data" method="post">
    							<p><b>Загрузите изображение в формате jpg, png, gif</b></p>
    							<p><input type="file" name="img" accept="image/*" id="design-upload"></p>
-   							<a href="#" class="waves-effect waves-light btn pink accent-3" id="upload-button">Загрузить картинку</a>
    							<a href="#" class="waves-effect waves-light btn pink accent-3" id="clear-button">Очистить</a>
-   							<p>Маленькое фото нельзя напечатать  в большом размере.</p>
-   							<p>Чтобы нанести фото на всю ширину области печати нужен размер не менее 1000x1000 пикселей, желательно в формате PNG с прозрачным фоном.</p>
+   							<p>Маленькое фото нельзя напечатать в большом размере.</p>
    							<p>Использование изображения не должно нарушать авторских прав.</p>
    						</form> 
 					</div>
@@ -305,6 +304,7 @@
 			$(document).ready(function(){
 				$('ul.tabs').tabs();
 				$(".button-collapse").sideNav();
+
 			});
 		</script>
 	</body>
