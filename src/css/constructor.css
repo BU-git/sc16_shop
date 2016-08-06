@@ -60,14 +60,13 @@ ul.tabs li a:hover{
 	margin-top: 48px !important;
 }
 
-.view-basis-canvas {
-	border: 1px solid white;
+.canvas_image {
+	/*border: 1px solid white;*/
 	border-radius: 3px;
-	/*padding: 5px;*/
 }
 
-.view-basis-canvas:hover {
-	border: 1px solid #c2cbd0;
+.canvas_image:hover {
+	/*border: 1px solid #c2cbd0;*/
 }
 
 .basis-hover {
@@ -103,4 +102,18 @@ ul.tabs li a:hover{
    max-height: 150px;
 }
 
+.canvas_image{
+	position:  absolute; 
+	z-index:  100;
+}
 
+.view-basis-canvas {
+	border: 1px solid white;
+	border-radius: 3px;
+	max-width:  150px;
+	/*padding: 5px;*/
+}
+
+.view-basis-canvas:hover {
+	border: 1px solid #c2cbd0;
+}
