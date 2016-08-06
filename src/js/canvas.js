@@ -79,7 +79,7 @@ function drawImageInCanvas() {
   context.drawImage(baseProduct.baseImage, positionBaseImage(baseProduct.baseImage).x, positionBaseImage(baseProduct.baseImage).y, baseProduct.baseImage.width, baseProduct.baseImage.height); 
 }
 
-// визначаємо позицію в canvas
+визначаємо позицію в canvas
 function positionBaseImage(img) {
   var point = new Object();
   point.x = (baseCanvas.width - img.width)/2;
@@ -105,7 +105,7 @@ function sizeBaseImg(){
   }
 }
 
-// зміна широти і висоти canvas при зміні вікна браузера
+зміна широти і висоти canvas при зміні вікна браузера
 function updateWindow() {
  if($(this)[0].innerWidth > 992){
   baseCanvas.width = 0.29*$(this)[0].innerWidth;
@@ -156,7 +156,7 @@ function  setTime() {
  setTimeout(updateCanvas , 1000);
 }
 
-// фунція вибору кольору
+фунція вибору кольору
 function changeColor(){
   baseProduct.color = (this).id;
   baseProduct.baseImage.src = viewSide[baseProduct.color];
@@ -183,9 +183,9 @@ function changeProductName() {
   $('.productName').html(baseProduct.name);
 }
 
-//upload image
+upload image
 
-//upload image
+upload image
 var canvas_image = document.getElementById("canvas_image");
 var ctx = canvas_image.getContext('2d')
 var labelImg;
@@ -197,6 +197,7 @@ document.getElementById('design-upload').onchange = function (e) {
        labelImg = new Image;
       labelImg.src = e.target.result;
       labelImg.onload = function() {
+        canvasClear ();
         resizeImage(labelImg);           
             
           };                         
@@ -239,6 +240,21 @@ function resizeImage(img) {
                    }    
                  }
 }
+
+
+
+
+$ ('#clipart img').on('click', loadingClipart);
+
+function loading (){
+  var src = (this).src;
+  var img = new Image();
+  img.src = src;
+  canvasClear ();
+  resizeImage(img);
+} ;
+
+
 
 $('#order').on("click", orderProduct);
 
