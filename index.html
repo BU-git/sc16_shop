@@ -10,24 +10,24 @@
 <body>
  <header id = "top">
   <div class="navbar-fixed">
-    <div class="nav white">
+    <div id = "menu"  class="nav white">
       <div class="nav-wrapper container">
         <div class="row container_row">
          <div class="col l3 menu">
           <a  href="#top"><img src="src/images/LOGO.png" alt=""></a> 
         </div>
-        <div class="col l8 ">
+        <div  class="col l8">
          <ul id="nav-mobile" class="left hide-on-med-and-down nav-wrapper__navigation">
-           <li class= "menu"><a href="#popular">Популярное</a></li>
-           <li class= "menu"><a href="#about">O Нас</a></li>
-           <li class= "menu"><a href="#contacts">Контакты</a></li>
            <li><a href="constructor.html">Конструктор</a></li>
+           <li ><a  href="#popular">Популярное</a></li>
+           <li ><a href="#about">Отзывы</a></li>
+           <li ><a  href="#contacts">Контакты</a></li>
          </ul>
-         <ul class="side-nav" id="mobile-demo">
-           <li class= "menu"><a href="#popular">Популярное</a></li>
-           <li class= "menu"><a href="#about">О Нас</a></li>
-           <li class= "menu"><a href="#contacts">Контакты</a></li>
+         <ul class="side-nav " id="mobile-demo">
            <li><a href="constructor.html">Конструктор</a></li>
+            <li ><a  href="#popular">Популярное</a></li>
+           <li ><a href="#about">Отзывы</a></li>
+           <li ><a href="#contacts">Контакты</a></li>
          </ul>
        </div>
        <div class="col l1 right">
@@ -39,8 +39,8 @@
  </div>
 </div> 
 </header>
-<section>
-  <div class="main__banner__img valign-wrapper" >
+<section >
+  <div  class="main__banner__img valign-wrapper " >
     <div class="container">
      <div class="row">
       <div class="col s12 offset-l2 m11 offset-m1">
@@ -140,7 +140,6 @@
     </div>
   </div>
 </section>
-
 <section id="popular" class="light-blue darken-4">
   <div class="container container-padding">
     <div class="row">
@@ -180,9 +179,6 @@
  </div>
 </div>
 </section>
-
-
-
 <section class="purple">
   <div class="container container-padding">
     <div class="row">
@@ -314,10 +310,64 @@
  </div>
  </div>
 </section>
+<footer class="page-footer #01579b light-blue darken-4">
+          <div class="container">
+            <div class="row">
+              <div class="valign-wrapper">
+                <div class="col l7 s12">
+                  <div class="col l6 menu">
+                     <a  href="#top"><img src="src/images/LOGO.png" alt=""></a> 
+                  </div>
+                  <ul id="nav-mobile" class="left nav-wrapper__navigation">
+                    <li><a href="constructor.html">Конструктор</a></li>
+                  </ul>
+                </div>
+                <div class="social_box col l5 s12">
+                  <ul class="social_links">
+                    <li><a class="grey-text text-lighten-3" href="#!"><img src="src/images/f.png" alt=""></a></li>
+                    <li><a class="grey-text text-lighten-3" href="#!"><img src="src/images/inst.png" alt=""></a></li>
+                    <li><a class="grey-text text-lighten-3" href="#!"><img src="src/images/vk.png" alt=""></a></li>
+                  </ul>
+                </div>
+            </div>
+            
+          </div>
+          </div>
+          <div class="footer-copyright">
+            <div class="container">
+            </div>
+          </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 <script type="text/javascript" src="build/js/main.js"></script>
+<script>
+ $(document).ready(function(){
+    $("#menu").on("click","a[href*=#]:not([href=#])", function (event) {
+        event.preventDefault();
+        var id  = $(this).attr('href'),
+            top = $(id).offset().top;
+        $('body,html').animate({scrollTop: top}, 1500);
+    });
+});
+</script>
 <script>  
-  $(document).ready(function(){
+$(document).ready(function(){
   $(".button-collapse").sideNav();
   $('.slider').slider({indicators: false, height: 300, full_width: true});
   $('#next-slider').click(function(){ 
@@ -325,13 +375,7 @@
  }); 
   $('#prev-slider').click(function(){ 
    $('.slider').slider('prev');
- });
- $(".menu").on("click","a", function (event) {
-        event.preventDefault();
-        var id  = $(this).attr('href'),
-            top = $(id).offset().top;
-        $('body,html').animate({scrollTop: top}, 1500);
-    }); 
+ }); 
 });      
 </script>
 </body>
