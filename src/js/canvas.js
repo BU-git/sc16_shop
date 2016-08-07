@@ -211,9 +211,13 @@ else {
 
 };
 
-$('#clear-button').on('click', canvasClear);
+$('#clear-button').on('click', function  (argument) {
+  labelImg = null;
+  canvasClear ();
+});
+
 function canvasClear () {
-  ctx.clearRect(0, 0, canvas_image.width, canvas_image.height);
+  ctx.clearRect(-canvas_image.width, -canvas_image.height, 2*canvas_image.width, 2*canvas_image.height);
 } 
 
 function drawPrintImage() {
@@ -229,11 +233,11 @@ $('#clipart .clipartholder').on('click', function( e ) {
    
   labelImg.onload = function() {
     sizeBaseImg(labelImg, canvas_image);
-  eventOb.width = labelImg.width;
+   eventOb.width = labelImg.width;
     eventOb.height = labelImg.height;
     eventOb.X =  positionBaseImage(labelImg, canvas_image).x;
     eventOb.Y = positionBaseImage(labelImg, canvas_image).y;
-    paint() ;
+    drawPrintImage() ;
 }
 });
 
@@ -252,7 +256,7 @@ function  moveImg(e) {
  {
   eventOb.X +=  e.originalEvent.movementX;
   eventOb.Y += e.originalEvent.movementY;
- paint();
+ drawPrintImage();
  borderImg()
  
 }else{
@@ -262,6 +266,7 @@ function  moveImg(e) {
 
 function paint (){
   canvasClear ();
+  ctx.lineWidth = 0;
   ctx.drawImage(labelImg, eventOb.X,  eventOb.Y, eventOb.width, eventOb.height);
 }
 
@@ -270,22 +275,25 @@ function  stopMoveImg(e) {
  $('#canvas_image').off('mousemove');
 }
 
-
 $('#canvas_image').on( "mouseover",function  (e) {
+  if(labelImg){
  borderImg();
+}else{
+   canvasClear ();
+}
 });
 
 $('#canvas_image').on( "mouseout",function  (e) {
-  paint();
+  drawPrintImage();
 });
 
 function  borderImg() {
-
- 
-ctx.lineWidth  = 0.5;
+  if(labelImg){
+ctx.lineWidth  = 0.3;
 ctx.setLineDash([1,1]); 
 ctx.lineDashOffset=1;
 ctx.strokeRect(eventOb.X,eventOb.Y,eventOb.width,eventOb.height);
+}
 }
 
 
