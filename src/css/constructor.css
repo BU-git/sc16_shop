@@ -23,7 +23,14 @@
 	background-color:violet;
 	color:white;
 }
-
+.canvas-basis-description__color{
+	background-image: url('../../src/images/white.png');
+	width: 31px;
+	height: 27px;
+}
+.canvas-basis-description__color:hover{
+	background-image: url('../../src/images/white_s.png');
+}
 .price{
 	font-weight:bold;
 	font-size:18px;
