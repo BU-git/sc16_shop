@@ -5,39 +5,39 @@ var context;
 var baseImgItem;
 var viewSide;
 var baseProduct;
-
+var eventOb  = new Object();
 
 
 $(document).ready(function(){
   if(document.getElementById('mainCanvas') && document.getElementById('mainCanvas').getContext){
-
-  baseCanvas = document.getElementById('mainCanvas');
-  context = baseCanvas.getContext('2d');
-  baseImgItem = 'tshirts';
-  baseProduct = new Object();
-  baseProduct.baseImage = new Image();
+    
+    baseCanvas = document.getElementById('mainCanvas');
+    context = baseCanvas.getContext('2d');
+    baseImgItem = 'tshirts';
+    baseProduct = new Object();
+    baseProduct.baseImage = new Image();
   // baseProduct.baseImage.crossOrigin = 'anonymous';
 
   loadProduct();
   baseProduct.baseImage.onload = function() {
-  updateWindow();
- }
+    updateWindow();
+  }
 
 // подія зміни вікна браузера
- $(window).on('resize' , updateWindow);
+$(window).on('resize' , updateWindow);
 
 // подія вибору основи
- $('#basis .basis>li').click(function () {
-   fillBackgroundColor();
-   baseImgItem = (this).id;
-   loadProduct();
-   drawImageInCanvas();
- })
+$('#basis .basis>li').click(function () {
+ fillBackgroundColor();
+ baseImgItem = (this).id;
+ loadProduct();
+ drawImageInCanvas();
+})
 
 // завантаження фото
 $('#upload-button').click(function(){
-        $('#design-upload').click();
-        return false;
+  $('#design-upload').click();
+  return false;
 });
 // подія вибору кольору
 $('#color li').on('click', changeColor);
@@ -48,46 +48,45 @@ $('#backView').on('click', toBackView);
 
 // вибір продукту
 function loadProduct() {
-   viewSide = clothe[baseImgItem].frontImg;
-   baseProduct.color= "white";
-   baseProduct.price  = clothe[baseImgItem].price;
-   baseProduct.name = clothe[baseImgItem].productName;
-   baseProduct.size  = "S";
-   baseProduct.manufacturer  = clothe[baseImgItem].manufacturer;
-   baseProduct.about  = clothe[baseImgItem].about;
-   baseProduct.service  = clothe[baseImgItem].service;
-   changePrice();
-   changeProductName();
-changeViewButtons() ;
-   baseProduct.baseImage.src = viewSide[baseProduct.color];
+ viewSide = clothe[baseImgItem].frontImg;
+ baseProduct.color= "white";
+ baseProduct.price  = clothe[baseImgItem].price;
+ baseProduct.name = clothe[baseImgItem].productName;
+ baseProduct.size  = "S";
+ baseProduct.manufacturer  = clothe[baseImgItem].manufacturer;
+ baseProduct.about  = clothe[baseImgItem].about;
+ baseProduct.service  = clothe[baseImgItem].service;
+ changePrice();
+ changeProductName();
+ changeViewButtons() ;
+ baseProduct.baseImage.src = viewSide[baseProduct.color];
 }
 
 function  changeViewButtons() {
- 
-if(baseImgItem == "peakedcap")
-{
+
+  if(baseImgItem == "peakedcap")
+  {
    $('#viewCollapseProduct').css("display" , "none");
-}
-else{
+ }
+ else{
    $('#viewCollapseProduct').css("display" , "block");
    $('#frontView img').attr('src',clothe[baseImgItem].frontImg[baseProduct.color]);
    $('#backView img').attr('src',clothe[baseImgItem].backImg[baseProduct.color]);
-}
+ }
 
 }
-
 
 // перерисовує картинку в canvas
 function drawImageInCanvas() {
   sizeBaseImg(baseProduct.baseImage, baseCanvas);
-  context.drawImage(baseProduct.baseImage, positionBaseImage(baseProduct.baseImage).x, positionBaseImage(baseProduct.baseImage).y, baseProduct.baseImage.width, baseProduct.baseImage.height); 
+  context.drawImage(baseProduct.baseImage, positionBaseImage(baseProduct.baseImage, baseCanvas).x, positionBaseImage(baseProduct.baseImage, baseCanvas).y, baseProduct.baseImage.width, baseProduct.baseImage.height); 
 }
 
 // визначаємо позицію в canvas
-function positionBaseImage(img) {
+function positionBaseImage(img, canvas) {
   var point = new Object();
-  point.x = (baseCanvas.width - img.width)/2;
-  point.y = (baseCanvas.height - img.height)/2;
+  point.x = (canvas.width - img.width)/2;
+  point.y = (canvas.height - img.height)/2;
   return point;
 }
 
@@ -116,20 +115,20 @@ function updateWindow() {
   baseCanvas.height = baseCanvas.width;
   canvas_image.width = 0.32*baseCanvas.width;
   canvas_image.height = 0.32*baseCanvas.width;
- canvas_image.style.top  = 0.22*baseCanvas.width +"px";
+  canvas_image.style.top  = 0.22*baseCanvas.width +"px";
   canvas_image.style.left  = 0.34*baseCanvas.width+"px";
   drawImageInCanvas();
-  drawPrintImage(labelImg);
+  drawPrintImage();
   setTime()
 } else if ($(this)[0].innerWidth <= 992){
   baseCanvas.width = 0.75*$(this)[0].innerWidth;
   baseCanvas.height = baseCanvas.width;
   canvas_image.width = 0.32*baseCanvas.width;
   canvas_image.height = 0.32*baseCanvas.width;
- canvas_image.style.top  = 0.22*baseCanvas.width +"px";
+  canvas_image.style.top  = 0.22*baseCanvas.width +"px";
   canvas_image.style.left  = 0.33*baseCanvas.width+"px";
   drawImageInCanvas();
-  drawPrintImage(labelImg);
+  drawPrintImage();
   setTime();
 }    
 }
@@ -140,10 +139,10 @@ function updateCanvas() {
   baseCanvas.height = baseCanvas.width;
   canvas_image.style.top  = 0.22*baseCanvas.width +"px";
   canvas_image.style.left  = 0.33*baseCanvas.width+"px";
-   canvas_image.width = 0.32*baseCanvas.width;
+  canvas_image.width = 0.32*baseCanvas.width;
   canvas_image.height = 0.32*baseCanvas.width;
   drawImageInCanvas();
-  drawPrintImage(labelImg);
+  drawPrintImage();
 } else if ($(window)[0].innerWidth <= 992){
   baseCanvas.width = 0.75*$(window)[0].innerWidth;
   baseCanvas.height = baseCanvas.width;
@@ -152,7 +151,7 @@ function updateCanvas() {
   canvas_image.width = 0.32*baseCanvas.width;
   canvas_image.height = 0.32*baseCanvas.width;
   drawImageInCanvas();
-  drawPrintImage(labelImg);
+  drawPrintImage();
 }    
 }
 
@@ -166,6 +165,7 @@ function changeColor(){
   baseProduct.baseImage.src = viewSide[baseProduct.color];
   changeViewButtons();
   drawImageInCanvas();
+  console.log(eventOb, eventOb.y);
 }
 
 function toFrontView() {
@@ -184,7 +184,6 @@ function changePrice() {
   $('#price').html(baseProduct.price + ' ' + "грн");
 }
 function changeProductName() {
-  // var d = baseProduct.name;
   $('.productName').html(baseProduct.name);
 }
 
@@ -197,19 +196,19 @@ document.getElementById('design-upload').onchange = function (e) {
     var reader = new FileReader();
     reader.readAsDataURL(e.target.files[0]); 
     reader.onload = function (e) {
-       labelImg = new Image;
-      labelImg.src = e.target.result;
-      labelImg.onload = function() {
-       
-        drawPrintImage(labelImg);           
-            
-          };                         
-      };
-    }
-  else {
-    alert('FileReader API is not supported in your browser, please use Firefox, Safari, Chrome or IE10!')
-  }
-  
+     labelImg = new Image;
+     labelImg.src = e.target.result;
+     labelImg.onload = function() {
+
+      drawPrintImage();           
+
+    };                         
+  };
+}
+else {
+  alert('FileReader API is not supported in your browser, please use Firefox, Safari, Chrome or IE10!')
+}
+
 };
 
 $('#clear-button').on('click', canvasClear);
@@ -217,25 +216,77 @@ function canvasClear () {
   ctx.clearRect(0, 0, canvas_image.width, canvas_image.height);
 } 
 
-function drawPrintImage(img) {
-  if(img){
-     canvasClear ();
-   sizeBaseImg(img, canvas_image);
-   ctx.drawImage(img, 0, 0, img.width, img.height);
+function drawPrintImage() {
+  if(labelImg){
+ paint ();
  }
 }
 
-// $ ('#re').bind('click', loadingClipart);
-
-   $('.clipartholder').on('click', function( e ) {
-    var src = (e).target.children[0].src;
-     labelImg = new Image;
+$('#clipart .clipartholder').on('click', function( e ) {
+  var src = (e).target.children[0].src;
+  labelImg = new Image;
   labelImg.src = src;
+   
   labelImg.onload = function() {
-  drawPrintImage(labelImg);
+    sizeBaseImg(labelImg, canvas_image);
+  eventOb.width = labelImg.width;
+    eventOb.height = labelImg.height;
+    eventOb.X =  positionBaseImage(labelImg, canvas_image).x;
+    eventOb.Y = positionBaseImage(labelImg, canvas_image).y;
+    paint() ;
 }
-   });
+});
 
+
+$('#canvas_image').on( "mousedown",translateImg);
+
+function  translateImg(e) {
+  if(e.offsetX>eventOb.X && e.offsetY>eventOb.Y && e.offsetX<(eventOb.X + eventOb.width) && e.offsetY<(eventOb.Y + eventOb.height))
+  {
+    $('#canvas_image').mousemove(moveImg);
+  }
+}
+
+function  moveImg(e) {
+ if(e.offsetX>eventOb.X && e.offsetY>eventOb.Y && e.offsetX<(eventOb.X + eventOb.width) && e.offsetY<(eventOb.Y + eventOb.height))
+ {
+  eventOb.X +=  e.originalEvent.movementX;
+  eventOb.Y += e.originalEvent.movementY;
+ paint();
+ borderImg()
+ 
+}else{
+ $('#canvas_image').off('mousemove');
+}
+}
+
+function paint (){
+  canvasClear ();
+  ctx.drawImage(labelImg, eventOb.X,  eventOb.Y, eventOb.width, eventOb.height);
+}
+
+$('#canvas_image').on( "mouseup",stopMoveImg);
+function  stopMoveImg(e) {
+ $('#canvas_image').off('mousemove');
+}
+
+
+$('#canvas_image').on( "mouseover",function  (e) {
+ borderImg();
+});
+
+$('#canvas_image').on( "mouseout",function  (e) {
+  paint();
+});
+
+function  borderImg() {
+
+ 
+ctx.lineWidth  = 0.5;
+ctx.setLineDash([1,1]); 
+ctx.lineDashOffset=1;
+ctx.strokeRect(eventOb.X,eventOb.Y,eventOb.width,eventOb.height);
+}
 
 
 // $('#order').on("click", orderProduct);
@@ -247,7 +298,7 @@ function drawPrintImage(img) {
 
 //  var data1 = baseCanvas.toDataURL('image/jpeg');
 // console.log(data1);
- 
+
 // var order= new Object();
 
 //       // order.printImg = labelImg.src;
@@ -257,7 +308,7 @@ function drawPrintImage(img) {
 //       order.size = baseProduct.size;
 //        localStorage.setItem('Ordered', JSON.stringify(order));
 
-   
+
 // }
 
 }});
