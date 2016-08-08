@@ -2,6 +2,11 @@ body{
 	min-width: 320px !important;
 }
 
+footer{
+	background-color: white !important;
+	color: white !important;
+}
+
 .container_row{
 	margin: 0 !important;
 	padding: 15px 0 !important;
@@ -146,7 +151,7 @@ body{
 	flex-wrap: wrap;
 	align-items: stretch;
 	flex-direction: column;
-	padding:  15px;
+	padding:15px;
 }
 
 .pop-production>p{
@@ -156,4 +161,26 @@ body{
 .pop-production>a{
 	align-self:flex-start;
 }
+.social_links>li{
+	display: inline-block;
+	margin-left: 10px;
+
+}
+.footer_main {
+	padding-bottom: 10px;
+	
+	}
+.footer_main__button{
+	display: block;
+	margin: 15px 0 15px 0;
+}
+.footer_main__button:hover {
+ 	background-color: #9b56e0 !important;
+	border-radius: 50px;
+}
+
+.social_links{
+	margin:0;
+}
+
 
