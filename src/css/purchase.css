@@ -78,3 +78,7 @@ input::-webkit-inner-spin-button {
 input[type=number].amount { 
  -moz-appearance:textfield; 
  }
+ .formValidate div.row{
+  margin-bottom: 0;
+  overflow: hidden;
+ }

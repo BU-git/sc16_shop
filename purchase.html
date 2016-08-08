@@ -38,34 +38,34 @@
   <div class="container">
    <div class="row">
     <div class="col s12">
-     <h3 class="center-align header-indent__body">Оформление заказа</h3>
+     <h3 class="center-align header-indent__body ">Оформление заказа</h3>
     </div>
    </div>
    <div class="row ">
     <div class="col s12 m12 l6">
      <div class="info">
       <div class="row">
-       <div class="col s12">
+       <div class="col s12 ">
         <div>
-         <h4>Ваш заказ</h4>
+         <h4 >Ваш заказ</h4>
         </div>
        </div>
       </div>
-      <div class="flex-box">
+      <div class="flex-box ">
        <div class="center-align">
-        <img  class="center-align" src="src/images/Product.png" alt="Close">
+        <img id = "productOrderedImage"  class="center-align materialboxed" src="src/images/Product.png" alt="Close">
        </div>
        <div >
-        <ul class="collection collapsed-border">
-         <li class="collection-item collapsed-border "><h5>Футболка</h5></li>
+        <ul class="collection collapsed-border ">
+         <li class="collection-item collapsed-border"><h5 id ="productOrderedName">Футболка</h5></li>
          <li class="collection-item collapsed-border valign-wrapper">
-          <span class="valign">Цвет </span><span class="valign badge"><img  src="src/images/ColorProduct.png" alt=""></span></li>
-         <li class="collection-item collapsed-border">Размер <span class="badge">S</span></li>
+          <span class="valign">Цвет </span><span class="valign badge"><img  id = "productOrderedColor" src="src/images/ColorProduct.png" alt=""></span></li>
+         <li class="collection-item collapsed-border">Размер <span id = "productOrderedSize" class="badge">S</span></li>
          <li class="collection-item collapsed-border">Количество
           <ul class="counter">
            <li id="decrease_amount" class="waves-effect waves-light grey">-</li>
-           <li class="waves-effect waves-light container-input"><input id="amount" class="amount" min="1" max="1000" size="4" name = "amount" type="number"  value="1"></li>
-           <li id="increase_amount" class="waves-effect waves-light grey">+</li>
+           <li class="waves-effect waves-light container-input"><input id="counterAmount" class="amount" min="1" max="1000" size="4" name = "amount" type="number"  value="1"></li>
+           <li id="increase_amount12" class="waves-effect waves-light grey ">+</li>
           </ul>
         </ul>
        </div>
@@ -123,7 +123,7 @@
       </div>
       <div class="row">
        <div class="col s12">
-        <p class="right">Итого: <span class="sum">350 грн</span></p>
+        <p class="right">Итого: <span id = "productOrderedAmount" class="sum">420 грн</span></p>
        </div>
       </div>
       <div class="row">
@@ -139,10 +139,6 @@
   </div>
   <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script type="text/javascript" src="build/js/main.js"></script>
-  <script>
-   $(document).ready(function() {
-    $(".button-collapse").sideNav();
-    $('select').material_select();});
-  </script>
+    <!-- <script src="src/js/counter.js">  </script> -->
  </body>
 </html>

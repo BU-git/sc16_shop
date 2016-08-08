@@ -20,6 +20,12 @@
 }
 
 .choice-size a:hover{
+	/*background-color:violet;*/
+	/*color:white;*/
+	cursor: pointer;
+}
+
+a.choice-size-active{
 	background-color:violet;
 	color:white;
 }
@@ -60,14 +66,14 @@ ul.tabs li a:hover{
 	margin-top: 48px !important;
 }
 
-.canvas_image {
-	/*border: 1px solid white;*/
+/*.canvas_image {
+	border: 1px solid white;
 	border-radius: 3px;
 }
 
 .canvas_image:hover {
-	/*border: 1px solid #c2cbd0;*/
-}
+	border: 1px solid #c2cbd0;
+}*/
 
 .basis-hover {
 	border: 1px solid white;
@@ -79,6 +85,9 @@ ul.tabs li a:hover{
 	border: 1px solid #c2cbd0; 
 }
 
+.basis-hover-active {
+	border: 1px solid #c2cbd0; 
+}
  .canvas-basis-description {
 	margin: 0 20px 0 15px;
 } 
@@ -102,13 +111,13 @@ ul.tabs li a:hover{
    max-height: 150px;
 }
 
+/*.basis-clipart-active{
+	border: 1px solid #c2cbd0;
+}*/
+
 .canvas_image{
 	position:  absolute; 
-	z-index:  100;
 }
-
-
-
 
 .view-basis-canvas {
 	border: 1px solid white;
@@ -117,5 +126,10 @@ ul.tabs li a:hover{
 }
 
 .view-basis-canvas:hover {
+	cursor: pointer;
+	border: 1px solid #c2cbd0;
+}
+
+.view-basis-active {
 	border: 1px solid #c2cbd0;
 }

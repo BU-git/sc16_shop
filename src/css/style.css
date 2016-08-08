@@ -3,7 +3,6 @@ body{
 	min-width: 320px !important;
 	font-family: 'Roboto', sans-serif;
 	font-size: 16px; 
-
 }
 
 .container__row{
@@ -34,7 +33,7 @@ body{
 	height: 32px;
 	width: 37px;
 	margin-top: 6px;
-	background-image: url('../../src/images/cart.svg');
+	background-image: url('../../src/images/cart.png');
 	background-size: 90%;
 	background-repeat: no-repeat;
 	float: right;
@@ -48,7 +47,7 @@ body{
 }
 
 
-.header__cart-icon a:hover {
+.header__cart-icon a:hover,a:active{
 	color:#2890e3;
 }
 
@@ -58,7 +57,7 @@ body{
 
 .main__banner__img{
 	height: 634px;
-	background-image: url(../../src/images/banner.jpg);
+	background-image: url('../../src/images/banner.jpg');
 	background-position: top;
 	margin-top:20px;
 	background-repeat: no-repeat;
@@ -79,17 +78,34 @@ body{
 .cash_delivering{
 	border: 1px dashed;
 }
-
+.slides{
+	height: 336px !important;
+}
+.arrow{
+	margin-top:8%;
+}
 .sample {
 	display: inline-block;
 }
 
 .container-padding{
-	padding: 25px 0;
+	padding: 1px 0 35px 0;
 }
 .advantages-attachment__above{
 	padding: 25px;
+	color:#fff;
 }
+.advantages-attachment__image{
+	height:151px !important;
+}
+.advantages-attachment__above>.row{
+	margin-bottom: 0 !important;
+}
+.slider-arrow {
+    position: relative;
+    top: 10px;
+}
+
 .flex-pupular_main{
 	display:  flex;
 	justify-content: space-around; 
