@@ -16,7 +16,7 @@ $(document).ready(function(){
     baseImgItem = 'tshirts';
     baseProduct = new Object();
     baseProduct.baseImage = new Image();
-  // baseProduct.baseImage.crossOrigin = 'anonymous';
+  baseProduct.baseImage.crossOrigin = 'anonymous';
 
   loadProduct();
   baseProduct.baseImage.onload = function() {
@@ -40,9 +40,18 @@ $('#upload-button').click(function(){
   return false;
 });
 // подія вибору кольору
-$('#color li').on('click', changeColor);
+$('#colorClothe li').on('click', changeColor);
+
+$('#choiceSize a').on('click', changeSize);
+
+function changeSize() {
+  baseProduct.size = (this).innerHTML;
+   $('#choiceSize a').removeClass('choice-size-active');
+ $(this).addClass('choice-size-active');
+}
 
 $('#frontView').on('click', toFrontView);
+
 $('#backView').on('click', toBackView);
 
 
@@ -165,16 +174,19 @@ function changeColor(){
   baseProduct.baseImage.src = viewSide[baseProduct.color];
   changeViewButtons();
   drawImageInCanvas();
-  console.log(eventOb, eventOb.y);
 }
 
 function toFrontView() {
+   $('#viewCollapseProduct .view-basis-active').removeClass('view-basis-active');
+  $(this).addClass('view-basis-active');
   viewSide = clothe[baseImgItem].frontImg;
   baseProduct.baseImage.src = viewSide[baseProduct.color];
   drawImageInCanvas();
 }
 
 function toBackView() {
+  $('#viewCollapseProduct .view-basis-active').removeClass('view-basis-active');
+   $(this).addClass('view-basis-active');
   viewSide = clothe[baseImgItem].backImg;
   baseProduct.baseImage.src = viewSide[baseProduct.color];
   drawImageInCanvas();
@@ -217,7 +229,8 @@ $('#clear-button').on('click', function  (argument) {
 });
 
 function canvasClear () {
-  ctx.clearRect(-canvas_image.width, -canvas_image.height, 2*canvas_image.width, 2*canvas_image.height);
+  var color = context.getImageData((canvas_image.style.left).split('px')[0], (canvas_image.style.top).split('px')[0], canvas_image.width, canvas_image.height);
+    ctx.putImageData(color, 0, 0);
 } 
 
 function drawPrintImage() {
@@ -256,18 +269,18 @@ function  moveImg(e) {
  {
   eventOb.X +=  e.originalEvent.movementX;
   eventOb.Y += e.originalEvent.movementY;
- drawPrintImage();
- borderImg()
- 
-}else{
+  drawPrintImage();
+  borderImg()
+}
+else{
  $('#canvas_image').off('mousemove');
-}
-}
+}}
 
 function paint (){
   canvasClear ();
   ctx.lineWidth = 0;
-  ctx.drawImage(labelImg, eventOb.X,  eventOb.Y, eventOb.width, eventOb.height);
+  sizeBaseImg(labelImg, canvas_image);
+  ctx.drawImage(labelImg, eventOb.X,  eventOb.Y, canvas_image.width, canvas_image.height);
 }
 
 $('#canvas_image').on( "mouseup",stopMoveImg);
@@ -278,10 +291,10 @@ function  stopMoveImg(e) {
 $('#canvas_image').on( "mouseover",function  (e) {
   if(labelImg){
  borderImg();
-}else{
-   canvasClear ();
 }
-});
+else{
+   canvasClear ();
+}});
 
 $('#canvas_image').on( "mouseout",function  (e) {
   drawPrintImage();
@@ -292,34 +305,43 @@ function  borderImg() {
 ctx.lineWidth  = 0.3;
 ctx.setLineDash([1,1]); 
 ctx.lineDashOffset=1;
-ctx.strokeRect(eventOb.X,eventOb.Y,eventOb.width,eventOb.height);
+ctx.strokeRect(eventOb.X,eventOb.Y,canvas_image.width,canvas_image.height);
+}}
+
+
+$('#order').on("click", orderProduct);
+
+function  orderProduct() {
+  if(labelImg){
+      var color = ctx.getImageData(0, 0, canvas_image.width, canvas_image.height);
+      context.putImageData(color, ((canvas_image.style.left).split('px')[0] ), ((canvas_image.style.top).split('px')[0]) );
+      var order= new Object();
+      order.printImg = labelImg.src;
+      order.baseImg = baseCanvas.toDataURL("image/svg", 1.0);
+      order.name = baseProduct.name;
+      order.price = baseProduct.price;
+      order.color = document.getElementById(baseProduct.color).lastChild.src;
+      order.size = baseProduct.size;
+      localStorage.setItem('Ordered', JSON.stringify(order));
 }
 }
-
-
-// $('#order').on("click", orderProduct);
-
-// function  orderProduct() {
-
-//  // var data = ctx.getImageData(0,0,canvas_image.width,canvas_image.height);
-//  // context.putImageData(data, )
-
-//  var data1 = baseCanvas.toDataURL('image/jpeg');
-// console.log(data1);
-
-// var order= new Object();
-
-//       // order.printImg = labelImg.src;
-//        order.name = baseProduct.name;
-//       order.price = baseProduct.price;
-//       order.color = baseProduct.color;
-//       order.size = baseProduct.size;
-//        localStorage.setItem('Ordered', JSON.stringify(order));
-
-
-// }
 
 }});
 
+restoreOrderedProduct();
 
-
+function  restoreOrderedProduct() {
+var restoredSession = JSON.parse(localStorage.getItem('Ordered'));
+  if (restoredSession != null && document.getElementById('productOrderedName')) {
+    var size = document.getElementById('productOrderedSize');
+    size.innerHTML =restoredSession.size;
+    var productOrderedName = document.getElementById('productOrderedName');
+    productOrderedName.innerHTML = restoredSession.name;
+    var image = document.getElementById('productOrderedImage');
+    image.src = restoredSession.baseImg;
+    var color = document.getElementById('productOrderedColor');
+    color.src = restoredSession.color;
+     var amount = document.getElementById('productOrderedAmount');
+    amount.innerHTML  = restoredSession.price +' ' + 'грн';
+  }
+}
