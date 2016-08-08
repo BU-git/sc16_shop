@@ -44,7 +44,7 @@ var clothe = {
       'size': ['S', 'M', 'L', 'XL', 'XXL']
   },
     'jumper': {
-      'productName': "Толстовка мужской",
+      'productName': "Толстовка мужская",
       'frontImg':{
       'white': 'src/images/m_jumper_f_white.jpg',
       'red': 'src/images/m_jumper_f_red.jpg',
@@ -84,6 +84,26 @@ var clothe = {
       'service': 'Не требует особенного ухода! Стирать при температуре не выше 40С. Этого достаточно для того, что бы футболка радовала Вас долгие годы!',
       'price': 800, 
       'size': ['S', 'M', 'L', 'XL', 'XXL']
+  },
+     'w_tshirts': {
+      'productName': "Футболка женская",
+      'frontImg':{
+      'white': 'src/images/w_tshirt_f_white.png',
+      'red': 'src/images/w_tshirt_f_red.png',
+      'blue': 'src/images/w_tshirt_f_blue.png',
+      'black': 'src/images/w_tshirt_f_black.png',
+       },
+      'backImg':{
+      'white': 'src/images/w_tshirt_b_white.png',
+      'red': 'src/images/w_tshirt_b_red.png',
+      'blue': 'src/images/w_tshirt_b_blue.png',
+      'black': 'src/images/w_tshirt_b_black.jpg',
+       },
+      'color': ['white', 'red', 'blue', 'black'],
+      'manufacturer': 'Stedman (Бельгия)',
+      'about': 'Футболка изготовлена из 100% хлопка, не имеет боковых швов, хорошо сидит по фигуре. Изображение наносится специальной флекс-пленкой Premium качества. Благодаря использованию высококачественных материалов, нанесенное изобрежение не отрывается, не трескается, не выгорает и не меняет цвет даже спустя 100 стирок!',
+      'service': 'Не требует особенного ухода! Стирать при температуре не выше 40С. Этого достаточно для того, что бы футболка радовала Вас долгие годы!',
+      'price': 600, 
+      'size': ['S', 'M', 'L', 'XL', 'XXL']
   }
- 
 }
