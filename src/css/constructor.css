@@ -85,7 +85,9 @@ ul.tabs li a:hover{
 	border: 1px solid #c2cbd0; 
 }
 
-
+.basis-hover-active {
+	border: 1px solid #c2cbd0; 
+}
  .canvas-basis-description {
 	margin: 0 20px 0 15px;
 } 
@@ -109,6 +111,10 @@ ul.tabs li a:hover{
    max-height: 150px;
 }
 
+/*.basis-clipart-active{
+	border: 1px solid #c2cbd0;
+}*/
+
 .canvas_image{
 	position:  absolute; 
 }
@@ -123,6 +129,7 @@ ul.tabs li a:hover{
 	cursor: pointer;
 	border: 1px solid #c2cbd0;
 }
+
 .view-basis-active {
 	border: 1px solid #c2cbd0;
 }

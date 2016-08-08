@@ -27,12 +27,24 @@ $(document).ready(function(){
 $(window).on('resize' , updateWindow);
 
 // подія вибору основи
-$('#basis .basis>li').click(function () {
+$('#basis .basis img').click(function () {
+ $('#basis .basis img').removeClass('basis-hover-active');
+ $(this).addClass('basis-hover-active');
+ firstLoadProduct();
  fillBackgroundColor();
  baseImgItem = (this).id;
  loadProduct();
  drawImageInCanvas();
 })
+
+function firstLoadProduct(){
+  $('#clipart .clipartholder').removeClass('view-basis-active');
+  $('#frontView').addClass('view-basis-active');
+  $('#backView').removeClass('view-basis-active');
+    $('#choiceSize a').removeClass('choice-size-active');
+ $('#choiceSize a:first').addClass('choice-size-active');
+}
+
 
 // завантаження фото
 $('#upload-button').click(function(){
@@ -176,6 +188,8 @@ function changeColor(){
   drawImageInCanvas();
 }
 
+
+
 function toFrontView() {
    $('#viewCollapseProduct .view-basis-active').removeClass('view-basis-active');
   $(this).addClass('view-basis-active');
@@ -239,7 +253,12 @@ function drawPrintImage() {
  }
 }
 
+
+
+
 $('#clipart .clipartholder').on('click', function( e ) {
+  $('#clipart .clipartholder').removeClass('view-basis-active');
+  $(this).addClass('view-basis-active');
   var src = (e).target.children[0].src;
   labelImg = new Image;
   labelImg.src = src;
