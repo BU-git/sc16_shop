@@ -41,8 +41,8 @@ function firstLoadProduct(){
   $('#clipart .clipartholder').removeClass('view-basis-active');
   $('#frontView').addClass('view-basis-active');
   $('#backView').removeClass('view-basis-active');
-    $('#choiceSize a').removeClass('choice-size-active');
- $('#choiceSize a:first').addClass('choice-size-active');
+ //    $('#choiceSize a').removeClass('choice-size-active');
+ // $('#choiceSize a:first').addClass('choice-size-active');
 }
 
 
@@ -85,7 +85,7 @@ function loadProduct() {
 
 function  changeViewButtons() {
 
-  if(baseImgItem == "peakedcap")
+  if(baseImgItem == "peakedcap" || baseImgItem == "w_peakedcap")
   {
    $('#viewCollapseProduct').css("display" , "none");
  }

@@ -105,5 +105,69 @@ var clothe = {
       'service': 'Не требует особенного ухода! Стирать при температуре не выше 40С. Этого достаточно для того, что бы футболка радовала Вас долгие годы!',
       'price': 600, 
       'size': ['S', 'M', 'L', 'XL', 'XXL']
-  }
+  },
+  'w_jumper': {
+      'productName': "Толстовка женская",
+      'frontImg':{
+      'white': 'src/images/m_jumper_f_white.jpg',
+      'red': 'src/images/m_jumper_f_red.jpg',
+      'blue': 'src/images/m_jumper_f_blue.jpg',
+      'black': 'src/images/m_jumper_f_gray.jpg',
+       },
+      'backImg':{
+      'white': 'src/images/m_jumper_b_white.jpg',
+      'red': 'src/images/m_jumper_b_red.jpg',
+      'blue': 'src/images/m_jumper_b_blue.jpg',
+      'black': 'src/images/m_jumper_b_gray.jpg',
+       },
+      'color': ['white', 'red', 'blue', 'black'],
+      'manufacturer': 'Stedman (Бельгия)',
+      'about': 'Футболка изготовлена из 100% хлопка, не имеет боковых швов, хорошо сидит по фигуре. Изображение наносится специальной флекс-пленкой Premium качества. Благодаря использованию высококачественных материалов, нанесенное изобрежение не отрывается, не трескается, не выгорает и не меняет цвет даже спустя 100 стирок!',
+      'service': 'Не требует особенного ухода! Стирать при температуре не выше 40С. Этого достаточно для того, что бы футболка радовала Вас долгие годы!',
+      'price': 600, 
+      'size': ['S', 'M', 'L', 'XL', 'XXL']
+  },
+   'w_sweatshirt': {
+      'productName': "Реглан женский",
+      'frontImg':{
+      'white': 'src/images/m_shirt_f_gray.jpg',
+      'red': 'src/images/m_shirt_f_red.jpg',
+      'blue': 'src/images/m_shirt_f_blue.jpg',
+      'black': 'src/images/m_shirt_f_black.jpg',
+       },
+      'backImg':{
+      'white': 'src/images/m_shirt_b_grayk.jpg',
+      'red': 'src/images/m_shirt_b_red.jpg',
+      'blue': 'src/images/m_shirt_b_blue.jpg',
+      'black': 'src/images/m_shirt_b_black.jpg',
+       },
+      'color': ['white', 'red', 'blue', 'black'],
+      'manufacturer': 'Stedman (Бельгия)',
+      'about': 'Футболка изготовлена из 100% хлопка, не имеет боковых швов, хорошо сидит по фигуре. Изображение наносится специальной флекс-пленкой Premium качества. Благодаря использованию высококачественных материалов, нанесенное изобрежение не отрывается, не трескается, не выгорает и не меняет цвет даже спустя 100 стирок!',
+      'service': 'Не требует особенного ухода! Стирать при температуре не выше 40С. Этого достаточно для того, что бы футболка радовала Вас долгие годы!',
+      'price': 800, 
+      'size': ['S', 'M', 'L', 'XL', 'XXL']
+  },
+   'w_peakedcap': {
+      'productName': 'Кашкет',
+      'frontImg':{
+      'white': 'src/images/cap_white.jpg',
+      'red': 'src/images/cap_red.jpg',
+      'blue': 'src/images/cap_blue.jpg',
+      'black': 'src/images/cap_black.jpg',
+       },
+      'backImg':{
+      'white': 'src/images/cap_white.jpg',
+      'red': 'src/images/cap_red.jpg',
+      'blue': 'src/images/cap_blue.jpg',
+      'black': 'src/images/cap_black.jpg',
+       },
+      'color': ['white', 'red', 'blue', 'black'],
+      'manufacturer': 'Stedman (Бельгия)',
+      'about': 'Футболка изготовлена из 100% хлопка, не имеет боковых швов, хорошо сидит по фигуре. Изображение наносится специальной флекс-пленкой Premium качества. Благодаря использованию высококачественных материалов, нанесенное изобрежение не отрывается, не трескается, не выгорает и не меняет цвет даже спустя 100 стирок!',
+      'service': 'Не требует особенного ухода! Стирать при температуре не выше 40С. Этого достаточно для того, что бы футболка радовала Вас долгие годы!',
+      'price': 240, 
+      'size': ['S', 'M', 'L', 'XL', 'XXL']
+  },
+
 }
