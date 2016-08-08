@@ -195,3 +195,24 @@ body{
 	align-self:flex-start;
 }
 
+.social_links>li{
+	display: inline-block;
+	margin-left: 10px;
+
+}
+.footer_main {
+	padding-bottom: 10px;
+	
+	}
+.footer_main__button{
+	display: block;
+	margin: 15px 0 15px 0;
+}
+.footer_main__button:hover {
+ 	background-color: #9b56e0 !important;
+	border-radius: 50px;
+}
+
+.social_links{
+	margin:0;
+}
