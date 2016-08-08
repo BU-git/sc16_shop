@@ -3,7 +3,6 @@ body{
 	min-width: 320px !important;
 	font-family: 'Roboto', sans-serif;
 	font-size: 16px; 
-
 }
 
 .container__row{
@@ -160,7 +159,6 @@ body{
 }
 .collection-info__main{
 	padding:  5px;
-
 	margin: 5px;
 }
 
