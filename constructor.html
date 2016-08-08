@@ -8,31 +8,37 @@
 	<link rel="stylesheet" href="build/css/main.css">
 </head>
 <body>
-	<header>
-		<div class="navbar-fixed">
-			<div id = "menu" class="nav white">
-				<div class="nav-wrapper container">
-					<div class="row container_row">
-						<div class="col l3 ">
-							<a href="index.html"><img src="src/images/LOGO.png" alt=""></a> 
-						</div>
-						<div class="col l8 ">
-							<ul id="nav-mobile" class="left hide-on-med-and-down nav-wrapper__navigation">
-								<li><a  href="index.html#popular">Главная</a></li>
-							</ul>
-							<ul class="side-nav" id="mobile-demo">
-								<li ><a href="index.html#popular">Главная</a></li>
-							</ul>
-						</div>
-						<div class="col l1 right">
-							<a href="#" data-activates="mobile-demo" class="button-collapse hide-on-large-only button_hiden-menu"><img src="src/images/menu.svg" alt=""></a>
-							<a href="purchase.html"><img src="src/images/cart.svg" alt="" class="header__cart-icon"></a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div> 
-	</header>
+  <header id="top">
+     <div class="navbar-fixed">
+       <div id="menu"  class="nav white">
+         <div class="nav-wrapper container">
+            <div class="row container__row">
+            <div class="col l3 menu">
+              <a href="index.html"><img src="src/images/LOGO.png" alt="Flash"></a> 
+            </div>
+            <div class="col l8">
+              <ul id="nav-mobile" class="left hide-on-med-and-down nav-wrapper__navigation">
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="index.html#popular" >Популярное</a></li>
+                <li><a href="index.html#reviews">Отзывы</a></li>
+                <li><a href="index.html#contacts">Контакты</a></li>
+              </ul>
+              <ul class="side-nav" id="mobile-demo">
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="index.html#popular">Популярное</a></li>
+                <li><a href="index.html#reviews">Отзывы</a></li>
+                <li><a href="index.html#contacts">Контакты</a></li>
+              </ul>
+           </div>
+           <div class="col l1 right side-nav__icon">
+             <a href="#" data-activates="mobile-demo" class="button-collapse hide-on-large-only button_hiden-menu"><img src="src/images/menu1.svg" alt=""></a>
+             <a href="purchase.html" class="side-nav__icon__cart"></a>
+           </div>
+         </div>
+       </div>
+     </div>
+    </div> 
+    </header>
 	<section  class="header container">
 		<h3 class="center-align header-indent__body">КОНСТРУКТОР</h3>
 		<div class="row">
@@ -280,17 +286,5 @@
 		</section>
 		<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 		<script type="text/javascript" src="build/js/main.js" ></script>
-		<script src="src/js/canvas.js">	</script>
-			<!-- <script src="src/js/data.js">	</script> -->
-
-		<script>
-
-			$(document).ready(function(){
-				$('ul.tabs').tabs();
-				$('.materialboxed').materialbox();
-				$(".button-collapse").sideNav();
-        $('select').material_select();
-			});
-		</script>
 	</body>
 	</html>

@@ -334,24 +334,6 @@
 
 <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 <script type="text/javascript" src="build/js/main.js"></script>
-<script>
- $(document).ready(function(){
-    $("#menu").on("click","a[href*=#]:not([href=#])", function (event) {
-        event.preventDefault();
-        var id  = $(this).attr('href'),
-            top = $(id).offset().top;
-        $('body,html').animate({scrollTop: top}, 1500);
-    });
-  $(".button-collapse").sideNav();
-  $('.slider').slider({indicators: false, height: 300, full_width: true});
-  $('#next-slider').click(function(){ 
-   $('.slider').slider('next');
- }); 
-  $('#prev-slider').click(function(){ 
-  $('.slider').slider('prev');
- }); 
-
-});      
 </script>
 </body>
 </html>
