@@ -1,12 +1,11 @@
  $(document).ready(function(){
 
- 	var MAXNUMBER = 1000;
+ 	var MAXNUMBER = 100;
  	var MINNUMBER = 1;
-  var amountId = "#amount";
 
 // функция проверки на число
  	function checkNumberFields(e, k){
- 		var str = jQuery(e).val();
+ 		var str = $(e).val();
  		var new_str = "";
 
  		for(var i=0; i < str.length; i++){
@@ -16,11 +15,11 @@
  		if(eval(new_str) > MAXNUMBER){ new_str = MAXNUMBER; }
  		if(eval(new_str) == 0){ new_str = ""; }
 
- 		jQuery(e).val(new_str);
+ 		$(e).val(new_str);
  	}
 
 // проверка на ввод чисел с клавиатуры
-jQuery(amountId).keyup(function(event){// когда пользователь отпускает клавишу клавиатуры
+$("#counterAmount").keyup(function(event){// когда пользователь отпускает клавишу клавиатуры
 	checkNumberFields(this, event);
 }).keypress(function(event){// когда пользователь нажимает клавишу клавиатуры и удерживает её в нажатом состоянии
 	checkNumberFields(this, event);
@@ -31,20 +30,29 @@ jQuery(amountId).keyup(function(event){// когда пользователь о
 });
 
 // когда поля теряет фокус проверить на пустоту или ноль
-$(amountId).focusout(function(){
-	if (+$(amountId).val() == "" || +$(amountId).val() == 0) {+$(amountId).val(MINNUMBER);}
+$("#counterAmount").focusout(function(){
+	if (+$("#counterAmount").val() == "" || +$("#counterAmount").val() == 0) {+$("#counterAmount").val(MINNUMBER);}
 })
 
 // инкрементация счетчика
-$('#increase_amount').click(function(){ 
-	if(+$(amountId).val() < MAXNUMBER){ 
-		$(amountId).val(+$(amountId).val()+1);
+$('#increase_amount12').on('click',function(){ 
+	if(+$("#counterAmount").val() < MAXNUMBER){ 
+		$("#counterAmount").val(+$("#counterAmount").val()+1);
+		var restoredSession = JSON.parse(localStorage.getItem('Ordered'));
+		var amount = document.getElementById('productOrderedAmount');
+   amount.innerHTML = restoredSession.price * (+$("#counterAmount").val()) +' ' + 'грн';;
 	}
 });
 // декрементация счетчика
-$('#decrease_amount').click(function(){ 
-	if (+$(amountId).val()> MINNUMBER) { 
-		$(amountId).val(+$(amountId).val()-1);
+$('#decrease_amount').on('click',function(){ 
+	if (+$("#counterAmount").val() > 1) { 
+		$("#counterAmount").val(+$("#counterAmount").val()-1);
+		var restoredSession = JSON.parse(localStorage.getItem('Ordered'));
+		var amount = document.getElementById('productOrderedAmount');
+   amount.innerHTML = restoredSession.price * (+$("#counterAmount").val()) +' ' + 'грн';
 	}
 });
+
+
+
 });
