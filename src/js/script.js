@@ -16,5 +16,5 @@
 		$('#prev-slider').click(function(){ 
 			$('.slider').slider('prev');
 		}); 
-		$('.modal-trigger').leanModal();
+		
 	});

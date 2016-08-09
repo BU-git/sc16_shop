@@ -39,6 +39,10 @@ $(document).ready(function(){
     }
   },
 
+submitHandler: function() { 
+  $('#modal1').openModal(); 
+},
+
   messages:{
     first_name:{
       required: "Введите ваше имя.",
