@@ -9,7 +9,7 @@
   <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="build/css/main.css">
 </head>
-<body>
+<body id="main__page">
   <header id="top">
     <div class="navbar-fixed">
       <div id="menu"  class="nav white">
@@ -322,6 +322,32 @@
 
 
 <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+
 <script type="text/javascript" src="build/js/main.js"></script>
+<script>  
+$(document).ready(function(){
+  var show = true;
+  var countbox = '#counts';
+  $(window).on("scroll load resize", function(){
+    if (!show) return false;
+    if ($('#counts')){
+    var w_top = $(window).scrollTop();
+    var e_top = $(countbox).offset().top;
+    var w_height = $(window).height();
+    var d_height = $(document).height();
+    var e_height =  $(countbox).outerHeight();
+    if(w_top + 600>= e_top || w_height + w_top == d_height){
+      $(".spincrement").spincrement({
+        thousandSeparator: "",
+        duration: 2500
+      });
+
+    show = false;
+
+    }   
+    }
+  });
+});
+</script>
 </body>
 </html>
