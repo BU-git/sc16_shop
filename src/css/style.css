@@ -223,3 +223,6 @@ body{
 .social_links{
 	margin:0;
 }
+#counts .advantages-attachment-numbers {
+	flex-wrap: nowrap;
+}

@@ -3,6 +3,7 @@ $(document).ready(function(){
 	
 	var show = true;
 	var countbox = '#counts';
+	
 	$(window).on("scroll load resize", function(){
 		if (!show) return false;
 		if ($('#counts')){
