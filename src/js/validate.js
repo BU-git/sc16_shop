@@ -2,7 +2,7 @@ $(document).ready(function(){
   $.validator.addMethod('phoneUS', function(phone_number, element) {
     phone_number = phone_number.replace(/\s+/g, ''); 
     return this.optional(element) || phone_number.length > 5 &&
-    phone_number.match(/^\d[\d\(\)\ -]{3,14}\d$/);
+    phone_number.match(/^[\d]{10}$/);
   }, "Please specify a valid  phone number");
 
   $.validator.addMethod( "lettersonly", function( value, element ) {
@@ -38,6 +38,10 @@ $(document).ready(function(){
       maxlength: 100,
     }
   },
+
+submitHandler: function() { 
+  $('#modal1').openModal(); 
+},
 
   messages:{
     first_name:{

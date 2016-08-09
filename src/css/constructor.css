@@ -20,8 +20,6 @@
 }
 
 .choice-size a:hover{
-	/*background-color:violet;*/
-	/*color:white;*/
 	cursor: pointer;
 }
 
@@ -66,14 +64,14 @@ ul.tabs li a:hover{
 	margin-top: 48px !important;
 }
 
-/*.canvas_image {
-	border: 1px solid white;
+.canvas_image {
+	box-shadow: 0 0 3px rgba(139, 69, 19,0);
 	border-radius: 3px;
 }
 
 .canvas_image:hover {
-	border: 1px solid #c2cbd0;
-}*/
+	box-shadow: 0 0 3px rgba(139, 69, 19,1);
+}
 
 .basis-hover {
 	border: 1px solid white;
@@ -107,13 +105,9 @@ ul.tabs li a:hover{
  .iframeImg{  
    pointer-events:none; 
    border-style: none;
-   max-width: 150px; 
-   max-height: 150px;
+   max-width: 140px; 
+   max-height: 140px;
 }
-
-/*.basis-clipart-active{
-	border: 1px solid #c2cbd0;
-}*/
 
 .canvas_image{
 	position:  absolute; 
