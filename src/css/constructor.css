@@ -129,7 +129,7 @@ ul.tabs li a:hover{
 }
 .white-basis-color {
 	display: block;
-	background-image: url('../../src/images/white.png');
+	background-image: url('../../build/images/white.png');
 	background-size: 90%;	
 	height: 20px;
 	width: 26px;
@@ -137,11 +137,11 @@ ul.tabs li a:hover{
 }
 .white-basis-color:hover, 
 .white-basis-color:active {
-	background-image: url('../../src/images/white_s.png');	
+	background-image: url('../../build/images/white_s.png');	
 }
 .red-basis-color{
 	display: block;
-	background-image: url('../../src/images/red.png');
+	background-image: url('../../build/images/red.png');
 	background-size: 90%;	
 	height: 20px;
 	width: 26px;
@@ -149,11 +149,11 @@ ul.tabs li a:hover{
 }
 .red-basis-color:hover, 
 .red-basis-color:active {
-	background-image: url('../../src/images/red_s.png');	
+	background-image: url('../../build/images/red_s.png');	
 }
 .black-basis-color{
 	display: block;
-	background-image: url('../../src/images/black.png');
+	background-image: url('../../build/images/black.png');
 	background-size: 90%;	
 	height: 20px;
 	width: 26px;
@@ -161,11 +161,11 @@ ul.tabs li a:hover{
 }
 .black-basis-color:hover, 
 .black-basis-color:active {
-	background-image: url('../../src/images/black_s.png');	
+	background-image: url('../../build/images/black_s.png');	
 }
 .blue-basis-color {
 	display: block;
-	background-image: url('../../src/images/blue.png');
+	background-image: url('../../build/images/blue.png');
 	background-size: 90%;	
 	height: 20px;
 	width: 26px;
@@ -173,5 +173,5 @@ ul.tabs li a:hover{
 }
 .blue-basis-color:hover, 
 .blue-basis-color:active {
-	background-image: url('../../src/images/blue_s.png');	
+	background-image: url('../../build/images/blue_s.png');	
 }
