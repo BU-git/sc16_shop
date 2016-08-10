@@ -129,9 +129,7 @@ body{
 	.pop-production{
 		width:  auto;
 	}
-	.collection-info__main {
-		width: 25%;
-	}
+	
 
 }
 
@@ -182,7 +180,7 @@ body{
 	width: 50%;
 	border:1px solid red;
 }
-.collection-info__main>li{
+.collection-info__main>p{
 	padding:  5px;
 
 }
