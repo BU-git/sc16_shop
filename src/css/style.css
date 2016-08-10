@@ -41,6 +41,7 @@ body{
 .side-nav__icon__cart:hover{
 	background-image: url('../../src/images/cart-hover.svg');
 }
+
 .nav-wrapper__navigation a:hover{
 	border-bottom:1px dashed #2890e3;
 	color:#2890e3;
@@ -95,9 +96,7 @@ body{
 	padding: 25px;
 	color:#fff;
 }
-.advantages-attachment__image{
-	height:151px !important;
-}
+
 .advantages-attachment__above>.row{
 	margin-bottom: 0 !important;
 }
@@ -130,6 +129,10 @@ body{
 	.pop-production{
 		width:  auto;
 	}
+	.collection-info__main {
+		width: 25%;
+	}
+
 }
 
 .container-about {
@@ -193,6 +196,10 @@ body{
 
 .pop-production>a{
 	align-self:flex-start;
+}
+.pop-production_basis {
+	margin-top: 3px;
+	margin-bottom: 3px;
 }
 
 .social_links>li{

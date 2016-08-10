@@ -171,3 +171,10 @@ var clothe = {
   },
 
 }
+
+var dataColor = {
+  'white': 'src/images/white.png',
+  'red': 'src/images/red.png',
+  'blue': 'src/images/blue.png',
+  'black': 'src/images/black.png',
+}

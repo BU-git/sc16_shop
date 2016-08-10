@@ -369,7 +369,7 @@ function  borderImg() {
       order.baseImg = baseCanvas.toDataURL("image/svg", 1.0);
       order.name = baseProduct.name;
       order.price = baseProduct.price;
-      order.color = document.getElementById(baseProduct.color).lastChild.src;
+      order.color = dataColor[baseProduct.color];
       order.size = baseProduct.size;
       localStorage.setItem('Ordered', JSON.stringify(order));
     }else{
