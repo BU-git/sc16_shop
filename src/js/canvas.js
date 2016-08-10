@@ -273,7 +273,7 @@ function drawPrintImage() {
 $('#clipart .clipartholder').on('click', function( e ) {
   $('#clipart .clipartholder').removeClass('view-basis-active');
   $(this).addClass('view-basis-active');
-  var src = (e).target.children[0].src;
+  var src = (this).children[0].src;
   labelImg = new Image;
   labelImg.src = src;
   labelImg.onload = function() {
@@ -310,6 +310,18 @@ else{
  $('#canvas_image').off('mousemove', moveImg);
 }
 }
+
+$('#canvas_image').on( "touchstart",translateImgTouch);
+function  translateImgTouch(e) {
+  // console.log(e.touches[0].pageX-offset.left);
+  if(e.offsetX > (eventOb.X + eventOb.width-5) && e.offsetY>(eventOb.Y + eventOb.height -5)&& e.offsetX<(eventOb.X + eventOb.width+5) && e.offsetY<(eventOb.Y + eventOb.height+5)){
+    $('#canvas_image').on('touchmove',resizeImg);
+  }else  if(e.offsetX>eventOb.X && e.offsetY>eventOb.Y && e.offsetX<(eventOb.X + eventOb.width) && e.offsetY<(eventOb.Y + eventOb.height))
+  {
+    $('#canvas_image').on('touchmove',moveImg);
+  }
+}
+
 
 function resizeImg(e) {
   var ratio = eventOb.height/eventOb.width;
