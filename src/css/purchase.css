@@ -78,3 +78,13 @@ input::-webkit-inner-spin-button {
 input[type=number].amount { 
  -moz-appearance:textfield; 
  }
+.side-nav-active_icon__cart{
+ display: block;
+  height: 32px;
+  width: 37px;
+  margin-top: 6px;
+  background-image: url('../../build/images/cart-hover.svg');
+  background-size: 90%;
+  background-repeat: no-repeat;
+  float: right;
+}
