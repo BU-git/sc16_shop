@@ -10,25 +10,24 @@ var eventOb;
 
 $(document).ready(function(){
   $('#w_tshirts_main a').on('click',  function () {
-    var popular = new Object();
-    popular.product = 'w_tshirts';
-    localStorage.setItem('popular', JSON.stringify(popular));
+     popProduct("w_tshirts");
   });
   $('#w_sweatshirt a').on('click', function () {
-    var popular = new Object();
-    popular.product = 'w_sweatshirt';
-    localStorage.setItem('popular', JSON.stringify(popular));
+  popProduct("w_sweatshirt");
   });
   $('#jumper_main a').on('click', function () {
-    var popular = new Object();
-    popular.product = 'jumper';
-    localStorage.setItem('popular', JSON.stringify(popular));
+     popProduct("jumper");
   });
   $('#sweatshirt_main a').on('click', function () {
-   var popular = new Object();
-   popular.product = 'sweatshirt';
-   localStorage.setItem('popular', JSON.stringify(popular));
+   popProduct("sweatshirt");
  });
+
+function  popProduct(argument) {
+  var popular = new Object();
+   popular.product = argument;
+   localStorage.setItem('popular', JSON.stringify(popular));
+}
+
 
   if(document.getElementById('mainCanvas') && document.getElementById('mainCanvas').getContext){
     baseCanvas = document.getElementById('mainCanvas');
@@ -43,6 +42,10 @@ $(document).ready(function(){
       baseImgItem = 'tshirts';
     } else{
       baseImgItem = restoredSession['product'];
+      $('#basis .basis img').removeClass('basis-hover-active');
+      var popId = '#basis .basis img#' + baseImgItem;
+      $(popId).addClass('basis-hover-active');
+     // console.log("restoredSession['product']");
       localStorage.removeItem('popular');
     }
 
@@ -119,8 +122,8 @@ function  changeViewButtons() {
  }
  else{
    $('#viewCollapseProduct').css("display" , "block");
-   $('#frontView img').attr('src',clothe[baseImgItem].frontImg[baseProduct.color]);
-   $('#backView img').attr('src',clothe[baseImgItem].backImg[baseProduct.color]);
+   $('#frontView').attr('src',clothe[baseImgItem].frontImg[baseProduct.color]);
+   $('#backView').attr('src',clothe[baseImgItem].backImg[baseProduct.color]);
  }
 }
 

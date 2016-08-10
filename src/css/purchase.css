@@ -83,7 +83,7 @@ input[type=number].amount {
   height: 32px;
   width: 37px;
   margin-top: 6px;
-  background-image: url('../../src/images/cart-hover.svg');
+  background-image: url('../../build/images/cart-hover.svg');
   background-size: 90%;
   background-repeat: no-repeat;
   float: right;
