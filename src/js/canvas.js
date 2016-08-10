@@ -10,24 +10,25 @@ var eventOb;
 
 $(document).ready(function(){
   $('#w_tshirts_main a').on('click',  function () {
-     popProduct("w_tshirts");
+    var popular = new Object();
+    popular.product = 'w_tshirts';
+    localStorage.setItem('popular', JSON.stringify(popular));
   });
   $('#w_sweatshirt a').on('click', function () {
-  popProduct("w_sweatshirt");
+    var popular = new Object();
+    popular.product = 'w_sweatshirt';
+    localStorage.setItem('popular', JSON.stringify(popular));
   });
   $('#jumper_main a').on('click', function () {
-     popProduct("jumper");
+    var popular = new Object();
+    popular.product = 'jumper';
+    localStorage.setItem('popular', JSON.stringify(popular));
   });
   $('#sweatshirt_main a').on('click', function () {
-   popProduct("sweatshirt");
- });
-
-function  popProduct(argument) {
-  var popular = new Object();
-   popular.product = argument;
+   var popular = new Object();
+   popular.product = 'sweatshirt';
    localStorage.setItem('popular', JSON.stringify(popular));
-}
-
+ });
 
   if(document.getElementById('mainCanvas') && document.getElementById('mainCanvas').getContext){
     baseCanvas = document.getElementById('mainCanvas');
@@ -42,10 +43,6 @@ function  popProduct(argument) {
       baseImgItem = 'tshirts';
     } else{
       baseImgItem = restoredSession['product'];
-      $('#basis .basis img').removeClass('basis-hover-active');
-      var popId = '#basis .basis img#' + baseImgItem;
-      $(popId).addClass('basis-hover-active');
-     // console.log("restoredSession['product']");
       localStorage.removeItem('popular');
     }
 
@@ -122,8 +119,8 @@ function  changeViewButtons() {
  }
  else{
    $('#viewCollapseProduct').css("display" , "block");
-   $('#frontView').attr('src',clothe[baseImgItem].frontImg[baseProduct.color]);
-   $('#backView').attr('src',clothe[baseImgItem].backImg[baseProduct.color]);
+   $('#frontView img').attr('src',clothe[baseImgItem].frontImg[baseProduct.color]);
+   $('#backView img').attr('src',clothe[baseImgItem].backImg[baseProduct.color]);
  }
 }
 
@@ -273,7 +270,7 @@ function drawPrintImage() {
 $('#clipart .clipartholder').on('click', function( e ) {
   $('#clipart .clipartholder').removeClass('view-basis-active');
   $(this).addClass('view-basis-active');
-  var src = (this).children[0].src;
+  var src = (e).target.children[0].src;
   labelImg = new Image;
   labelImg.src = src;
   labelImg.onload = function() {
@@ -310,18 +307,6 @@ else{
  $('#canvas_image').off('mousemove', moveImg);
 }
 }
-
-$('#canvas_image').on( "touchstart",translateImgTouch);
-function  translateImgTouch(e) {
-  // console.log(e.touches[0].pageX-offset.left);
-  if(e.offsetX > (eventOb.X + eventOb.width-5) && e.offsetY>(eventOb.Y + eventOb.height -5)&& e.offsetX<(eventOb.X + eventOb.width+5) && e.offsetY<(eventOb.Y + eventOb.height+5)){
-    $('#canvas_image').on('touchmove',resizeImg);
-  }else  if(e.offsetX>eventOb.X && e.offsetY>eventOb.Y && e.offsetX<(eventOb.X + eventOb.width) && e.offsetY<(eventOb.Y + eventOb.height))
-  {
-    $('#canvas_image').on('touchmove',moveImg);
-  }
-}
-
 
 function resizeImg(e) {
   var ratio = eventOb.height/eventOb.width;
@@ -384,7 +369,7 @@ function  borderImg() {
       order.baseImg = baseCanvas.toDataURL("image/svg", 1.0);
       order.name = baseProduct.name;
       order.price = baseProduct.price;
-      order.color = dataColor[baseProduct.color];
+      order.color = document.getElementById(baseProduct.color).lastChild.src;
       order.size = baseProduct.size;
       localStorage.setItem('Ordered', JSON.stringify(order));
     }else{
