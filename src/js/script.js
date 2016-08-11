@@ -17,4 +17,9 @@
 			$('.slider').slider('prev');
 		}); 
 		
+		$("#tel").mask("(999) 999-99-99");
+
+			$(".nav-wrapper__navigation a").on("click", function(){
+		$(this).toggleClass("active");
+	});
 	});

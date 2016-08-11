@@ -15,7 +15,7 @@
 	border:none;
 }
 
-form, .info{
+.formValidate, .info{
   border: 1px solid #c2cbd0;
   padding: 20px 15px;
   margin-bottom: 15px;
@@ -78,12 +78,13 @@ input::-webkit-inner-spin-button {
 input[type=number].amount { 
  -moz-appearance:textfield; 
  }
+
 .side-nav-active_icon__cart{
  display: block;
   height: 32px;
-  width: 37px;
-  margin-top: 6px;
-  background-image: url('../../src/images/cart-hover.svg');
+  margin-top:10px;
+  width: 28px;
+  background-image: url('../../build/images/cart-hover.svg');
   background-size: 90%;
   background-repeat: no-repeat;
   float: right;

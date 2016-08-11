@@ -2,12 +2,12 @@ $(document).ready(function(){
   $.validator.addMethod('phoneUS', function(phone_number, element) {
     phone_number = phone_number.replace(/\s+/g, ''); 
     return this.optional(element) || phone_number.length > 5 &&
-    phone_number.match(/^[\d]{10}$/);
-  }, "Please specify a valid  phone number");
+    phone_number.match(/^[\d\(\)\ -]{14}$/);
+  });
 
   $.validator.addMethod( "lettersonly", function( value, element ) {
   return this.optional( element ) || /^[а-я,ґ,',і,ї,є\-\a-z]+$/i.test( value );
-}, "Letters or punctuation only please" )
+} )
 
   $("#formValidate").validate({
    rules:{
@@ -46,14 +46,14 @@ submitHandler: function() {
   messages:{
     first_name:{
       required: "Введите ваше имя.",
-      maxlength: $.validator.format( "Количество символов должно быть небольше {0}." ),
-      lettersonly: "Введите только букви."
+      maxlength: $.validator.format( "Количество символов должно быть не больше {0}." ),
+      lettersonly: "Введите только буквы."
     },
 
     last_name:{
       required: "Введите вашу фамилию",
-      maxlength: $.validator.format( "Количество символов должно быть небольше {0}." ),
-       lettersonly: "Введите только букви."
+      maxlength: $.validator.format( "Количество символов должно быть не больше {0}." ),
+       lettersonly: "Введите только буквы." 
     },
 
     tel:{
@@ -63,7 +63,7 @@ submitHandler: function() {
 
     email:{ email:"Введите корректный  email."},
 
-    textarea:{  maxlength: $.validator.format( "Количество символов должно быть небольше {0}." )}
+    textarea:{  maxlength: $.validator.format( "Количество символов должно быть не больше {0}." )}
   },
 
   errorElement : 'div',
