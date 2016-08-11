@@ -25,7 +25,6 @@ footer{
 
 .nav-wrapper__navigation a{
 	display: block;
-	
 	margin:0 7px;
 	border-bottom:1px dashed gray;
 	color:#000;
@@ -37,7 +36,8 @@ footer{
 }
 
 .header__cart-icon{
-	padding-top:17px;
+	margin-top:6px;
+	width: 35px;
 }
 
 .header__cart-icon a:hover {
