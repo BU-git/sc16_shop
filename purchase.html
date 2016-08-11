@@ -4,145 +4,155 @@
  <meta charset="utf-8">
  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
  <title>Корзина</title>
+ <link rel="shortcut icon" href="build/images/favicon.png" type="image/x-icon">
  <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
  <link rel="stylesheet" href="build/css/main.css">
 </head>
- <body>
- <header>
-  <div class="navbar-fixed">
-    <div class="nav white">
-      <div class="nav-wrapper container">
-        <div class="row container_row">
-         <div class="col l3 ">
-          <a href="index.html"><img src="src/images/LOGO.png" alt=""></a> 
-        </div>
-        <div class="col l8 ">
-         <ul id="nav-mobile" class="left hide-on-med-and-down nav-wrapper__navigation">
-           <li><a href="index.html">Главная</a></li>
-           <li><a href="constructor.html">Конструктор</a></li>
-         </ul>
-         <ul class="side-nav" id="mobile-demo">
-         <li><a href="index.html">Главная</a></li>
-           <li><a href="constructor.html">Конструктор</a></li>
-         </ul>
+<body>
+ <header id="top">
+   <div class="navbar-fixed">
+     <div id="menu"  class="nav white">
+       <div class="nav-wrapper container">
+        <div class="row container__row">
+          <div class="col l3 menu">
+            <a href="index.html"><img src="build/images/LOGO.png" alt="Flash"></a> 
+          </div>
+          <div class="col l8">
+            <ul id="nav-mobile" class="left hide-on-med-and-down nav-wrapper__navigation">
+              <li><a href="constructor.html">Конструктор</a></li>
+              <li><a href="index.html#popular" >Популярное</a></li>
+              <li><a href="index.html#reviews">Отзывы</a></li>
+              <li><a href="index.html#contacts">Контакты</a></li>
+            </ul>
+            <ul class="side-nav" id="mobile-demo">
+              <li><a href="constructor.html">Конструктор</a></li>
+              <li><a href="index.html#popular">Популярное</a></li>
+              <li><a href="index.html#reviews">Отзывы</a></li>
+              <li><a href="index.html#contacts">Контакты</a></li>
+            </ul>
+          </div>
+          <div class="col l1 right side-nav__icon">
+           <a href="#" data-activates="mobile-demo" class="button-collapse hide-on-large-only button_hiden-menu"><img src="build/images/menu1.svg" alt=""></a>
+           <a href="purchase.html" class="side-nav-active_icon__cart"></a>
+         </div>
        </div>
-       <div class="col l1 right">
-         <a href="#" data-activates="mobile-demo" class="button-collapse hide-on-large-only button_hiden-menu"><img src="src/images/menu.svg" alt=""></a>
-         <a href="purchase.html"><img src="src/images/cart.svg" alt="" class="header__cart-icon"></a>
-       </div>
+     </div>
+   </div>
+ </div> 
+</header>
+<div class="container">
+ <div class="row">
+  <div class="col s12">
+   <h3 class="center-align header-indent__body ">Оформление заказа</h3>
+ </div>
+</div>
+<div class="row ">
+  <div class="col s12 m12 l6">
+   <div class="info">
+    <div class="row">
+     <div class="col s12 ">
+      <div>
+       <h4 >Ваш заказ</h4>
      </div>
    </div>
  </div>
-</div> 
-</header>
-  <div class="container">
-   <div class="row">
-    <div class="col s12">
-     <h3 class="center-align header-indent__body">Оформление заказа</h3>
-    </div>
-   </div>
-   <div class="row ">
-    <div class="col s12 m12 l6">
-     <div class="info">
-      <div class="row">
-       <div class="col s12">
-        <div>
-         <h4>Ваш заказ</h4>
-        </div>
-       </div>
-      </div>
-      <div class="flex-box">
-       <div class="center-align">
-        <img  class="center-align" src="src/images/Product.png" alt="Close">
-       </div>
-       <div >
-        <ul class="collection collapsed-border">
-         <li class="collection-item collapsed-border "><h5>Футболка</h5></li>
-         <li class="collection-item collapsed-border valign-wrapper">
-          <span class="valign">Цвет </span><span class="valign badge"><img  src="src/images/ColorProduct.png" alt=""></span></li>
-         <li class="collection-item collapsed-border">Размер <span class="badge">S</span></li>
-         <li class="collection-item collapsed-border">Количество
-          <ul class="counter">
-           <li id="decrease_amount" class="waves-effect waves-light grey">-</li>
-           <li class="waves-effect waves-light container-input"><input id="amount" class="amount" min="1" max="1000" size="4" name = "amount" type="number"  value="1"></li>
-           <li id="increase_amount" class="waves-effect waves-light grey">+</li>
-          </ul>
-        </ul>
-       </div>
-      </div>
-     </div>
-    </div>
-    <div class="col s12  m12  l6">
-     <form id="formValidate" class="formValidate" method="POST">
-      <div class="row">
-       <div class="col s12">
-        <h4>Ваши данные</h4>
-       </div>
-      </div>
-      <div class="row">
-       <div class="input-field col l6 m6 s12">
-        <input  id="first_name" type="text" class="validate"  name="first_name" data-error=".error_first_name" >
-        <div class="error_first_name"></div>
-        <label for="first_name">Имя*</label>
-       </div>
-       <div class="input-field col l6 m6 s12">
-        <input id="last_name" type="text" class="validate" name="last_name" data-error=".error_last_name">
-        <div class="error_last_name "></div>
-        <label for="last_name">Фамилия*</label>
-       </div>
-      </div>
-      <div class="row">
-       <div class="input-field col s12">
-        <input id="tel" type="tel"   class="validate" name="tel" data-error=".error_tel">
-        <div class="error_tel"></div>
-        <label for="tel">Телефон*</label>
-       </div>
-      </div>
-      <div class="row">
-       <div class="input-field col s12">
-        <input id="email" type="text" class="validate" name="email" data-error=".error_email">
-        <div class="error_email"></div>
-        <label for="email">Email</label>
-       </div>
-      </div>
-      <div class="row">
-       <div class="input-field col s12">
-        <select id="select_delivery" name="select_delivery">
-         <option value="1"   selected>Самовывоз</option>
-         <option value="2">Доставка</option>
-        </select>
-        <label>Как доставить?</label>
-       </div>
-      </div>
-      <div class="row">
-       <div class="input-field col s12">
-        <textarea id="textarea" class="materialize-textarea" name="textarea" data-error=".error_textarea"></textarea>
-        <div class="error_textarea"></div>
-        <label for="textarea">Коментарии</label>
-       </div>
-      </div>
-      <div class="row">
-       <div class="col s12">
-        <p class="right">Итого: <span class="sum">350 грн</span></p>
-       </div>
-      </div>
-      <div class="row">
-       <div class="col s12">
-        <div  class="right">
-         <button class="btn waves-effect waves-light pink" type="submit" name="action">Заказать</button>
-        </div>
-       </div>
-      </div>
-     </form>
-    </div>
-   </div>
+ <div class="flex-box ">
+   <div class="center-align">
+    <img id = "productOrderedImage"  class="center-align responsive-img materialboxed" src="build/images/Product.png" alt="Close">
   </div>
-  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-  <script type="text/javascript" src="build/js/main.js"></script>
-  <script>
-   $(document).ready(function() {
-    $(".button-collapse").sideNav();
-    $('select').material_select();});
-  </script>
- </body>
+  <div >
+    <ul class="collection collapsed-border ">
+     <li class="collection-item collapsed-border"><h5 id ="productOrderedName">Футболка</h5></li>
+     <li class="collection-item collapsed-border valign-wrapper">
+      <span class="valign">Цвет </span><span class="valign badge"><img  id = "productOrderedColor" src="build/images/ColorProduct.png" alt=""></span></li>
+      <li class="collection-item collapsed-border">Размер <span id = "productOrderedSize" class="badge">S</span></li>
+      <li class="collection-item collapsed-border">Количество
+        <ul class="counter">
+         <li id="decrease_amount" class="waves-effect waves-light grey">-</li>
+         <li class="waves-effect waves-light container-input"><input id="counterAmount" class="amount" min="1" max="1000" size="4" name = "amount" type="number"  value="1"></li>
+         <li id="increase_amount12" class="waves-effect waves-light grey ">+</li>
+       </ul>
+     </ul>
+   </div>
+ </div>
+</div>
+</div>
+<div class="col s12  m12  l6">
+ <form id="formValidate" class="formValidate" method="POST">
+  <div class="row">
+   <div class="col s12">
+    <h4>Ваши данные</h4>
+  </div>
+</div>
+<div class="row">
+ <div class="input-field col l6 m6 s12">
+  <input  id="first_name" type="text" class="validate"  name="first_name" data-error=".error_first_name" >
+  <div class="error_first_name"></div>
+  <label for="first_name">Имя*</label>
+</div>
+<div class="input-field col l6 m6 s12">
+  <input id="last_name" type="text" class="validate" name="last_name" data-error=".error_last_name">
+  <div class="error_last_name "></div>
+  <label for="last_name">Фамилия*</label>
+</div>
+</div>
+<div class="row">
+ <div class="input-field col s12">
+  <input id="tel" type="text"   class="validate" name="tel" data-error=".error_tel">
+  <div class="error_tel"></div>
+  <label for="tel">Телефон*</label>
+</div>
+</div>
+<div class="row">
+ <div class="input-field col s12">
+  <input id="email" type="text" class="validate" name="email" data-error=".error_email">
+  <div class="error_email"></div>
+  <label for="email">Email</label>
+</div>
+</div>
+<div class="row">
+ <div class="input-field col s12">
+  <select id="select_delivery" name="select_delivery">
+   <option value="1"   selected>Самовывоз</option>
+   <option value="2">Доставка</option>
+ </select>
+ <label>Как доставить?</label>
+</div>
+</div>
+<div class="row">
+ <div class="input-field col s12">
+  <textarea id="textarea" class="materialize-textarea" name="textarea" data-error=".error_textarea"></textarea>
+  <div class="error_textarea"></div>
+  <label for="textarea">Комментарии</label>
+</div>
+</div>
+<div class="row">
+ <div class="col s12">
+  <p class="right">Итого: <span id = "productOrderedAmount" class="sum">420 грн</span></p>
+</div>
+</div>
+<div class="row">
+ <div class="col s12">
+  <div  class="right">
+   <button  data-target="modal1" class="btn waves-effect waves-light pink modal-trigger" type="submit" name="action">Заказать</button>
+ </div>
+</div>
+</div>
+</form>
+</div>
+</div>
+</div>
+<div id="modal1" class="modal">
+ <div class="modal-content ">
+  <h4 class="center-align" >Заказ оформлен</h4>
+  <p class="center-align">Спасибо за заказ!</p>
+  <p class="center-align">Менеджер свяжется с вами в течение часа</p>
+</div>
+<div class="modal-footer">
+ <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Закрыть</a>
+</div>
+</div>
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="build/js/main.js"></script>
+</body>
 </html>
