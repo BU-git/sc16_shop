@@ -89,7 +89,7 @@ body{
 }
 
 .container-padding{
-	padding: 1px 0 35px 0;
+	padding: 1px 0 15px 0;
 }
 .advantages-attachment__above{
 	padding: 25px;
@@ -151,7 +151,7 @@ body{
 	top: -80px;
 	padding-left:  5px;
 	padding-right:  5px;
-	margin-bottom:  50px;
+	margin-bottom:  10px;
 }
 
 .about-inform{
@@ -230,4 +230,7 @@ body{
 .advantages-attachment-numbers {
 	font-weight: bold;
 	margin: 0;
+}
+.about-inform-text {
+	margin: 1px;
 }
