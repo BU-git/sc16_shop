@@ -142,7 +142,7 @@ footer{
 }
 
 .collection-info__main{
-	padding:  5px;
+	padding:  6px;
 	margin: 5px;
 }
 
@@ -182,9 +182,16 @@ footer{
 .social_links{
 	margin:0;
 }
+.social_links a{
+	display: block;
+}
+.social_links a:hover{
+	transform:scale(1.1);
+}
 
 .copyright {
-font-size: 12px;
+font-size: 8px;
+float:right;
 }
 
 
