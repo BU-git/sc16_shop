@@ -32,30 +32,30 @@ $("#counterAmount").keyup(function(event){// когда пользователь
 // когда поля теряет фокус проверить на пустоту или ноль
 $("#counterAmount").focusout(function(){
 	if (+$("#counterAmount").val() == "" || +$("#counterAmount").val() == 0) {+$("#counterAmount").val(MINNUMBER);}
-	var restoredSession = JSON.parse(localStorage.getItem('Ordered'));
-		var amount = document.getElementById('productOrderedAmount');
-   amount.innerHTML = restoredSession.price * (+$("#counterAmount").val()) +' ' + 'грн';;
+fprice();
 })
 
 // инкрементация счетчика
 $('#increase_amount12').on('click',function(){ 
 	if(+$("#counterAmount").val() < MAXNUMBER){ 
 		$("#counterAmount").val(+$("#counterAmount").val()+1);
-		var restoredSession = JSON.parse(localStorage.getItem('Ordered'));
-		var amount = document.getElementById('productOrderedAmount');
-   amount.innerHTML = restoredSession.price * (+$("#counterAmount").val()) +' ' + 'грн';;
+	fprice();
 	}
 });
 // декрементация счетчика
 $('#decrease_amount').on('click',function(){ 
 	if (+$("#counterAmount").val() > 1) { 
 		$("#counterAmount").val(+$("#counterAmount").val()-1);
+		fprice();
+	}
+});
+
+function fprice() {
+	if(JSON.parse(localStorage.getItem('Ordered'))){
 		var restoredSession = JSON.parse(localStorage.getItem('Ordered'));
 		var amount = document.getElementById('productOrderedAmount');
    amount.innerHTML = restoredSession.price * (+$("#counterAmount").val()) +' ' + 'грн';
 	}
-});
-
-
+}
 
 });
