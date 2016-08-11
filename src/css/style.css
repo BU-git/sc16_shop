@@ -128,6 +128,12 @@ body{
 	.pop-production{
 		width:  auto;
 	}
+	.counts-inform-text {
+		margin-top: 5px;
+	}
+	.counts-inform {
+		margin-top: 5px;
+	}
 }
 
 .container-about {
@@ -233,4 +239,19 @@ body{
 }
 .about-inform-text {
 	margin: 1px;
+}
+.counts-inform-text {
+	margin-top: 60px;
+	/*border: px solid red;*/
+}
+.counts-inform {
+	margin-top: 63px;
+}
+@media only screen and (max-width: 600px) {
+	.counts-inform-text {
+		margin-top: 5px;
+	}
+	.counts-inform {
+		margin-top: 10px;
+	}
 }
