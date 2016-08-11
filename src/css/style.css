@@ -23,7 +23,6 @@ body{
 
 .nav-wrapper__navigation a{
 	display: block;
-	/*padding: 0 10px;*/
 	margin:0 7px;
 	border-bottom:1px dashed gray;
 	color:#000;

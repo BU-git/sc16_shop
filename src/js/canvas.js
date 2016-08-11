@@ -54,8 +54,6 @@ function  popProduct(argument) {
       updateWindow();
     }
 
-// подія зміни вікна браузера
-$(window).on('resize' , updateWindow);
 
 // подія вибору основи
 $('#basis .basis img').click(function () {
@@ -159,38 +157,38 @@ function sizeBaseImg(img, canvas){
   }
 }
 
+
 // зміна широти і висоти canvas при зміні вікна браузера
 function updateWindow() {
- if($(this)[0].innerWidth > 992){
-  updateCanvas();
-  setTimeout(updateCanvas , 1000);
-} else if ($(this)[0].innerWidth <= 992){
-  updateCanvas();
-  setTimeout(updateCanvas , 1000);
-}    
+     updateCanvas();
+     setTimeout(updateCanvas , 1200);
 }
 
 function updateCanvas() {
  if($(window)[0].innerWidth > 992){
-  baseCanvas.width = 0.29*$(window)[0].innerWidth;
+  baseCanvas.width = 0.75*$('#constructor_container')[0].offsetWidth;
   baseCanvas.height = baseCanvas.width;
   canvas_image.style.top  = 0.22*baseCanvas.width +"px";
-  canvas_image.style.left  = 0.33*baseCanvas.width+"px";
+  canvas_image.style.left  = 0.34*baseCanvas.width+"px";
   canvas_image.width = 0.32*baseCanvas.width;
   canvas_image.height = 0.32*baseCanvas.width;
   drawImageInCanvas();
   drawPrintImage();
 } else if ($(window)[0].innerWidth <= 992){
-  baseCanvas.width = 0.75*$(window)[0].innerWidth;
+  baseCanvas.width =0.96*$('#constructor_container')[0].offsetWidth;
   baseCanvas.height = baseCanvas.width;
   canvas_image.style.top  = 0.22*baseCanvas.width +"px";
-  canvas_image.style.left  = 0.33*baseCanvas.width+"px";
+  canvas_image.style.left  = 0.34*baseCanvas.width+"px";
   canvas_image.width = 0.32*baseCanvas.width;
   canvas_image.height = 0.32*baseCanvas.width;
   drawImageInCanvas();
   drawPrintImage();
 }    
 }
+
+frame1.onresize = function  () {
+    updateCanvas();
+};
 
 // фунція вибору кольору
 function changeColor(){

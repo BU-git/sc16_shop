@@ -175,3 +175,11 @@ ul.tabs li a:hover{
 .blue-basis-color:active {
 	background-image: url('../../build/images/blue_s.png');	
 }
+
+.frame_canvas{
+	width:100%; 
+	height:100%; 
+	position:absolute;
+	z-index:-1; 
+	opacity:0;
+}
