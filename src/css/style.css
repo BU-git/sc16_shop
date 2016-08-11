@@ -36,8 +36,8 @@ footer{
 }
 
 .header__cart-icon{
-	margin-top:6px;
-	width: 35px;
+	margin-top:10px;
+	width: 28px;
 }
 
 .header__cart-icon a:hover {
@@ -181,6 +181,10 @@ footer{
 
 .social_links{
 	margin:0;
+}
+
+.copyright {
+font-size: 12px;
 }
 
 
