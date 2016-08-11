@@ -1,5 +1,4 @@
  $(document).ready(function(){
-
  	var MAXNUMBER = 100;
  	var MINNUMBER = 1;
 
@@ -57,5 +56,4 @@ function fprice() {
    amount.innerHTML = restoredSession.price * (+$("#counterAmount").val()) +' ' + 'грн';
 	}
 }
-
 });
