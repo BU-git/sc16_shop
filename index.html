@@ -3,102 +3,95 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Главная страница</title>
+  <title>FLASH</title>
+  <link rel="shortcut icon" href="build/images/favicon.png" type="image/x-icon">
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,500,700' rel='stylesheet' type='text/css'>
   <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="build/css/main.css">
 </head>
-<body>
- <header id = "top">
-  <div class="navbar-fixed">
-    <div id = "menu"  class="nav white">
-      <div class="nav-wrapper container">
-        <div class="row container_row">
-         <div class="col l3 menu">
-          <a  href="#top"><img src="src/images/LOGO.png" alt=""></a> 
+<body id="main__page">
+  <header id="top">
+    <div class="navbar-fixed">
+      <div id="menu"  class="nav white">
+        <div class="nav-wrapper container">
+         <div class="row container__row">
+           <div class="col l3 menu">
+             <a href="#top"><img src="build/images/LOGO.png" alt="Flash"></a> 
+           </div>
+           <div class="col l8">
+             <ul id="nav-mobile" class="left hide-on-med-and-down nav-wrapper__navigation">
+               <li><a href="constructor.html">Конструктор</a></li>
+               <li><a href="#popular" >Популярное</a></li>
+               <li><a href="#reviews">Отзывы</a></li>
+               <li><a href="#contacts">Контакты</a></li>
+             </ul>
+             <ul class="side-nav" id="mobile-demo">
+               <li><a href="constructor.html">Конструктор</a></li>
+               <li><a href="#popular">Популярное</a></li>
+               <li><a href="#reviews">Отзывы</a></li>
+               <li><a href="#contacts">Контакты</a></li>
+             </ul>
+           </div>
+           <div class="col l1 right side-nav__icon">
+            <a href="#" data-activates="mobile-demo" class="button-collapse hide-on-large-only button_hiden-menu"><img src="build/images/menu1.svg" alt=""></a>
+            <a href="purchase.html" class="side-nav__icon__cart"></a>
+          </div>
         </div>
-        <div  class="col l8">
-         <ul id="nav-mobile" class="left hide-on-med-and-down nav-wrapper__navigation">
-           <li><a href="constructor.html">Конструктор</a></li>
-           <li ><a  href="#popular">Популярное</a></li>
-           <li ><a href="#about">Отзывы</a></li>
-           <li ><a  href="#contacts">Контакты</a></li>
-         </ul>
-         <ul class="side-nav " id="mobile-demo">
-           <li><a href="constructor.html">Конструктор</a></li>
-            <li ><a  href="#popular">Популярное</a></li>
-           <li ><a href="#about">Отзывы</a></li>
-           <li ><a href="#contacts">Контакты</a></li>
-         </ul>
-       </div>
-       <div class="col l1 right">
-         <a href="#" data-activates="mobile-demo" class="button-collapse hide-on-large-only button_hiden-menu"><img src="src/images/menu.svg" alt=""></a>
-         <a href="purchase.html"><img src="src/images/cart.png" alt="" class="header__cart-icon"></a>
-       </div>
-     </div>
-   </div>
- </div>
-</div> 
+      </div>
+    </div>
+  </div> 
 </header>
-<section >
-  <div  class="main__banner__img valign-wrapper " >
+<section class="main__banner">
+  <div class="main__banner__img valign-wrapper">
     <div class="container">
      <div class="row">
-      <div class="col s12 offset-l2 m11 offset-m1">
-        <div class="wrapper left-align"> 
-         <h3 class='#3b4449-text text-darken-1'>Создай свою <br> футболку мечты</h3>
-         <a href="constructor.html" class="waves-effect waves-light btn pink accent-3 "> Создать дизайн</a>
-       </div>
+      <div class="col  l8 offset-l2 m10 offset-m1">
+       <h3 class="#3b4449-text text-darken-1 main-banner__name hide-on-small-only">Создай футболку мечты</h3>
+       <h3 class="#3b4449-text text-darken-1 main-banner__name__small hide-on-med-and-up">Создай футболку мечты</h3>
+       <a href="constructor.html" class="waves-effect waves-light btn pink accent-3 "> Создать дизайн</a>
      </div>
    </div>
  </div>
 </div>               
 </section>
-<section>
- <div class="row advantages-attachment ">
-  <div class="col s12">
-   <div class="container ">
-    <div class="flex-box light-blue-text text-darken-4">      
-      <div class="collection-info__main text-darken-4 center-align">
-        <h2 class="sample"><b>450</b></h2>
-        <h5 class="sample left-align">уникальных <br> дизайна</h5>
-      </div>
-      <div class="collection-info__main text-darken-4 center-align">
-       <h2 class="sample"><b>320</b></h2>
-       <h5 class="sample left-align">довольных <br> клиента</h5>
-     </div>
-     <div class="collection-info__main text-darken-4 center-align">
-       <h2 class="sample"><b>60</b></h2>
-       <h5 class="sample left-align">видов <br> продукции</h5>
-     </div>
-   </div>
- </div>
-</div>
-</div>
-<div class="row light-blue darken-4 ">
-  <div class="col s12">
-   <div class="container container-padding">
-    <div class="row">
-      <div class="col s12">
-        <h3 class="white-text center-align">Наши преимущества</h3>
+<section id="counts">
+  <div class="row container">
+    <div class="col l3 offset-l1 m3 offset-m1 s12">
+      <div class="row center advantages-attachment">
+        <div class="col l5 offset-l1 m5 offset-m1 s12"><h3 class="spincrement counts-inform">450</h3></div>
+        <div class="col l4 offset-m1 m4 s12"><p class="counts-inform-text" >уникальных дизайна</p></div>
       </div>
     </div>
-    <div class="flex-box white-text">
-     <div class="center-align collection-info__main">
-       <div><img class="responsive-img" src="src/images/advantages-1.png" alt="advantages-1"></div>
-       <h5>100% качество</h5>
-     </div>
-     <div class="center-align collection-info__main">
-      <div><img class="responsive-img" src="src/images/advantages-2.png" alt="advantages-2"></div>
-      <h5>Оперативность в <br> изготовлении</h5>
+    <div class="col l3 offset-l1 m3 offset-m1 s12">
+      <div class="row center advantages-attachment">
+        <div class="col l5 offset-l1 m5 offset-m1 s12"><h3 class="spincrement counts-inform">320</h3></div>
+        <div class="col l4 offset-m1 m4 s12"><p class="counts-inform-text">довольных клиента</p></div>
+      </div>
     </div>
-    <div class="center-align collection-info__main">
-     <div><img class="responsive-img  " src="src/images/advantages-3.png" alt="advantages-3"></div>
-     <h5>100% уникальность</h5>
-   </div>
- </div>
-</div>
-</div>
-</div>
+    <div class="col l3 offset-l1 m3 offset-m1 s12">
+      <div class="row center advantages-attachment">
+        <div class="col l5 offset-l1 m5 offset-m1 s12"><h3 class="spincrement counts-inform">60</h3></div>
+        <div class="col l4 offset-m1 m4 s12 "><p class="counts-inform-text">видов  продукции</p></div>
+      </div>
+    </div>
+  </div>
+  <div class="light-blue darken-4 advantages-attachment__above">
+    <div class="row container"> 
+      <h3 class="white-text center-align">Наши преимущества</h3>
+      <div class="col l4 m3 offset-m1 s12 center-align">
+        <img class="responsive-img " src="build/images/advantages-1.png" alt="advantages-1">
+        <h5>Качественно</h5>
+      </div>
+      <div class="col l4  m3 offset-m1 s12 center-align">
+        <img class="responsive-img" src="build/images/advantages-2.png" alt="advantages-1">
+        <h5>Оперативно</h5>
+      </div>
+      <div class="col l4  m3 offset-m1 s12 center-align">
+        <img class="responsive-img " src="build/images/advantages-3.png" alt="advantages-1">
+        <h5>Уникально</h5>
+      </div>
+    </div>
+  </div>
 </section>
 <section>
   <div class="container container-padding">
@@ -111,13 +104,11 @@
         <div class="about-inform">
           <div class="valign-wrapper">
             <img class="indent-info__main hide-on-small-only responsive-img " src="src/images/icon1.png" alt="">
-           <div class="collection-info__main">
+            <div class="collection-info__main">
               <p><b>Информация о доставке</b></p>
               <p>Заказ можно забрать на указанном Вами отделении Новой Почты при оформлении заказа.</p>
               <p>Также доступна доставка курьером в нужное Вам место.</p>
             </div>
-
-
           </div>
           <div class="valign-wrapper">
             <img class="indent-info__main hide-on-small-only responsive-img " src="src/images/icon2.png" alt="">
@@ -130,11 +121,10 @@
             </div>
             <div class="valign-wrapper">
               <img class="indent-info__main hide-on-small-only responsive-img" src="src/images/icon1.png" alt="">
-               <div class="collection-info__main">
+              <div class="collection-info__main">
                 <p><b>Оформление заказа</b></p>
                 <p>Заказ можно оформить, добавив его в корзину со страниц конструктора/магазина, выбрав при этом количество, размер и цвет товара.</p>
-                <p>Если у Вас возникнут дополнительные вопросы, можете обратиться к нам. по телефону +380672695536</p>
-
+                <p>Если у Вас возникнут дополнительные вопросы, можете обратиться к нам по телефону +380672695536.</p>
               </div>
             </div>
           </div>
@@ -151,98 +141,89 @@
      </div>
    </div>
    <div class="flex-pupular_main">
-    <div class="pop-production">
+    <div id = "w_tshirts_main" class="pop-production">
      <div class="center-align img-pop"><a  href="constructor.html">
-       <img class="responsive-img "  onmouseover="this.src='src/images/1_hover.png ';" onmouseout="this.src='src/images/1.png';" src="src/images/1.png" alt="Close"></a>
+       <img class="responsive-img "  onmouseover="this.src='build/images/1_hover.png ';" onmouseout="this.src='build/images/1.png';" src="build/images/1.png" alt="Close"></a>
      </div> 
-     <p class="white-text">Футболка женская 200грн</p>
+     <p class="pop-production_basis white-text">Футболка женская </p>
+     <p class="pop-production_basis popular_basis white-text">600 грн</p>
      <a href="constructor.html" class="waves-effect waves-light btn pink accent-3 btn-red">Хочу</a>
    </div>
-   <div class="pop-production">
+   <div id = "jumper_main" class="pop-production">
      <div class="center-align img-pop"><a  href="constructor.html">
-       <img class="responsive-img " onmouseover="this.src='src/images/2_hover.png ';" onmouseout="this.src='src/images/2.png';" src="src/images/2.png" alt="Close"></a>
+       <img class="responsive-img " onmouseover="this.src='build/images/2_hover.png ';" onmouseout="this.src='build/images/2.png';" src="build/images/2.png" alt="Close"></a>
      </div> 
-     <p class="white-text">Толстовка  мужская 300грн</p>
+     <p class="pop-production_basis white-text">Толстовка  мужская </p>
+     <p class="pop-production_basis white-text popular_basis">600 грн</p>
      <a href="constructor.html" class="waves-effect waves-light btn pink accent-3">Хочу</a>
    </div>
-   <div class="pop-production">
+   <div  id ="w_sweatshirt" class="pop-production">
      <div class="center-align img-pop"><a href="constructor.html">
-       <img  class="responsive-img"  onmouseover="this.src='src/images/3_hover.png ';" onmouseout="this.src='src/images/3.png';" src="src/images/3.png" alt="Close"></a>
+       <img  class="responsive-img"  onmouseover="this.src='build/images/3_hover.png ';" onmouseout="this.src='build/images/3.png';" src="build/images/3.png" alt="Close"></a>
      </div> 
-     <p class="white-text">Реглан женский 320грн</p>
+     <p class="pop-production_basis white-text">Реглан женский </p>
+     <p class="pop-production_basis white-text">800 грн</p>
      <a href="constructor.html" class="waves-effect waves-light btn pink accent-3">Хочу</a>
    </div>
-   <div class="pop-production">
+   <div  id ="sweatshirt_main" class="pop-production">
      <div class="center-align img-pop"><a href="constructor.html">
-       <img  class="responsive-img"  onmouseover="this.src='src/images/4_hover.png ';" onmouseout="this.src='src/images/4.png';" src="src/images/4.png" alt="Close"></a>
+       <img  class="responsive-img"  onmouseover="this.src='build/images/4_hover.png ';" onmouseout="this.src='build/images/4.png';" src="build/images/4.png" alt="Close"></a>
      </div> 
-     <p class="white-text">Реглан мужской 320грн</p>
+     <p class="pop-production_basis white-text">Реглан мужской </p>
+     <p class="pop-production_basis white-text popular_basis">800 грн</p>
      <a href="constructor.html" class="waves-effect waves-light btn pink accent-3">Хочу</a>
    </div>
  </div>
 </div>
 </section>
-<section class="purple">
+<section class="purple" id="reviews">
   <div class="container container-padding">
+    <h2 class="center-align white-text">Отзывы</h2>
     <div class="row">
-      <div class="col s12">
-        <h3 class="center-align white-text">Отзывы</h3>
+      <div class="col l8 m8 push-l2 push-m2 s12">
+        <div class="slider">
+          <ul class="slides purple ">
+            <li>
+              <div class="row">
+                <div class="col l5   m6  s4 offset-s4"> <img src="build/images/comments-1.png" alt="comments-1" class="circle responsive-img"> </div>
+                <div class="col l7 m6 s8 offset-s3 white-text">
+                  <h5>Настя, 23 года</h5>
+                  <p>Очень здорово, что можно добавить свой принт и почувствовать себя дизайнером! Желаю успехов в дальнейшем! </p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="row">
+                <div class="col l5   m6  s4 offset-s4"> <img src="build/images/comments-2.png" alt="comments-2" class="circle responsive-img"> </div>
+                <div class="col l7 m6 s8 offset-s3 white-text">
+                  <h5>Антон, 23 года </h5>
+                  <p> Заказывали футболки с принтом нашей футбольной школы, остались довольны качеством и тем, с какой ответственностью ребята подошли к заказу.</p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="row">
+                <div class="col l5   m6  s4 offset-s4"> <img src="build/images/comments-3.png" alt="comments-3" class="circle responsive-img"> </div>
+                <div class="col l7 m6 s8 offset-s3 white-text">
+                  <h5>Катя, 20 лет </h5>
+                  <p> Безумно порадовало качество готового изделия, а также скорость в исполнении моего заказа.</p>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
       </div>
-    </div>
-    <div class="row ">
-     <div class="col l8 m8 push-l2 push-m2 s12">
-       <div class="slider">
-        <ul class="slides purple" >
-          <li>
-            <div class="row">
-            <div class="col l4  offset-l2  m4 offset-m2 s4 offset-s4"> <img src="src/images/comments-1.png" alt="comments-1" class="circle responsive-img"> </div>
-             <div class="col l6 m6 s8 offset-s3">
-              <p class="white-text">
-               <b>Настя, 23 года</b> <br>
-               Очень здорово, что можно добавить свой принт и почувствовать себя дизайнером!
-               <br> Желаю успехов в дальнейшем!
-             </p>
-           </div>
-         </div>
-       </li>
-       <li>
-        <div class="row">
-          <div class="col l4 offset-l2 m4 offset-m2 s4 offset-s4"><img src="src/images/comments-2.png" alt="comments-2" class="circle responsive-img"> </div>
-          <div class="col l6 m6 s8 offset-s3">
-            <p class="white-text">
-             <b>Антон, 23 года </b><br>
-             Заказывали футболки с принтом нашей футбольной школы, остались довольны качеством и тем, с какой ответственностью ребята подошли к заказу. <br>Спасибо!
-           </p>
-         </div>
-       </div>
-     </li>
-     <li>
-      <div class="row">
-       <div class="col l4 offset-l2 m4 offset-m2 s4 offset-s4"> <img src="src/images/comments-3.png" alt="comments-3" class="circle responsive-img"> </div>
-       <div class="col l6 m6 s8 offset-s3">
-        <p class="white-text ">         
-          <b>Катя, 20 лет </b><br>
-          Безумно порадовало качество готового изделия, а также скорость в исполнении моего заказа
-        </p>
-      </div>
-    </div>
-  </li>
-</ul>
-</div>
-</div>
-<div class="col l2 m2 pull-l8 pull-m8 s3 offset-s1"> 
-  <div class="valign-wrapper">
-    <a id = "prev-slider" class="btn-floating btn-large waves-effect waves-light purple valign">
-     <i class="material-icons">arrow_back</i>
+      <div class="col l2 m2 pull-l8 pull-m8 s3 offset-s1 arrow"> 
+        <a id = "prev-slider" class="btn-floating btn-large waves-effect waves-light purple valign">
+         <img src="build/images/arrow-back.svg" alt="back" class="slider-arrow">
+       </a>
+     </div>
+     <div class="col l2 m2 s3 offset-s4 arrow">
+      <a  id = "next-slider" class="btn-floating btn-large waves-effect waves-light purple right">
+       <img src="build/images/forward.svg" alt="forward" class="slider-arrow">
      </a>
-  </div>
-</div>
-<div class="col l2 m2 s3 offset-s4">
-  <a  id = "next-slider" class="btn-floating btn-large waves-effect waves-light purple right">
-   <i class="material-icons">arrow_forward</i>
- </a>
-</div>
-</div>
+   </div>
+ </div>
 </div>
 </section>
 <section class="collapse-margine light-blue darken-4">
@@ -250,24 +231,22 @@
     <div class="row ">
      <div class="col s12">
        <div class="row">
-         <div class="col s12">
-           <h3 class="white-text center-align">Партнеры</h3>
-         </div>
+         <h3 class="white-text center-align">Партнеры</h3>
        </div>
        <div class="row">
          <div class="col l4 m4 s12 center-align">
-           <a href="#"><img class="responsive-img " src="src/images/lotus.png" alt="lotus"></a>
+           <img class="responsive-img " src="build/images/lotus.png" alt="lotus">
          </div>
          <div class="col l4 m4 s12 center-align">
-           <a href="#" class="center-align"><img class="responsive-img" src="src/images/fruit.png" alt="fruit"></a>
+           <img class="responsive-img" src="build/images/fruit.png" alt="fruit">
          </div>
          <div class="col l4 m4 s12 center-align">
-           <a href="#" class="center-align"><img class="responsive-img" src="src/images/mate.png" alt="mate"></a>
-         </div>
-       </div>
-     </div>
-   </div>
- </div>
+          <img class="responsive-img" src="build/images/mate.png" alt="mate">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 </section>
 <section id = "about" class="collapse-margine">
   <div class="container container-padding">
@@ -311,60 +290,54 @@
      </div>
    </div>
  </div>
- </div>
+</div>
 </section>
 <footer class="footer_main page-footer #01579b light-blue darken-4">
-         <!--  <div class="container"> -->
-          <div class="row container footer_main__row">
-            <div class="col l4 m4 s12 center-align">
-              <img src="src/images/LOGO2.png" alt="">
-            </div>
-            <div class="col l2  m3 s12 center-align ">
-              <a href="constructor.html" class="footer_main__button white-text darken-2 center">Конструктор</a></li> 
-            </div>
-            <div class="col l6 m5 s12 center-align">
-              <ul class="social_links center-align">
-                    <li><a class="grey-text text-lighten-3" href="https://www.facebook.com/"><img src="src/images/f.png" alt="" class="footer_link"></a></li>
-                    <li><a class="grey-text text-lighten-3" href="https://www.instagram.com/"><img src="src/images/inst.png" alt="" class="footer_link"></a></li>
-                    <li><a class="grey-text text-lighten-3" href="https://new.vk.com/"><img src="src/images/vk.png" alt="" class="footer_link"></a></li>
-               </ul>
-            </div>
-          </div>
-
-          <div class="row container">
-            <div class="col l12 m12 s12 grey-text text-darken-0 right-align copyright"> 
-         &copy; 2016-2017 FLASH Inc. All rights reserved.      
-             </div>  
-          </div>
-        
-            
-         
+  <div class="row container footer_main__row">
+    <div class="col l4 m4 s12 center-align">
+      <img src="src/images/LOGO2.png" alt="">
+    </div>
+    <div class="col l2  m3 s12 center-align ">
+    <a href="constructor.html" class="footer_main__button white-text darken-2 center">Конструктор</a>
+    </div>
+    <div class="col l6 m5 s12 center-align">
+      <ul class="social_links center-align">
+        <li><a class="grey-text text-lighten-3" href="https://www.facebook.com/"><img src="src/images/f.png" alt="" class="footer_link"></a></li>
+        <li><a class="grey-text text-lighten-3" href="https://www.instagram.com/"><img src="src/images/inst.png" alt="" class="footer_link"></a></li>
+        <li><a class="grey-text text-lighten-3" href="https://new.vk.com/"><img src="src/images/vk.png" alt="" class="footer_link"></a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="row container">
+    <div class="col l12 m12 s12 grey-text text-darken-0 right-align copyright"> 
+     &copy; 2016-2017 FLASH Inc. All rights reserved.      
+   </div>  
+ </div>
 </footer>
 <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 <script type="text/javascript" src="build/js/main.js"></script>
-<script>
- $(document).ready(function(){
-    $("#menu").on("click","a[href*=#]:not([href=#])", function (event) {
-        event.preventDefault();
-        var id  = $(this).attr('href'),
-            top = $(id).offset().top;
-        $('body,html').animate({scrollTop: top}, 1500);
-    });
-});
-</script>
 <script>  
-$(document).ready(function(){
-  $(".button-collapse").sideNav();
-  $('.slider').slider({indicators: false, height: 300, full_width: true});
-  $('#next-slider').click(function(){ 
-   $('.slider').slider('next');
- }); 
-  $('#prev-slider').click(function(){ 
-   $('.slider').slider('prev');
- }); 
-});      
+  $(document).ready(function(){
+    var show = true;
+    var countbox = '#counts';
+    $(window).on("scroll load resize", function(){
+      if (!show) return false;
+      if ($('#counts')){
+        var w_top = $(window).scrollTop();
+        var e_top = $(countbox).offset().top;
+        var w_height = $(window).height();
+        var d_height = $(document).height();
+        var e_height =  $(countbox).outerHeight();
+        if(w_top + 600>= e_top || w_height + w_top == d_height){
+          $(".spincrement").spincrement({
+            thousandSeparator: "",
+            duration: 2500
+          });
+          show = false;
+        }   
+      }
+    });
+  });
 </script>
 </body>
 </html>
-
-   

@@ -1,8 +1,6 @@
  $(document).ready(function(){
-
- 	var MAXNUMBER = 1000;
+ 	var MAXNUMBER = 100;
  	var MINNUMBER = 1;
-  var amountId = "#amount";
 
 // функция проверки на число
  	function checkNumberFields(e, k){
@@ -20,7 +18,7 @@
  	}
 
 // проверка на ввод чисел с клавиатуры
-$(amountId).keyup(function(event){// когда пользователь отпускает клавишу клавиатуры
+$("#counterAmount").keyup(function(event){// когда пользователь отпускает клавишу клавиатуры
 	checkNumberFields(this, event);
 }).keypress(function(event){// когда пользователь нажимает клавишу клавиатуры и удерживает её в нажатом состоянии
 	checkNumberFields(this, event);
@@ -31,22 +29,31 @@ $(amountId).keyup(function(event){// когда пользователь отп�
 });
 
 // когда поля теряет фокус проверить на пустоту или ноль
-$(amountId).focusout(function(){
-	if (+$(amountId).val() == "" || +$(amountId).val() == 0) {+$(amountId).val(MINNUMBER);}
+$("#counterAmount").focusout(function(){
+	if (+$("#counterAmount").val() == "" || +$("#counterAmount").val() == 0) {+$("#counterAmount").val(MINNUMBER);}
+fprice();
 })
 
 // инкрементация счетчика
-$('#increase_amount').click(function(){ 
-	if(+$(amountId).val() < MAXNUMBER){ 
-		$(amountId).val(+$(amountId).val()+1);
+$('#increase_amount12').on('click',function(){ 
+	if(+$("#counterAmount").val() < MAXNUMBER){ 
+		$("#counterAmount").val(+$("#counterAmount").val()+1);
+	fprice();
 	}
 });
 // декрементация счетчика
-$('#decrease_amount').click(function(){ 
-	if (+$(amountId).val()> MINNUMBER) { 
-		$(amountId).val(+$(amountId).val()-1);
+$('#decrease_amount').on('click',function(){ 
+	if (+$("#counterAmount").val() > 1) { 
+		$("#counterAmount").val(+$("#counterAmount").val()-1);
+		fprice();
 	}
 });
 
-
+function fprice() {
+	if(JSON.parse(localStorage.getItem('Ordered'))){
+		var restoredSession = JSON.parse(localStorage.getItem('Ordered'));
+		var amount = document.getElementById('productOrderedAmount');
+   amount.innerHTML = restoredSession.price * (+$("#counterAmount").val()) +' ' + 'грн';
+	}
+}
 });
