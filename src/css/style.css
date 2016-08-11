@@ -90,7 +90,7 @@ body{
 }
 
 .container-padding{
-	padding: 1px 0 35px 0;
+	padding: 1px 0 15px 0;
 }
 .advantages-attachment__above{
 	padding: 25px;
@@ -129,6 +129,12 @@ body{
 	.pop-production{
 		width:  auto;
 	}
+	.counts-inform-text {
+		margin-top: 5px;
+	}
+	.counts-inform {
+		margin-top: 5px;
+	}
 }
 
 .container-about {
@@ -152,7 +158,7 @@ body{
 	top: -80px;
 	padding-left:  5px;
 	padding-right:  5px;
-	margin-bottom:  50px;
+	margin-bottom:  10px;
 }
 
 .about-inform{
@@ -183,7 +189,7 @@ body{
 
 }
 .collection-info__main{
-	padding:  5px;
+	padding:  6px;
 	margin: 5px;
 }
 
@@ -203,8 +209,12 @@ body{
 	align-self:flex-start;
 }
 .pop-production_basis {
-	margin-top: 3px;
-	margin-bottom: 3px;
+	margin-top: 1px;
+	margin-bottom: 1px;
+}
+.popular_basis {
+	margin-bottom: 10px;
+	margin-top: 1px;
 }
 .social_links>li{
 	display: inline-block;
@@ -242,4 +252,22 @@ body{
 .copyright {
 font-size: 8px;
 float:right;
+}
+.about-inform-text {
+	margin: 1px;
+}
+.counts-inform-text {
+	margin-top: 60px;
+	/*border: px solid red;*/
+}
+.counts-inform {
+	margin-top: 63px;
+}
+@media only screen and (max-width: 600px) {
+	.counts-inform-text {
+		margin-top: 5px;
+	}
+	.counts-inform {
+		margin-top: 10px;
+	}
 }
