@@ -46,8 +46,6 @@ body{
 	color:#2890e3;
 }
 
-
-
 .header__cart-icon a:hover,a:active{
 	color:#2890e3;
 }
@@ -258,7 +256,6 @@ float:right;
 }
 .counts-inform-text {
 	margin-top: 60px;
-	/*border: px solid red;*/
 }
 .counts-inform {
 	margin-top: 63px;

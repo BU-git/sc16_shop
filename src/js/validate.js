@@ -40,11 +40,7 @@ $(document).ready(function(){
   },
 
 submitHandler: function() { 
-  if(JSON.parse(localStorage.getItem('Ordered'))){
   $('#modal1').openModal(); 
-}else{
-  return false;
-}
 },
 
   messages:{
