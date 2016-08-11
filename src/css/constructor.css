@@ -52,9 +52,18 @@ ul.tabs li a:hover{
     color: white !important;
 }
 
+.tabs-constructor li:nth-child(1) a{
+	 border-radius: 3px 0 0 0;
+}
+
+.tabs-constructor li:nth-child(3) a{
+	 border-radius: 0 3px 0 0;
+}
+
 .tabcontent {
   border: 1px solid #c2cbd0;
-  border-radius: 3px;
+  border-radius: 0 0 3px 3px;
+  padding: 10px;
 }
 
 .canvas-basis {
@@ -100,14 +109,6 @@ ul.tabs li a:hover{
 .canvas_shirt {
 	position: relative;
 	}
-
-
- .iframeImg{  
-   pointer-events:none; 
-   border-style: none;
-   max-width: 140px; 
-   max-height: 140px;
-}
 
 .canvas_image{
 	position:  absolute; 
@@ -174,4 +175,16 @@ ul.tabs li a:hover{
 .blue-basis-color:hover, 
 .blue-basis-color:active {
 	background-image: url('../../build/images/blue_s.png');	
+}
+
+.frame_canvas{
+	width:100%; 
+	height:100%; 
+	position:absolute;
+	z-index:-1; 
+	opacity:0;
+}
+
+.clipartholder img{
+max-width: 70px;
 }

@@ -10,24 +10,23 @@ var eventOb;
 
 $(document).ready(function(){
   $('#w_tshirts_main a').on('click',  function () {
-     popProduct("w_tshirts");
-  });
+   popProduct("w_tshirts");
+ });
   $('#w_sweatshirt a').on('click', function () {
-  popProduct("w_sweatshirt");
+    popProduct("w_sweatshirt");
   });
   $('#jumper_main a').on('click', function () {
-     popProduct("jumper");
-  });
+   popProduct("jumper");
+ });
   $('#sweatshirt_main a').on('click', function () {
    popProduct("sweatshirt");
  });
 
-function  popProduct(argument) {
-  var popular = new Object();
-   popular.product = argument;
-   localStorage.setItem('popular', JSON.stringify(popular));
-}
-
+  function  popProduct(argument) {
+    var popular = new Object();
+    popular.product = argument;
+    localStorage.setItem('popular', JSON.stringify(popular));
+  }
 
   if(document.getElementById('mainCanvas') && document.getElementById('mainCanvas').getContext){
     baseCanvas = document.getElementById('mainCanvas');
@@ -42,10 +41,9 @@ function  popProduct(argument) {
       baseImgItem = 'tshirts';
     } else{
       baseImgItem = restoredSession['product'];
-      $('#basis .basis img').removeClass('basis-hover-active');
-      var popId = '#basis .basis img#' + baseImgItem;
-      $(popId).addClass('basis-hover-active');
-     // console.log("restoredSession['product']");
+      $('#basis .basis li').removeClass('basis-hover-active');
+      var popId = '#basis .basis li .' + baseImgItem;
+      $(popId).parent().addClass('basis-hover-active');
       localStorage.removeItem('popular');
     }
 
@@ -54,35 +52,29 @@ function  popProduct(argument) {
       updateWindow();
     }
 
-// подія зміни вікна браузера
-$(window).on('resize' , updateWindow);
-
 // подія вибору основи
-$('#basis .basis img').click(function () {
- $('#basis .basis img').removeClass('basis-hover-active');
+$('#basis .basis li').click(function () {
+ $('#basis .basis li').removeClass('basis-hover-active');
  $(this).addClass('basis-hover-active');
  firstLoadProduct();
  fillBackgroundColor();
- baseImgItem = (this).id;
+ baseImgItem = (this).children[0].classList[0];
  loadProduct();
  drawImageInCanvas();
 })
-
 
 function firstLoadProduct(){
   $('#clipart .clipartholder').removeClass('view-basis-active');
   $('#frontView').addClass('view-basis-active');
   $('#backView').removeClass('view-basis-active');
- //    $('#choiceSize a').removeClass('choice-size-active');
- // $('#choiceSize a:first').addClass('choice-size-active');
 }
-
 
 // завантаження фото
 $('#upload-button').click(function(){
   $('#design-upload').click();
   return false;
 });
+
 // подія вибору кольору
 $('#colorClothe li').on('click', changeColor);
 
@@ -97,7 +89,6 @@ function changeSize() {
 $('#frontView').on('click', toFrontView);
 
 $('#backView').on('click', toBackView);
-
 
 // вибір продукту
 function loadProduct() {
@@ -161,36 +152,35 @@ function sizeBaseImg(img, canvas){
 
 // зміна широти і висоти canvas при зміні вікна браузера
 function updateWindow() {
- if($(this)[0].innerWidth > 992){
-  updateCanvas();
-  setTimeout(updateCanvas , 1000);
-} else if ($(this)[0].innerWidth <= 992){
-  updateCanvas();
-  setTimeout(updateCanvas , 1000);
-}    
+ updateCanvas();
+ setTimeout(updateCanvas , 1200);
 }
 
 function updateCanvas() {
  if($(window)[0].innerWidth > 992){
-  baseCanvas.width = 0.29*$(window)[0].innerWidth;
+  baseCanvas.width = 0.75*$('#constructor_container')[0].offsetWidth;
   baseCanvas.height = baseCanvas.width;
   canvas_image.style.top  = 0.22*baseCanvas.width +"px";
-  canvas_image.style.left  = 0.33*baseCanvas.width+"px";
+  canvas_image.style.left  = 0.34*baseCanvas.width+"px";
   canvas_image.width = 0.32*baseCanvas.width;
   canvas_image.height = 0.32*baseCanvas.width;
   drawImageInCanvas();
   drawPrintImage();
 } else if ($(window)[0].innerWidth <= 992){
-  baseCanvas.width = 0.75*$(window)[0].innerWidth;
+  baseCanvas.width =0.96*$('#constructor_container')[0].offsetWidth;
   baseCanvas.height = baseCanvas.width;
   canvas_image.style.top  = 0.22*baseCanvas.width +"px";
-  canvas_image.style.left  = 0.33*baseCanvas.width+"px";
+  canvas_image.style.left  = 0.34*baseCanvas.width+"px";
   canvas_image.width = 0.32*baseCanvas.width;
   canvas_image.height = 0.32*baseCanvas.width;
   drawImageInCanvas();
   drawPrintImage();
 }    
 }
+
+frame1.onresize = function  () {
+  updateCanvas();
+};
 
 // фунція вибору кольору
 function changeColor(){
@@ -252,7 +242,7 @@ else {
 }
 };
 
-$('#clear-button').on('click', function  (argument) {
+$('.clear-button1').on('click', function  (argument) {
   labelImg = null;
   canvasClear ();
 });
@@ -285,7 +275,6 @@ $('#clipart .clipartholder').on('click', function( e ) {
     drawPrintImage() ;
   }
 });
-
 
 $('#canvas_image').on( "mousedown",translateImg);
 
@@ -322,7 +311,6 @@ function  translateImgTouch(e) {
   }
 }
 
-
 function resizeImg(e) {
   var ratio = eventOb.height/eventOb.width;
   eventOb.width +=  e.originalEvent.movementX;
@@ -331,7 +319,6 @@ function resizeImg(e) {
   drawPrintImage();
   borderImg();
 }
-
 
 $('#canvas_image').mousemove(cursorView);
 function cursorView(e) {
@@ -372,27 +359,29 @@ function  borderImg() {
     ctx.strokeRect((eventOb.X + eventOb.width-10),(eventOb.Y + eventOb.height -10), 15,15);
   }}
 
-
   $('#order').on("click", orderProduct);
 
   function  orderProduct() {
     if(labelImg){
-      var color = ctx.getImageData(0, 0, canvas_image.width, canvas_image.height);
-      context.putImageData(color, ((canvas_image.style.left).split('px')[0] ), ((canvas_image.style.top).split('px')[0]) );
-      var order= new Object();
-      order.printImg = labelImg.src;
-      order.baseImg = baseCanvas.toDataURL("image/svg", 1.0);
-      order.name = baseProduct.name;
-      order.price = baseProduct.price;
-      order.color = dataColor[baseProduct.color];
-      order.size = baseProduct.size;
-      localStorage.setItem('Ordered', JSON.stringify(order));
-    }else{
-      return false;
-    }
+     $("#order").attr("href", "purchase.html");
+     var color = ctx.getImageData(0, 0, canvas_image.width, canvas_image.height);
+     context.putImageData(color, ((canvas_image.style.left).split('px')[0] ), ((canvas_image.style.top).split('px')[0]) );
+     var order= new Object();
+     order.printImg = labelImg.src;
+     order.baseImg = baseCanvas.toDataURL("image/svg", 1.0);
+     order.name = baseProduct.name;
+     order.price = baseProduct.price;
+     order.color = dataColor[baseProduct.color];
+     order.size = baseProduct.size;
+     localStorage.setItem('Ordered', JSON.stringify(order));
+   }else{
+    $("#order").attr("href", "#modal2");
+    $('#modal2').openModal();
+    return false;
   }
-
 }
+}
+
 restoreOrderedProduct();
 function  restoreOrderedProduct() {
   var restoredSession = JSON.parse(localStorage.getItem('Ordered'));
@@ -409,9 +398,5 @@ function  restoreOrderedProduct() {
     amount.innerHTML  = restoredSession.price +' ' + 'грн';
   }
 }
-
-
-
-
 });
 
