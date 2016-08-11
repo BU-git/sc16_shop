@@ -15,7 +15,7 @@
 	border:none;
 }
 
-form, .info{
+.formValidate, .info{
   border: 1px solid #c2cbd0;
   padding: 20px 15px;
   margin-bottom: 15px;

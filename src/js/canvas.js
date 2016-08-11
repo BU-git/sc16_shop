@@ -260,6 +260,8 @@ function canvasClear () {
   ctx.putImageData(color, 0, 0);
 } 
 
+
+
 function drawPrintImage() {
   if(labelImg){
    canvasClear ();

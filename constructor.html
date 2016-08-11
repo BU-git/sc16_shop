@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-	<title>Конструстор</title>
+	<title>Конструктор</title>
 	<link rel="shortcut icon" href="build/images/favicon.ico" type="image/x-icon">
 	<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<link rel="stylesheet" href="build/css/main.css">
@@ -15,7 +15,7 @@
 				<div class="nav-wrapper container">
 					<div class="row container__row">
 						<div class="col l3 menu">
-							<a href="index.html"><img src="build/images/LOGO.png" alt="Flash"></a> 
+							<a href="#top"><img src="build/images/LOGO.png" alt="Flash"></a> 
 						</div>
 						<div class="col l8">
 							<ul id="nav-mobile" class="left hide-on-med-and-down nav-wrapper__navigation">
@@ -52,8 +52,8 @@
 							<li class="tab col l3"><a class="purple-text text-darken-4" href="#clipart">Клипарт</a></li>
 						</ul>
 					</div>
-					<div id="basis" class="col s12 tabcontent">
-						<ul class="collapsible hide-on-large-only" data-collapsible="accordion">
+					<div id="basis" class="col s12 ">
+						<ul class="collapsible hide-on-large-only tabcontent" data-collapsible="accordion">
 							<li>
 								<div class="collapsible-header">МУЖСКАЯ ОДЕЖДА</div>
 								<div class="collapsible-body">
@@ -77,7 +77,7 @@
 								</div>
 							</li>
 						</ul>
-						<div class="construcor_height hide-on-med-and-down">
+						<div class="construcor_height hide-on-med-and-down tabcontent">
 							<div class="mens-basis">
 								<p>МУЖСКАЯ ОДЕЖДА</p>
 								<ul class=" basis mens-basis">
@@ -98,8 +98,8 @@
 							</div>
 						</div>	
 					</div>
-					<div id="photo" class="col l12 m12"> 
-						<form enctype="multipart/form-data" method="post">
+					<div id="photo" class="col l12 m12 "> 
+						<form class ="tabcontent" enctype="multipart/form-data" method="post">
 							<p><b>Загрузите изображение в формате jpg, png, gif</b></p>
 							<p><input type="file" name="img" accept="image/*" id="design-upload"></p>
 							<a href="#" class="waves-effect waves-light btn pink accent-3" id="clear-button">Очистить</a>
@@ -107,27 +107,23 @@
 							<p>Использование изображения не должно нарушать авторских прав.</p>
 						</form> 
 					</div>
-					<div id="clipart" class="col s12 tabcontent">
-						<ul class="collapsible">
-							<li>
-								<div >
-									<ul class=" basis mens-basis ">
-										<li class="clipartholder basis-hover"><img class="clipart_pic" src="build/images/1_clipart.png" alt="basis-t-shirt"></li>
-										<li class="clipartholder basis-hover"><img class="clipart_pic" src="build/images/2_clipart.png" alt="basis-t-shirt"></li>
-										<li class="clipartholder basis-hover"><img class="clipart_pic" src="build/images/3_clipart.png" alt="basis-t-shirt"></li>
-										<li class="clipartholder basis-hover"><img class="clipart_picr" src="build/images/4_clipart.png" alt="basis-t-shirt"></li>
-										<li class="clipartholder basis-hover"><img class="clipart_pic" src="build/images/5_clipart.png" alt="basis-t-shirt"></li>
-										<li class="clipartholder basis-hover"><img class="clipart_pic" src="build/images/6_clipart.png" alt="basis-t-shirt"></li>
-										<li class="clipartholder basis-hover"><img class="clipart_pic" src="build/images/7_clipart.png" alt="basis-t-shirt"></li>
-										<li class="clipartholder basis-hover"><img class="clipart_pic" src="build/images/8_clipart.png" alt="basis-t-shirt"></li>
-										<li class="clipartholder basis-hover"><img class="clipart_pi" src="build/images/9_clipart.png" alt="basis-t-shirt"></li>
-										<li class="clipartholder basis-hover"><img class="clipart_pic" src="build/images/10_clipart.png" alt="basis-t-shirt"></li>
-										<li class="clipartholder basis-hover"><img class="clipart_pic" src="build/images/11_clipart.png" alt="basis-t-shirt"></li>
-										<li class="clipartholder basis-hover"><img class="clipart_pic" src="build/images/12_clipart.png" alt="basis-t-shirt"></li>
-									</ul>
-								</div>
-							</li>
-						</ul>
+					<div id="clipart" class="col s12">
+						<div class="tabcontent ">
+							<ul class="basis woman-basis ">
+								<li class="clipartholder basis-hover"><img class="clipart_pic" src="build/images/1_clipart.png" alt="basis-t-shirt"></li>
+								<li class="clipartholder basis-hover"><img class="clipart_pic" src="build/images/2_clipart.png" alt="basis-t-shirt"></li>
+								<li class="clipartholder basis-hover"><img class="clipart_pic" src="build/images/3_clipart.png" alt="basis-t-shirt"></li>
+								<li class="clipartholder basis-hover"><img class="clipart_picr" src="build/images/4_clipart.png" alt="basis-t-shirt"></li>
+								<li class="clipartholder basis-hover"><img class="clipart_pic" src="build/images/5_clipart.png" alt="basis-t-shirt"></li>
+								<li class="clipartholder basis-hover"><img class="clipart_pic" src="build/images/6_clipart.png" alt="basis-t-shirt"></li>
+								<li class="clipartholder basis-hover"><img class="clipart_pic" src="build/images/7_clipart.png" alt="basis-t-shirt"></li>
+								<li class="clipartholder basis-hover"><img class="clipart_pic" src="build/images/8_clipart.png" alt="basis-t-shirt"></li>
+								<li class="clipartholder basis-hover"><img class="clipart_pi" src="build/images/9_clipart.png" alt="basis-t-shirt"></li>
+								<li class="clipartholder basis-hover"><img class="clipart_pic" src="build/images/10_clipart.png" alt="basis-t-shirt"></li>
+								<li class="clipartholder basis-hover"><img class="clipart_pic" src="build/images/11_clipart.png" alt="basis-t-shirt"></li>
+								<li class="clipartholder basis-hover"><img class="clipart_pic" src="build/images/12_clipart.png" alt="basis-t-shirt"></li>
+							</ul>
+						</div>
 					</div>
 				</div>
 			</div>
