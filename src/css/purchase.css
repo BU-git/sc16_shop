@@ -82,8 +82,8 @@ input[type=number].amount {
 .side-nav-active_icon__cart{
  display: block;
   height: 32px;
-  width: 37px;
-  margin-top: 6px;
+  margin-top:10px;
+  width: 28px;
   background-image: url('../../build/images/cart-hover.svg');
   background-size: 90%;
   background-repeat: no-repeat;

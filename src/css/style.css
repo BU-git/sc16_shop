@@ -29,9 +29,9 @@ body{
 }
 .side-nav__icon__cart{
 	display: block;
-	height: 32px;
-	width: 37px;
-	margin-top: 6px;
+	height: 32px; 
+	margin-top:10px;
+	width: 28px;
 	background-image: url('../../build/images/cart.svg');
 	background-size: 90%;
 	background-repeat: no-repeat;
@@ -45,6 +45,7 @@ body{
 	border-bottom:1px dashed #2890e3;
 	color:#2890e3;
 }
+
 
 
 .header__cart-icon a:hover,a:active{
@@ -230,4 +231,15 @@ body{
 .advantages-attachment-numbers {
 	font-weight: bold;
 	margin: 0;
+}
+.social_links a{
+	display: block;
+}
+.social_links a:hover{
+	transform:scale(1.1);
+}
+
+.copyright {
+font-size: 8px;
+float:right;
 }
