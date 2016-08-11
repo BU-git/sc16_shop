@@ -32,6 +32,9 @@ $("#counterAmount").keyup(function(event){// когда пользователь
 // когда поля теряет фокус проверить на пустоту или ноль
 $("#counterAmount").focusout(function(){
 	if (+$("#counterAmount").val() == "" || +$("#counterAmount").val() == 0) {+$("#counterAmount").val(MINNUMBER);}
+	var restoredSession = JSON.parse(localStorage.getItem('Ordered'));
+		var amount = document.getElementById('productOrderedAmount');
+   amount.innerHTML = restoredSession.price * (+$("#counterAmount").val()) +' ' + 'грн';;
 })
 
 // инкрементация счетчика
