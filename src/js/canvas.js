@@ -53,8 +53,6 @@ function  popProduct(argument) {
       updateWindow();
     }
 
-
-
 // подія вибору основи
 $('#basis .basis li').click(function () {
  $('#basis .basis li').removeClass('basis-hover-active');
@@ -75,7 +73,6 @@ function firstLoadProduct(){
  //    $('#choiceSize a').removeClass('choice-size-active');
  // $('#choiceSize a:first').addClass('choice-size-active');
 }
-
 
 // завантаження фото
 $('#upload-button').click(function(){
@@ -250,7 +247,8 @@ else {
 }
 };
 
-$('#clear-button').on('click', function  (argument) {
+$('.clear-button1').on('click', function  (argument) {
+  console.log("hello!");
   labelImg = null;
   canvasClear ();
 });
@@ -259,6 +257,8 @@ function canvasClear () {
   var color = context.getImageData((canvas_image.style.left).split('px')[0], (canvas_image.style.top).split('px')[0], canvas_image.width, canvas_image.height);
   ctx.putImageData(color, 0, 0);
 } 
+
+
 
 function drawPrintImage() {
   if(labelImg){
@@ -368,10 +368,13 @@ function  borderImg() {
     ctx.strokeRect((eventOb.X + eventOb.width-10),(eventOb.Y + eventOb.height -10), 15,15);
   }}
 
+  
+
   $('#order').on("click", orderProduct);
 
   function  orderProduct() {
     if(labelImg){
+       $("#order").attr("href", "purchase.html");
       var color = ctx.getImageData(0, 0, canvas_image.width, canvas_image.height);
       context.putImageData(color, ((canvas_image.style.left).split('px')[0] ), ((canvas_image.style.top).split('px')[0]) );
       var order= new Object();
@@ -383,6 +386,8 @@ function  borderImg() {
       order.size = baseProduct.size;
       localStorage.setItem('Ordered', JSON.stringify(order));
     }else{
+      $("#order").attr("href", "#modal2");
+          $('#modal2').openModal();
       return false;
     }
   }

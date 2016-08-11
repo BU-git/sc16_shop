@@ -50,14 +50,14 @@ submitHandler: function() {
   messages:{
     first_name:{
       required: "Введите ваше имя.",
-      maxlength: $.validator.format( "Количество символов должно быть небольше {0}." ),
-      lettersonly: "Введите только букви."
+      maxlength: $.validator.format( "Количество символов должно быть не больше {0}." ),
+      lettersonly: "Введите только буквы."
     },
 
     last_name:{
       required: "Введите вашу фамилию",
-      maxlength: $.validator.format( "Количество символов должно быть небольше {0}." ),
-       lettersonly: "Введите только букви."
+      maxlength: $.validator.format( "Количество символов должно быть не больше {0}." ),
+       lettersonly: "Введите только буквы." 
     },
 
     tel:{
@@ -67,7 +67,7 @@ submitHandler: function() {
 
     email:{ email:"Введите корректный  email."},
 
-    textarea:{  maxlength: $.validator.format( "Количество символов должно быть небольше {0}." )}
+    textarea:{  maxlength: $.validator.format( "Количество символов должно быть не больше {0}." )}
   },
 
   errorElement : 'div',

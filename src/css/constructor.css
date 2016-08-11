@@ -52,9 +52,18 @@ ul.tabs li a:hover{
     color: white !important;
 }
 
+.tabs-constructor li:nth-child(1) a{
+	 border-radius: 3px 0 0 0;
+}
+
+.tabs-constructor li:nth-child(3) a{
+	 border-radius: 0 3px 0 0;
+}
+
 .tabcontent {
   border: 1px solid #c2cbd0;
-  border-radius: 3px;
+  border-radius: 0 0 3px 3px;
+  padding: 10px;
 }
 
 .canvas-basis {
@@ -174,4 +183,8 @@ ul.tabs li a:hover{
 	position:absolute;
 	z-index:-1; 
 	opacity:0;
+}
+
+.clipartholder img{
+max-width: 70px;
 }
