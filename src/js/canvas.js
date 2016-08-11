@@ -53,8 +53,6 @@ function  popProduct(argument) {
       updateWindow();
     }
 
-
-
 // подія вибору основи
 $('#basis .basis li').click(function () {
  $('#basis .basis li').removeClass('basis-hover-active');
@@ -75,7 +73,6 @@ function firstLoadProduct(){
  //    $('#choiceSize a').removeClass('choice-size-active');
  // $('#choiceSize a:first').addClass('choice-size-active');
 }
-
 
 // завантаження фото
 $('#upload-button').click(function(){
@@ -250,7 +247,8 @@ else {
 }
 };
 
-$('#clear-button').on('click', function  (argument) {
+$('.clear-button1').on('click', function  (argument) {
+  console.log("hello!");
   labelImg = null;
   canvasClear ();
 });

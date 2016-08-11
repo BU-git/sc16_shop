@@ -52,11 +52,11 @@ ul.tabs li a:hover{
     color: white !important;
 }
 
-.tabs-constructor li:first-child a{
+.tabs-constructor li:nth-child(1) a{
 	 border-radius: 3px 0 0 0;
 }
 
-.tabs-constructor li:last-child a{
+.tabs-constructor li:nth-child(3) a{
 	 border-radius: 0 3px 0 0;
 }
 
