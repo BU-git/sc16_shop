@@ -45,7 +45,6 @@ function  popProduct(argument) {
       $('#basis .basis img').removeClass('basis-hover-active');
       var popId = '#basis .basis img#' + baseImgItem;
       $(popId).addClass('basis-hover-active');
-     // console.log("restoredSession['product']");
       localStorage.removeItem('popular');
     }
 
@@ -54,16 +53,16 @@ function  popProduct(argument) {
       updateWindow();
     }
 
-// подія зміни вікна браузера
-$(window).on('resize' , updateWindow);
+
 
 // подія вибору основи
-$('#basis .basis img').click(function () {
- $('#basis .basis img').removeClass('basis-hover-active');
+$('#basis .basis li').click(function () {
+ $('#basis .basis li').removeClass('basis-hover-active');
  $(this).addClass('basis-hover-active');
+ console.log((this).children[0].classList[0])
  firstLoadProduct();
  fillBackgroundColor();
- baseImgItem = (this).id;
+ baseImgItem = (this).children[0].classList[0];
  loadProduct();
  drawImageInCanvas();
 })
@@ -161,36 +160,35 @@ function sizeBaseImg(img, canvas){
 
 // зміна широти і висоти canvas при зміні вікна браузера
 function updateWindow() {
- if($(this)[0].innerWidth > 992){
-  updateCanvas();
-  setTimeout(updateCanvas , 1000);
-} else if ($(this)[0].innerWidth <= 992){
-  updateCanvas();
-  setTimeout(updateCanvas , 1000);
-}    
+     updateCanvas();
+     setTimeout(updateCanvas , 1200);
 }
 
 function updateCanvas() {
  if($(window)[0].innerWidth > 992){
-  baseCanvas.width = 0.29*$(window)[0].innerWidth;
+  baseCanvas.width = 0.75*$('#constructor_container')[0].offsetWidth;
   baseCanvas.height = baseCanvas.width;
   canvas_image.style.top  = 0.22*baseCanvas.width +"px";
-  canvas_image.style.left  = 0.33*baseCanvas.width+"px";
+  canvas_image.style.left  = 0.34*baseCanvas.width+"px";
   canvas_image.width = 0.32*baseCanvas.width;
   canvas_image.height = 0.32*baseCanvas.width;
   drawImageInCanvas();
   drawPrintImage();
 } else if ($(window)[0].innerWidth <= 992){
-  baseCanvas.width = 0.75*$(window)[0].innerWidth;
+  baseCanvas.width =0.96*$('#constructor_container')[0].offsetWidth;
   baseCanvas.height = baseCanvas.width;
   canvas_image.style.top  = 0.22*baseCanvas.width +"px";
-  canvas_image.style.left  = 0.33*baseCanvas.width+"px";
+  canvas_image.style.left  = 0.34*baseCanvas.width+"px";
   canvas_image.width = 0.32*baseCanvas.width;
   canvas_image.height = 0.32*baseCanvas.width;
   drawImageInCanvas();
   drawPrintImage();
 }    
 }
+
+frame1.onresize = function  () {
+    updateCanvas();
+};
 
 // фунція вибору кольору
 function changeColor(){
@@ -322,7 +320,6 @@ function  translateImgTouch(e) {
   }
 }
 
-
 function resizeImg(e) {
   var ratio = eventOb.height/eventOb.width;
   eventOb.width +=  e.originalEvent.movementX;
@@ -331,7 +328,6 @@ function resizeImg(e) {
   drawPrintImage();
   borderImg();
 }
-
 
 $('#canvas_image').mousemove(cursorView);
 function cursorView(e) {
@@ -372,7 +368,6 @@ function  borderImg() {
     ctx.strokeRect((eventOb.X + eventOb.width-10),(eventOb.Y + eventOb.height -10), 15,15);
   }}
 
-
   $('#order').on("click", orderProduct);
 
   function  orderProduct() {
@@ -393,6 +388,7 @@ function  borderImg() {
   }
 
 }
+
 restoreOrderedProduct();
 function  restoreOrderedProduct() {
   var restoredSession = JSON.parse(localStorage.getItem('Ordered'));
@@ -409,9 +405,6 @@ function  restoreOrderedProduct() {
     amount.innerHTML  = restoredSession.price +' ' + 'грн';
   }
 }
-
-
-
 
 });
 
