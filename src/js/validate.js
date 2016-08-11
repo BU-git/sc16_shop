@@ -2,12 +2,12 @@ $(document).ready(function(){
   $.validator.addMethod('phoneUS', function(phone_number, element) {
     phone_number = phone_number.replace(/\s+/g, ''); 
     return this.optional(element) || phone_number.length > 5 &&
-    phone_number.match(/^[\d]{10}$/);
-  }, "Please specify a valid  phone number");
+    phone_number.match(/^[\d\(\)\ -]{14}$/);
+  });
 
   $.validator.addMethod( "lettersonly", function( value, element ) {
   return this.optional( element ) || /^[а-я,ґ,',і,ї,є\-\a-z]+$/i.test( value );
-}, "Letters or punctuation only please" )
+} )
 
   $("#formValidate").validate({
    rules:{
@@ -40,7 +40,11 @@ $(document).ready(function(){
   },
 
 submitHandler: function() { 
+  if(JSON.parse(localStorage.getItem('Ordered'))){
   $('#modal1').openModal(); 
+}else{
+  return false;
+}
 },
 
   messages:{

@@ -78,6 +78,7 @@ input::-webkit-inner-spin-button {
 input[type=number].amount { 
  -moz-appearance:textfield; 
  }
+
 .side-nav-active_icon__cart{
  display: block;
   height: 32px;

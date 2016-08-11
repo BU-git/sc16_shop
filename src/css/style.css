@@ -128,8 +128,6 @@ body{
 	.pop-production{
 		width:  auto;
 	}
-	
-
 }
 
 .container-about {
@@ -207,15 +205,12 @@ body{
 	margin-top: 3px;
 	margin-bottom: 3px;
 }
-
 .social_links>li{
 	display: inline-block;
 	margin-left: 10px;
-
 }
 .footer_main {
 	padding-bottom: 10px;
-	
 	}
 .footer_main__button{
 	display: block;
@@ -225,7 +220,6 @@ body{
  	background-color: #9b56e0 !important;
 	border-radius: 50px;
 }
-
 .social_links{
 	margin:0;
 }
